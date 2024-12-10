@@ -1,1734 +1,1794 @@
-var __ = {
-    "Ladder": "天梯",
-    "Rank": "天梯與排名",
-    "Account": "帳號",
-    "Points": "黯幣",
-    "Character": "角色",
-    "Class": "角色",
-    "Level": "等級",
-    "Experience": "經驗值",
-    "Next": "下一頁",
-    "Prev": "上一頁",
-    "per page": "每頁",
-    "Post Reply": "回覆貼文",
-    "Hide Delve Depth": "隱藏掘獄深度",
-    "Auto refresh": "自動重整",
-    "Refresh": "重整",
-    "Export CSV": "匯出成 CSV 檔",
-    "Witch": "女巫",
-    "Templar": "聖騎士",
-    "Scion": "貴族",
-    "Shadow": "暗影刺客",
-    "Marauder": "野蠻人",
-    "Ranger": "遊俠",
-    "Duelist": "決鬥者",
-    "Ascendant": "昇華使徒",
-    "Juggernaut": "勇士",
-    "Berserker": "暴徒",
-    "Chieftain": "酋長",
-    "Warden": "守護者",
-    "Deadeye": "銳眼",
-    "Pathfinder": "追獵者",
-    "Occultist": "秘術家",
-    "Elementalist": "元素使",
-    "Necromancer": "死靈師",
-    "Slayer": "處刑者",
-    "Gladiator": "衛士",
-    "Champion": "冠軍",
-    "Inquisitor": "判官",
-    "Hierophant": "聖宗",
-    "Guardian": "守護者",
-    "Assassin": "疾密刺客",
-    "Trickster": "詐欺師",
-    "Saboteur": "破壞者",
-    "Starts": "開始",
-    "Started": "已開始",
-    "Finishes": "結束時間",
-    "Finished": "已結束",
-    "Ends": "結束",
-    "Ended": "已結束",
-    "at": "在",
-    "Registration open": "開啟註冊",
-    "Rules": "規則",
-    "Hardcore": "專家模式",
-    "A character killed in Hardcore is moved to its parent league.": "在專家模式中，角色死亡將會被移動到對應的下層聯盟",
-    "Starts in": "開始於",
-    "Ends in": "結束於",
-    "Goal": "目標",
-    "Dead": "死亡",
-    "Retired": "退役",
-    "Ineligible": "不合格",
-    "Online": "線上",
-    "Offline": "不在線上",
-    "Loading": "載入中",
-    "League": "聯盟",
-    "1 Point Left": "剩餘 1 天賦點",
-    "{0} Points Left": "剩餘 {0} 天賦點",
-    "1 Ascendancy Point Left": "剩餘 1 昇華天賦點",
-    "{0} Ascendancy Points Left": "剩餘 {0} 昇華天賦點",
-    "1 Wildwood Point Left": "剩餘 1 荒林天賦點",
-    "{0} Wildwood Points Left": "剩餘 {0} 荒林天賦點",
-    "Ascendancy": "昇華",
-    "SWITCH CHARACTER": "切換角色",
-    "Guild Balance": "公會黯幣",
-    "Give Microtransaction Points to Guild": "貢獻黯幣給公會",
-    "Use this form to send points to your Guild to allow your Guild Leader to purchase Microtransactions. If the Guild Leader accepts your points you can not be kicked out for three months.": "你可以貢獻你的黯幣給公會並讓會長購買公會商品。如果公會會長接受你的貢獻，在三個月內你將無法被踢出公會。",
-    "Points Amount": "貢獻黯幣數",
-    "Give Points": "貢獻",
-    "Transaction History": "貢獻紀錄",
-    "Guild Transactions": "公會交易",
-    "This is a list of points transfers from members of your Guild. Accept transactions to credit the points to your Guild. You will not be able to kick a player for three months if you accept their points.": "下面是你所在公會的公會成員貢獻紀錄。你可以接受貢獻以增加公會黯幣。若是你接受了一位成員的貢獻，三個月內將無法把該成員移出公會。",
-    "Accept": "接受",
-    "Reject": "拒絕",
-    "Cancelled": "已取消",
-    "Rejected": "已拒絕",
-    "Complete": "完成",
-    "Manual transfer": "手動轉移",
-    "from": "從",
-    "Transaction created": "貢獻已建立",
-    "Amount is not a number": "請輸入數字",
-    "Amount must be greater than 0": "數字必須大於 0",
-    "Accept transaction": "接受貢獻",
-    "Reject transaction": "拒絕貢獻",
-    "Cancel transaction": "取消貢獻",
-    "points transferred to": "黯幣轉移至",
-    "Failed to load history": "讀取紀錄失敗",
-    "Added pin": "已增加展示",
-    "Deleted pin": "已刪除展示",
-    "Moved pin": "已被移動展示",
-    "There was an error adding this pin": "在增加展示時發生一個錯誤",
-    "There was an error deleting this pin": "在刪除展示時發生一個錯誤",
-    "There was an error moving this pin": "在移動展示時發生一個錯誤",
-    "Private": "私人",
-    "League requires a password to join.": "需要輸入密碼來加入此聯盟。",
-    "Drop equipped items on death.": "死亡時會掉落裝備的物品。",
-    "Instance invasion": "入侵地圖",
-    "Allows you to select other people's instances in the instance manager.": "你可以選擇進入其他流亡者所正在進行的地圖。",
-    "Harsh death experience penalty": "超級死亡懲罰",
-    "Increases the death experience penalty by 30% on all difficulty levels.": "所有難度下，死亡時的經驗懲罰提升到 30 %。",
-    "Hostile by default": "預設敵對",
-    "Non-partymembers are hostile by default when you are not partied.": "非在隊伍內的成員將會被預設為敵人。",
-    "Death penalty awarded to slayer": "殺人獎勵",
-    "When killing a player, their death penalty is awarded to the player doing the killing.": "當殺死一個其他的流亡者時，你會獲得其因死亡所損失的經驗值。",
-    "Increased player caps": "增加流亡者上限",
-    "Doubles player capacity in non-town instances. Does not increase the party size.": "非城鎮地圖內的流亡者上限提高一倍。隊伍人數上限並不會因此而增加。",
-    "Turbo": "加速",
-    "Monsters move, attack and cast 60% faster.": "怪物的移動、攻擊及施放速度加快 60 %。",
-    "Solo": "單人",
-    "You may not party in this league.": "你不能與他人組隊。",
-    "No Ascendancy respecs": "無昇華天賦重置",
-    "You cannot change your Ascendancy class once it has been chosen.": "你一但選擇昇華職業後就無法改動。",
-    "Ruthless": "無情",
-    "A significantly different game experience with extreme item scarcity, among other changes.": "極端物品稀缺和其它改動會有著非常不一樣的遊戲體驗。",
-    "Requires": "需求",
-    "No results found": "查無結果",
-    "Time": "時間",
-    "hour": "小時",
-    "hours": "小時",
-    "minute": "分",
-    "minutes": "分",
-    "second": "秒",
-    "seconds": "秒",
-    "League has ended": "聯盟已經結束",
-    "Monday": "星期一",
-    "Tuesday": "星期二",
-    "Wednesday": "星期三",
-    "Thursday": "星期四",
-    "Friday": "星期五",
-    "Saturday": "星期六",
-    "Sunday": "星期日",
-    "Find an account by ID, name or email.": "Find an account by ID, steam ID,  name or email.",
-    "Include related accounts": "Include related accounts",
-    "Connecting...": "連線中...",
-    "Searching...": "Searching...",
-    "Bulk Ban": "Bulk Ban",
-    "Put the account ids to ban in the textarea below (one line per account id)": "Put the account ids to ban in the textarea below (one line per account id)",
-    "Ban reason (Visible to Player)": "封鎖原因 (玩家可見)",
-    "Ban notes (Moderator Notes)": "封鎖備註 (後台)",
-    "Failed to ban": "Failed to ban",
-    "Banned": "已停權",
-    "Ban": "Ban",
-    "Incoming": "Incoming",
-    "All Types": "All Types",
-    "Whisper": "密語",
-    "Party": "Party",
-    "Local": "Local",
-    "Global": "全球",
-    "Exclude incoming": "Exclude incoming",
-    "Character Name": "Character Name",
-    "Filter": "篩選條件",
-    "From Character": "From Character",
-    "Message": "訊息",
-    "Loading...": "Loading...",
-    "Forum": "論壇",
-    "Thread": "主題",
-    "View Post": "閱讀文章",
-    "Set guild name": "Set guild name",
-    "Save": "保存",
-    "Set guild tag": "Set guild tag",
-    "Set guild status message": "Set guild status message",
-    "ID": "ID",
-    "Created": "Created",
-    "Change Member Type": "Change Member Type",
-    "Leader": "完成殘酷難度",
-    "Officer": "管理員",
-    "Member": "Member",
-    "Waitlist": "等待清單",
-    "Applied": "已申請",
-    "Removed": "已移除",
-    "Initiate": "新人",
-    "Change": "改變",
-    "Members": "成員",
-    "Show All Players": "顯示全部玩家",
-    "Elapsed time": "經過時間",
-    "Expire in 24 hours": "在 24 小時內到期",
-    "No Expiration Time": "沒有過期時間",
-    "Name": "名稱",
-    "Position": "Position",
-    "Details": "詳情",
-    "Garena UID": "Garena UID",
-    "Steam ID": "Steam ID",
-    "Destroyed Steam Account": "Destroyed Steam Account",
-    "Account name": "Account name",
-    "Change Name": "Change Name",
-    "FLAGS": "FLAGS",
-    "Flag set": "Flag set",
-    "Flag not set": "Flag not set",
-    "Unset": "Unset",
-    "Set": "Set",
-    "Email": "電子郵件",
-    "Change Email": "變更電子郵件",
-    "Set Random Password": "Set Random Password",
-    "Flag Compromised": "Flag Compromised",
-    "Unflag Compromised": "Unflag Compromised",
-    "Timezone": "時區",
-    "Create IP": "創建 IP",
-    "Last IP": "Last IP",
-    "Last client IP": "最後一個用戶端 IP",
-    "IP Login History": "IP 登錄歷史記錄",
-    "Yes Login IP Check": "Yes Login IP Check",
-    "No Login IP Check": "No Login IP Check",
-    "Verified": "已認證",
-    "Set Verified": "Set Verified",
-    "No": "否",
-    "Yes": "是",
-    "Staff Member": "員工",
-    "Moderator": "Moderator",
-    "Unban": "Unban",
-    "Deleted": "刪除",
-    "Delete Time": "刪除時間",
-    "Undelete": "Undelete",
-    "Locked": "鎖定",
-    "Unlock": "Unlock",
-    "Lock": "Lock",
-    "Lock Reason": "Lock Reason",
-    "Confirm Lock": "Confirm Lock",
-    "Probation": "Probation",
-    "Orphaned": "Orphaned",
-    "Unorphan": "Unorphan",
-    "Orphan": "Orphan",
-    "Last Login": "Last Login",
-    "Create Agent": "Create Agent",
-    "Last Agent": "Last Agent",
-    "Visitor ID": "Visitor ID",
-    "Hardware hash": "Hardware hash",
-    "Hell Mute Hash": "Hell Mute Hash",
-    "Unban Hash": "Unban Hash",
-    "Hash Login History": "Hash Login History",
-    "Muted until time": "Muted until time",
-    "Muted": "Muted",
-    "Mark as spam bot": "Mark as spam bot",
-    "Unlock code": "Unlock code",
-    "Cursed": "Cursed",
-    "Uncurse": "Uncurse",
-    "Credited Name": "感謝者",
-    "Change Credited Name": "Change Credited Name",
-    "Signature": "Signature",
-    "Disable honeypot": "Disable honeypot",
-    "Enable honeypot": "Enable honeypot",
-    "Show email change requests": "Show email change requests",
-    "Custom avatars": "Custom avatars",
-    "Season History": "Season History",
-    "Unlink Steam": "Unlink Steam",
-    "Restore Deleted Steam Account": "Restore Deleted Steam Account",
-    "Show Pending Accounts": "Show Pending Accounts",
-    "Email Change Requests": "Email Change Requests",
-    "Pending Accounts": "Pending Accounts",
-    "Name change history": "Name change history",
-    "by": "by",
-    "Email change history": "Email change history",
-    "Characters": "角色",
-    "Microtransactions": "商城",
-    "NOTE: The error \"Your character is not the owner of this item\" may mean the MTX is no longer in the MTX stash": "NOTE: The error \"Your character is not the owner of this item\" may mean the MTX is no longer in the MTX stash",
-    "Edit Settings": "Edit Settings",
-    "Shipping Address": "Shipping Address",
-    "Address Line 1": "地址 1",
-    "Address Line 2": "地址 2",
-    "Address Zip / Postal Code": "郵遞區號",
-    "City": "城市",
-    "State": "州份",
-    "Country": "國家",
-    "Shirt Size": "衣服尺寸",
-    "International Shipping": "International Shipping",
-    "Edit Shipping Address": "Edit Shipping Address",
-    "Open Beta points pack summary": "Open Beta points pack summary",
-    "Points purchased": "Points purchased",
-    "Less unspent points since 24 May": "Less unspent points since 24 May",
-    "Unspent points since 23 Oct 2013": "Unspent points since 23 Oct 2013",
-    "Calculator": "Calculator",
-    "Survivor Pack": "Survivor Pack",
-    "Warrior Pack": "Warrior Pack",
-    "Champion Pack": "Champion Pack",
-    "Payment Transactions": "Payment Transactions",
-    "Honey Potted": "Honey Potted",
-    "Add Points": "Add Points",
-    "Sub Points": "Sub Points",
-    "Undo All": "Undo All",
-    "Default Stripe Customer": "Default Stripe Customer",
-    "Add points amount": "Add points amount",
-    "Notes": "Notes",
-    "Go": "前往",
-    "Sub points amount": "Sub points amount",
-    "Give pack": "Give pack",
-    "Amount": "Amount",
-    "Note by": "Note by",
-    "Hash": "Hash",
-    "IP": "IP",
-    "Role Manager": "Role Manager",
-    "Manual": "Manual",
-    "Guild": "Guild",
-    "Find a guild by ID or Tag.": "Find a guild by ID or Tag.",
-    "Add": "新增",
-    "Remove": "移除",
-    "Delete": "刪除",
-    "Start": "開始",
-    "End": "End",
-    "Filter message": "Filter message",
-    "on": "在",
-    "Livestream": "Livestream",
-    "Blacklist": "Blacklist",
-    "Current blacklist": "Current blacklist",
-    "Add to blacklist": "Add to blacklist",
-    "Channel name": "Channel name",
-    "Un-Flag Hash": "Un-Flag Hash",
-    "Flag Hash": "Flag Hash",
-    "Unique client IPs used to login": "Unique client IPs used to login",
-    "Unique hardware hashes used to login": "Unique hardware hashes used to login",
-    "Last Logout": "Last Logout",
-    "Transactions": "Transactions",
-    "Ban Account": "Ban Account",
-    "Moderator Notes": "Moderator Notes",
-    "Future Ban": "Future Ban",
-    "Remove Ban": "Remove Ban",
-    "Delete Account": "刪除帳號",
-    "Muted until": "Muted until",
-    "hour(s)": "hour(s)",
-    "minute(s)": "minute(s)",
-    "second(s)": "second(s)",
-    "On probation until": "On probation until",
-    "Duration": "期間",
-    "Show post content": "Show post content",
-    "View thread": "View thread",
-    "Moved from forum": "Moved from forum",
-    "Events": "活動競賽",
-    "Moderation Type": "Moderation Type",
-    "Include System Events": "Include System Events",
-    "Hide System Events": "Hide System Events",
-    "Show Only System Events": "Show Only System Events",
-    "Key Redemptions": "Key Redemptions",
-    "Moderator Stats": "Moderator Stats",
-    "Average Report Response Time": "Average Report Response Time",
-    "Only reports from the last month are included": "Only reports from the last month are included",
-    "Count": "總計",
-    "Average": "平均",
-    "Add Note": "新增註解",
-    "Note": "註解",
-    "Nuke Account": "Nuke Account",
-    "Place on probation": "Place on probation",
-    "Probation Reason": "Probation Reason",
-    "Probation Length": "Probation Length",
-    "Probation Length Units": "Probation Length Units",
-    "Seconds": "秒",
-    "Minutes": "分",
-    "Hours": "小時",
-    "Days": "天",
-    "Weeks": "週",
-    "Months": "月",
-    "You have been muted for {TIME} for {REASON}. Please contact support@grindinggear.com if you would like to speak with a GGG staff member directly.": "由於{REASON}，你已被禁言，懲處時間為：{TIME}。如欲直接與 GGG 的工作人員溝通，請來信 support@pathofexile.tw。",
-    "Mute": "Mute",
-    "Reports for": "Reports for",
-    "Hell Mute": "Hell Mute",
-    "Send Whisper": "Send Whisper",
-    "Reason": "Reason",
-    "Please select a reason": "Please select a reason",
-    "abuse": "abuse",
-    "harassment": "harassment",
-    "an offensive character name": "an offensive character name",
-    "spam": "spam",
-    "trading in General Chat": "trading in General Chat",
-    "Whisper to be sent to player": "Whisper to be sent to player",
-    "Dismiss All": "Dismiss All",
-    "NEW": "NEW",
-    "DISMISSED": "DISMISSED",
-    "reported by": "reported by",
-    "View": "檢視",
-    "Edit": "編輯",
-    "Reload": "Reload",
-    "Back": "返回",
-    "Roles": "Roles",
-    "Add role": "Add role",
-    "Trophy Name": "Trophy Name",
-    "Trophy Description": "Trophy Description",
-    "Update": "更新",
-    "Updated": "已更新",
-    "Gifted Microtransactions": "Gifted Microtransactions",
-    "NOTE: The error \"Your character is not the owner of this item\" may mean that the gift has not yet been opened or the MTX is no longer in the MTX stash": "NOTE: The error \"Your character is not the owner of this item\" may mean that the gift has not yet been opened or the MTX is no longer in the MTX stash",
-    "Used": "Used",
-    "Unused": "Unused",
-    "Set as Used": "Set as Used",
-    "Num keys": "Num keys",
-    "Prefix (2 or 3 characters)": "Prefix (2 or 3 characters)",
-    "Generate": "Generate",
-    "Search for a full key, an account ID or use the * character to search for partial keys, eg \"NV*\"": "Search for a full key, an account ID or use the * character to search for partial keys, eg \"NV*\"",
-    "Search...": "Search...",
-    "Total": "總共",
-    "Warning! This item is not for sale, are you sure you've selected the correct item?": "Warning! This item is not for sale, are you sure you've selected the correct item?",
-    "Quantity": "Quantity",
-    "Purchase total": "Purchase total",
-    "Site-wide special": "Site-wide special",
-    "Special Cost": "Special Cost",
-    "Image URL": "Image URL",
-    "Start at": "Start at",
-    "End at": "End at",
-    "Description": "描述",
-    "Item special": "Item special",
-    "Category special": "Category special",
-    "Set Amount": "Set Amount",
-    "Percentage Amount": "Percentage Amount",
-    "Add special": "Add special",
-    "All": "All",
-    "Upcoming": "Upcoming",
-    "Active": "Active",
-    "Start Date": "Start Date",
-    "End Date": "結束時間",
-    "ASC": "ASC",
-    "DESC": "DESC",
-    "Signature Seasons": "Signature Seasons",
-    "Continent code": "Continent code",
-    "Banned from website": "Banned from website",
-    "Ban IP From Website": "Ban IP From Website",
-    "Unban IP From Website": "Unban IP From Website",
-    "Banned from game": "Banned from game",
-    "Banned until": "Banned until",
-    "Extend IP Ban": "Extend IP Ban",
-    "Ban IP From Game": "Ban IP From Game",
-    "Unban IP From Game": "Unban IP From Game",
-    "Result": "Result",
-    "Error": "Error",
-    "Transaction ID": "Transaction ID",
-    "Txn ID": "Txn ID",
-    "Merge": "Merge",
-    "Upgrade": "升級",
-    "Merge Into": "Merge Into",
-    "Upgrade to": "升級至",
-    "Transfer to account name": "Transfer to account name",
-    "New": "新增",
-    "Undone": "Undone",
-    "Payment Pending": "待付款項",
-    "Payment Failed": "Payment Failed",
-    "Failed To Reconcile": "Failed To Reconcile",
-    "Charge Back": "Charge Back",
-    "Refunded": "Refunded",
-    "Internal Pending": "Internal Pending",
-    "Internal Unhandled": "Internal Unhandled",
-    "Merged": "Merged",
-    "Upgraded": "升級新",
-    "Transferred": "Transferred",
-    "Merged from transaction": "Merged from transaction",
-    "Merged into transaction": "Merged into transaction",
-    "Upgraded to transaction": "已更新至交易",
-    "Upgraded from transaction": "已從交易更新",
-    "Transferred from transaction": "Transferred from transaction",
-    "Transferred to transaction": "Transferred to transaction",
-    "Undo": "Undo",
-    "Expires": "Expires",
-    "Microtransaction": "Microtransaction",
-    "Gifted from {GIFTER_ACCOUNT} to {GIFTEE_ACCOUNT}": "Gifted from {GIFTER_ACCOUNT} to {GIFTEE_ACCOUNT}",
-    "Your showcase is empty. Click a {PIN} to pin a notable item here.": "你的展示欄是空的。點擊資訊後方的 {PIN} 來展示相關資訊。",
-    "Cancel": "取消",
-    "Lifetime Points": "Lifetime Points",
-    "Overall": "總覽",
-    "Standard": "標準模式",
-    "Overall Points": "總點數",
-    "Standard Points": "一般模式點數",
-    "Hardcore Points": "專家模式點數",
-    "Forum Title": "論壇稱號",
-    "Corrupted": "已汙染",
-    "Unidentified": "未鑑定",
-    "Starts in {before}": "開始倒數：{before}",
-    "Ends in {before}": "結束倒數：{before}",
-    "Starts in {after}": "開始倒數：{after}",
-    "Ends in {after}": "結束倒數：{after}",
-    "Transfer": "轉移",
-    "points to your guild": "黯幣至你的公會",
-    "point to your guild": "黯幣至你的公會",
-    "Draft out of sync": "草稿未同步",
-    "Draft up to date": "草稿已更新",
-    "[ Expand ]": "[ 展開 ]",
-    "[ Collapse ]": "[ 收起 ]",
-    " Saved at  ": " 上次儲存時間： ",
-    "Saving draft": "正在儲存草稿",
-    "You are editing a saved draft. Click here to edit the original.": "你正在編輯先前存檔的草稿。點此編輯原文。",
-    "Stack Size": "堆疊數量",
-    "Talisman Tier:": "魔符階級：",
-    "New Note": "New Note",
-    "Edit Note": "Edit Note",
-    "None": "無",
-    "Normal": "一般",
-    "Cruel": "殘酷",
-    "Merciless": "無情",
-    "Format not correct": "格式不正確",
-    "Upload failed.": "檔案上傳失敗。",
-    "Upload successful.": "上傳成功。",
-    "Logout successful.": "已登出",
-    "Make this image your avatar?": "是否要用這張圖片做為頭像？",
-    "The Passive Skill Tree requires a browser that supports canvas.": "天賦樹需要瀏覽器支援 canvas。",
-    "You may need to upgrade your browser. Some other browsers that work with the passive skill tree are: ": "你需要升級你的瀏覽器。其他能運作天賦樹的瀏覽器有：",
-    "and": "和",
-    "Full Screen (f)": "全螢幕（F）",
-    "Exit Full Screen (f)": "離開全螢幕 (f)",
-    "No new posts since you last read this thread": "自從上次瀏覽後並無新增討論串",
-    "Account-bound": "帳號綁定",
-    "Use Avatar": "使用頭像",
-    "Current Avatar": "當前頭像",
-    "Choose Avatar": "選擇頭像",
-    "Public Avatars": "公開頭像",
-    "Custom Avatars": "自訂頭像",
-    "Limit reached!": "已達到上限！",
-    "You may have up to {MAX} forum supporter titles.": "你最多可以同時擁有 {MAX} 個論壇頭銜。",
-    "You may have up to {MAX} forum badges.": "你最多可以同時擁有 {MAX} 個論壇徽章。",
-    "CIS Race Season Reward": "CIS Race Season Reward",
-    "SG Race Season Reward": "SG 賽季獎勵",
-    "TH Race Season Reward": "TH Race Season Reward",
-    "Opted out of physical goods": "已選擇不接收實體商品",
-    "BDB Banned Until": "BDB Banned Until",
-    "You don't have enough points!": "你沒有足夠的黯幣！",
-    "You can give {{POINTS}} more points today.": "You can give {{POINTS}} more points today.",
-    "You get 1 point per 10 in-game achievements completed to give each day.": "You get 1 point per 10 in-game achievements completed to give each day.",
-    "Good job!": "Good job!",
-    "Give this post a point if you think they did a good job.": "Give this post a point if you think they did a good job.",
-    "Add Property Filter": "新增屬性過濾",
-    "Add Stat Filter": "新增數值過濾",
-    "Add Stat Group Filter": "新增數值組合過濾",
-    "Item Stats": "道具數值",
-    "Stat Groups": "項目群組",
-    "Item Properties": "道具屬性",
-    "No Price Set": "無定價",
-    "Search Items...": "搜尋道具...",
-    "Highlight Items...": "標記物品...",
-    "Any": "任何",
-    "Online Only": "只顯示線上",
-    "Listed by": "賣家",
-    "Events Schedule": "競賽賽程表",
-    "Please note that the times on this schedule are shown in your local timezone.": "請注意，表上的時間是你所在區域的當地時間。",
-    "There are no current events.": "沒有進行中的競賽。",
-    "Add to Watchlist": "加入關注清單",
-    "Remove from Watchlist": "移除關注清單",
-    "Add all to Watchlist": "全部加入關注清單",
-    "Starred Items": "星號標記物品",
-    "Stat Filters": "篩選器",
-    "And": "和",
-    "Not": "不",
-    "If": "如果",
-    "Following {name}...": "下面的 {name}...",
-    "Enter name (alphanumeric)": "輸入名字",
-    "Search saved!": "搜尋已儲存!",
-    "Search failed to save": "儲存失敗",
-    "Failed to remove saved search": "刪除已保存的搜尋失敗",
-    "Searching in {0}...": "搜尋中 {0}...",
-    "An error occurred. Please try again later.": "發生錯誤，請稍候再嘗試。",
-    "{i} results": "{i} 結果",
-    "Show my Status": "顯示我的狀態",
-    "Show my Status on All Leagues": "顯示所有聯盟",
-    "Appear Offline": "顯示離線",
-    "Fetching...": "取回中...",
-    "Orb of Alteration": "改造石",
-    "Orb of Fusing": "鏈結石",
-    "Orb of Alchemy": "點金石",
-    "Chaos Orb Equivalent": "與混沌石等值",
-    "Chaos Orb": "混沌石",
-    "Gemcutter's Prism": "珠寶匠的稜鏡",
-    "Exalted Orb": "崇高石",
-    "Chromatic Orb": "幻色石",
-    "Jeweller's Orb": "工匠石",
-    "Orb of Chance": "機會石",
-    "Cartographer's Chisel": "製圖釘",
-    "Orb of Scouring": "重鑄石",
-    "Blessed Orb": "祝福石",
-    "Orb of Regret": "後悔石",
-    "Regal Orb": "富豪石",
-    "Divine Orb": "神聖石",
-    "Vaal Orb": "瓦爾寶珠",
-    "Scroll of Wisdom": "智慧卷軸",
-    "Portal Scroll": "傳送卷軸",
-    "Armourer's Scrap": "護甲石",
-    "Blacksmith's Whetstone": "磨刀石",
-    "Glassblower's Bauble": "玻璃彈珠",
-    "Orb of Transmutation": "蛻變石",
-    "Orb of Augmentation": "增幅石",
-    "Mirror of Kalandra": "卡蘭德魔鏡",
-    "Eternal Orb": "永恆珠寶",
-    "Perandus Coin": "普蘭德斯金幣",
-    "Silver Coin": "銀幣",
-    "Blessing of Xoph": "索伏的祝福",
-    "Blessing of Tul": "托沃的祝福",
-    "Blessing of Esh": "艾許的祝福",
-    "Blessing of Uul-Netol": "烏爾尼多的祝福",
-    "Blessing of Chayula": "夏烏拉的祝福",
-    "Sacrifice at Dusk": "黃昏的奉獻",
-    "Sacrifice at Midnight": "午夜的奉獻",
-    "Sacrifice at Dawn": "黎明的奉獻",
-    "Sacrifice at Noon": "正午的奉獻",
-    "Sacrifice Set": "奉獻套組",
-    "Mortal Grief": "凡人的哀傷",
-    "Mortal Rage": "凡人的憤怒",
-    "Mortal Hope": "凡人的希望",
-    "Mortal Ignorance": "凡人的無知",
-    "Mortal Set": "凡人套組",
-    "Eber's Key": "希伯之鑰",
-    "Yriel's Key": "伊瑞之鑰",
-    "Inya's Key": "茵雅之鑰",
-    "Volkuur's Key": "福庫爾之鑰",
-    "Pale Court Set": "蒼白議會套組",
-    "Fragment of the Hydra": "九頭蛇的斷片",
-    "Fragment of the Phoenix": "鳳凰的斷片",
-    "Fragment of the Minotaur": "牛頭人的斷片",
-    "Fragment of the Chimera": "奇美拉的斷片",
-    "Shaper Set": "塑界者套組",
-    "Splinter of Xoph": "索伏裂片",
-    "Splinter of Tul": "托沃裂片",
-    "Splinter of Esh": "艾許裂片",
-    "Splinter of Uul-Netol": "烏爾尼多裂片",
-    "Splinter of Chayula": "夏烏拉裂片",
-    "Xoph's Breachstone": "索伏裂痕石",
-    "Tul's Breachstone": "托沃裂痕石",
-    "Esh's Breachstone": "艾許裂痕石",
-    "Uul-Netol's Breachstone": "烏爾尼多裂痕石",
-    "Chayula's Breachstone": "夏烏拉裂痕石",
-    "Offering to the Goddess": "女神祭品",
-    "Type Filters": "類別過濾",
-    "Item Subcategory": "物品類別",
-    "One-Handed Weapon": "單手武器",
-    "One-Handed Melee Weapon": "單手近戰武器",
-    "Two-Handed Melee Weapon": "雙手近戰武器",
-    "Bow": "弓",
-    "Claw": "爪",
-    "Dagger": "匕首",
-    "One-Handed Axe": "單手斧",
-    "One-Handed Mace": "單手錘",
-    "One-Handed Sword": "單手劍",
-    "Sceptre": "權杖",
-    "Staff": "長杖",
-    "Two-Handed Axe": "雙手斧",
-    "Two-Handed Mace": "雙手錘",
-    "Two-Handed Sword": "雙手劍",
-    "Wand": "法杖",
-    "Fishing Rod": "釣竿",
-    "Body Armour": "胸甲",
-    "Boots": "鞋子",
-    "Gloves": "手套",
-    "Helmet": "頭部",
-    "Shield": "盾",
-    "Quiver": "箭袋",
-    "Amulet": "項鍊",
-    "Belt": "腰帶",
-    "Ring": "戒指",
-    "Gem": "寶石",
-    "Abyss Jewel": "深淵珠寶",
-    "Jewel": "珠寶",
-    "Flask": "藥劑",
-    "Map": "地圖",
-    "Leaguestone": "聯盟石",
-    "Captured Beast": "已捕獲野獸",
-    "Divination Card": "命運卡",
-    "Item Rarity": "物品稀有度",
-    "Magic": "魔法",
-    "Rare": "稀有",
-    "Unique": "傳奇",
-    "Relic": "古典",
-    "Unique (Foil)": "傳奇 (貼模)",
-    "Weapon Filters": "武器篩選",
-    "Damage": "傷害",
-    "APS": "每秒攻擊次數",
-    "Attacks per Second": "每秒攻擊速度",
-    "Crit.": "暴擊",
-    "Critical Chance": "暴擊機率",
-    "Damage per Second": "每秒傷害",
-    "DPS": "每秒造成傷害",
-    "pDPS": "每秒物裡傷害",
-    "Physical DPS": "物理傷害",
-    "eDPS": "每秒元素傷害",
-    "Elemental DPS": "元素傷害",
-    "Armour Filters": "護甲篩選",
-    "Armour": "護甲",
-    "Evasion": "閃避值",
-    "E. Shield": "能量護盾",
-    "Energy Shield": "能量護盾",
-    "Block": "格檔",
-    "Socket Filters": "插槽篩選",
-    "Sockets": "插槽",
-    "Links": "連結",
-    "Requirements": "物品需求",
-    "Str": "力量",
-    "Strength": "力量",
-    "Dex": "敏捷",
-    "Dexterity": "敏捷",
-    "Int": "智慧",
-    "Intelligence": "智慧",
-    "Miscellaneous": "其他",
-    "Quality": "品質",
-    "Item Level": "物品等級",
-    "Monster Level": "怪物等級",
-    "Mod Filters": "詞綴篩選",
-    "Empty Prefixes": "空前綴",
-    "Empty Suffixes": "空後綴",
-    "Minimum Empty Affixes": "最少空白詞綴",
-    "Map Filters": "地圖篩選",
-    "Map Tier": "地圖階級",
-    "Map Packsize": "地圖大小",
-    "Map IIQ": "地圖物品掉落數量",
-    "Map IIR": "地圖物品稀有度",
-    "Map Series": "地圖系列",
-    "Blight": "凋落禁地",
-    "Legion": "戰亂之殤",
-    "War for the Atlas": "烽火輿圖",
-    "Atlas of Worlds": "異界輿圖",
-    "The Awakening": "大覺醒",
-    "Legacy": "不朽聯盟",
-    "Shaped Map": "塑者之圖",
-    "Elder Map": "尊師之圖",
-    "Blighted Map": "凋落的地圖",
-    "Captured Beast Filters": "已捕獲野獸篩選",
-    "Beast Level": "野獸等級",
-    "Beast Genus": "野獸種類",
-    "Beast Group": "野獸屬類",
-    "Beast Family": "野獸科類",
-    "Gargantuans": "巨人",
-    "Goatmen": "羊人",
-    "Goat Shamans": "羊人術師",
-    "Hellions": "地獄犬",
-    "Wolves": "惡狼",
-    "Apes": "狂猿",
-    "Rhoas": "恐喙鳥",
-    "Sand Spitters": "噴沙爪蟹",
-    "Sea Witches": "海妖",
-    "Shield Crabs": "重盾巨蟹",
-    "Snakes": "毒蛇",
-    "Spawn": "幼蟲",
-    "Spiders": "毒蛛",
-    "Maws": "裂齒獸",
-    "Chimerals": "龍蜥",
-    "Carrion Queens": "食腐蟲后",
-    "Carrion Insects": "食腐蟲",
-    "Retches": "反芻鳥",
-    "Goliaths": "巨獸",
-    "Devourers": "吞噬獸",
-    "Watchers": "看守者",
-    "Plummeting Ursae": "墜落熊",
-    "Vultures": "禿鷹",
-    "Leapers": "突躍獸",
-    "Karui Hounds": "卡魯獵犬",
-    "Pitbulls": "鬥牛犬",
-    "Cockerels": "野雞",
-    "Bulls": "野牛",
-    "Ape Chieftains": "大酋長",
-    "Parasites": "寄生獸",
-    "Lions": "怒獅",
-    "Crabs": "巨蟹",
-    "Hounds": "獵犬",
-    "Lurchers": "奸細",
-    "Arachnoscorpions": "蛛網毒蠍",
-    "Rhexes": "雛鳥",
-    "Scorpions": "毒蠍",
-    "Lynxes": "山貓",
-    "Tigers": "猛虎",
-    "Spider Crabs": "蛛蛛蟹",
-    "Octopuses": "章魚",
-    "Gem Frogs": "寶石蛙",
-    "Felines": "青蛙",
-    "Primates": "靈長動物",
-    "Canines": "犬科動物",
-    "Ursae": "熊類動物",
-    "Unnaturals": "非自然",
-    "Avians": "飛禽動物",
-    "Reptiles": "爬行動物",
-    "Insects": "昆蟲",
-    "Arachnids": "蜘蛛",
-    "Cephalopods": "頭足動物",
-    "Crustaceans": "甲殼動物",
-    "Amphibians": "兩棲動物",
-    "The Wilds": "野性",
-    "The Sands": "飛沙",
-    "The Caverns": "洞窟",
-    "The Deep": "深潭",
-    "Gem Level": "寶石等級",
-    "Gem Experience %": "寶石經驗 %",
-    "Shaper Item": "塑者之物",
-    "Elder Item": "尊師之物",
-    "Talisman Tier": "魔符階級",
-    "Stored Experience": "儲存經驗",
-    "Durability": "耐久度",
-    "Alternate Art": "特殊造型",
-    "Identified": "已鑑定",
-    "Unmodifiable": "不可調整",
-    "Crafted": "已工藝",
-    "Enchanted": "已附魔",
-    "Trade Filters": "交易過濾",
-    "Seller Account": "賣家帳號",
-    "Enter account name...": "輸入帳號名稱...",
-    "Sale Type": "販售型式",
-    "Buyout or Fixed Price": "直購價或定價",
-    "No Listed Price": "無定價",
-    "Buyout Price": "直購價",
-    "Unknown": "未知",
-    "Copied!": "已複製!",
-    "Added {PLAYER} to your ignore list": "將{PLAYER}加入黑名單",
-    "Removed {PLAYER} from your ignore list": "從黑名單移除 {PLAYER}",
-    "Exact Price:": "不二價:",
-    "Asking Price:": "報價:",
-    "Current Offer:": "當前價格:",
-    "(at max Quality)": "(最高品質)",
-    "Item no longer available": "物品不存在",
-    "Ignore Player": "黑名單流亡者",
-    "Unignore Player": "取消黑名單玩家",
-    "PM": "私訊",
-    "Contact...": "聯繫...",
-    "Selling:": "售價:",
-    "For:": "給:",
-    "Search Now": "馬上搜尋",
-    "View Stream": "觀賞實況",
-    "({0} new items)": "({0} 新物品)",
-    "(no new items)": "(沒有新物品)",
-    "R": "R",
-    "G": "G",
-    "B": "B",
-    "W": "W",
-    "(Inapplicable)": "(不適用)",
-    "Toggle": "切換",
-    "{{LEAGUE}} League": "{{LEAGUE}} 聯盟",
-    "Could not initiate Xsolla payment, please try again later or contact support@grindinggear.com": "Could not initiate Xsolla payment, please try again later or contact support@pathofexile.tw",
-    "Failed to create Xsolla transaction, please try again later or contact support@grindinggear.com": "Failed to create Xsolla transaction, please try again later or contact support@pathofexile.tw",
-    "Follow {NAME}": "Follow {NAME}",
-    "Unfollow {NAME}": "Unfollow {NAME}",
-    "Sort Items By:": "分類物品:",
-    "Categories": "種類",
-    "Theme": "主題",
-    "This tree is in read only mode": "此天賦樹圍觀察模式",
-    "Class Filter": "職業篩選器",
-    "This stat is already being used in this filter": "此項目已經在篩選中",
-    "min": "最小",
-    "max": "最大",
-    "weight": "權重",
-    "Items I Want": "想要的道具",
-    "Items I Have": "持有的道具",
-    "Add Want Entry": "增加想要名單",
-    "Add Have Entry": "增加持有名單",
-    "Swap Want/Have": "轉換想要/持有",
-    "My {{LEAGUE}} Offers": "我的 {{LEAGUE}} 提價",
-    "Add Stat Group": "新增屬性組合",
-    "Item not found": "無發現道具",
-    "Load More": "讀取更多",
-    "Activate Live Search": "啟動線上搜尋",
-    "Deactivate Live Search": "停用線上搜尋",
-    "Show Filters": "顯示篩選",
-    "Hide Filters": "隱藏篩選",
-    "Clear": "清除",
-    "Account Settings": "帳號設定",
-    "Online Status": "在線狀況",
-    "Search Settings": "搜尋設定",
-    "Treat DND Players as Offline": "將勿擾玩家判定離線",
-    "Treat AFK Players as Offline": "將暫離玩家判定離線",
-    "Track Online Status for Live Search": "追蹤搜尋時的在線狀態",
-    "Socket Notches": "插槽欄位",
-    "Notification Sound": "提示聲",
-    "Notification Volume": "提示聲音量",
-    "Cache Settings": "暫存設定",
-    "Cached Data": "暫存資料",
-    "Clear Cached Data": "清除暫存資料",
-    "Ignore List": "黑名單",
-    "Remove All": "移儲全部",
-    "Clear Filter Group": "清除篩選群組",
-    "at max Quality": "最高品質",
-    "listed": "清單",
-    "Item is outdated": "道具已過時",
-    "AFK": "暫離",
-    "DND": "勿擾",
-    "Unavailable Stat": "無法取得的狀態",
-    "Failed to fetch the next set of trade items.": "取得下個交易道具失敗。",
-    "Could not refresh trade item.": "無法重整交易道具。",
-    "Search form cleared!": "已清空搜尋表格.",
-    "Currency": "通貨",
-    "Splinters": "裂片",
-    "Shards": "碎片",
-    "Shards & Splinters": "碎片和裂片",
-    "Fragments": "碎片",
-    "Fragment Sets": "碎片組",
-    "Fragments & Sets": "地圖碎片和地圖組",
-    "Misc": "其他",
-    "Incubators": "培育器",
-    "Nets": "捕獸網",
-    "Vials": "神殿之罈",
-    "Delve Resonators": "掘獄鑄新儀",
-    "Delve Fossils": "掘獄化石",
-    "Atlas Memories": "輿圖記憶",
-    "Leaguestones": "聯盟石",
-    "Essences": "精髓",
-    "Cards": "命運卡",
-    "Maps": "地圖",
-    "Shaped Maps": "塑者之圖",
-    "Elder Maps": "尊師之圖",
-    "Blighted Maps": "凋落的地圖",
-    "Divination Cards": "命運卡",
-    "Invalid Currency": "無效通貨",
-    "Showing 1 result": "顯示 1 筆結果",
-    "Showing {i} results": "顯示 {i} 筆結果",
-    "{i} matched": "{i} 筆符合",
-    "Your live search has been disabled after 2 hours of inactivity.": "啟動 2 小時後，線上搜尋已經停止。",
-    "Your live search is being rate-limited.": "你的線上搜尋被限制中。",
-    "Live Search: ": "線上搜尋:",
-    "Search": "搜尋",
-    "Custom: {sound}": "客制化: {sound}",
-    "Custom...": "客制化...",
-    "The selected file was not recognized as an audio file": "選取檔案非音效檔",
-    "An error occurred while loading the selected sound": "讀取音效時發生錯誤",
-    "Account status updated!": "帳號狀態已更新!",
-    "Failed to update account status.": "更新帳號狀態失敗。",
-    "Reloading Page...": "重新載入頁面...",
-    "Failed to clear ignore list.": "清除黑名單失敗。",
-    "Failed to retrieve ignore list.": "取回黑名單失敗。",
-    "just now": "僅此一次",
-    "Search Listed Items": "搜尋道具",
-    "Item Exchange": "道具交易",
-    "Gong": "Gong",
-    "Weighted Sum": "權重總計",
-    "Weighted Sum v2": "加權總和版本2",
-    "Item Category": "道具分類",
-    "Any Weapon": "武器",
-    "Any Dagger": "任一匕首",
-    "Any Staff": "任一長杖",
-    "Any Armour": "護甲",
-    "Any Accessory": "配件",
-    "Any Non-Unique": "非傳奇道具",
-    "No elements found. Consider changing the search query.": "沒有發現道具。請更換搜尋條件。",
-    "No matches.": "無符合道具.",
-    "{i} selected": "{i} 選取",
-    "Check out with Credit/Debit Card.": "使用信用卡／簽帳金融卡結帳。",
-    "Listed Item Searching": "搜尋清單道具",
-    "This website allows you to search through items listed for sale in Shop Forums as well as those listed using Public Premium Stash Tabs in-game.": "這個網站可以讓你搜尋列在交易論壇中或是遊戲中公開高級倉庫頁中的道具。",
-    "You can search by an item's name or an item's base type using the \"Search Items\" field.": "你可以在\"搜尋道具\"區塊，使用道具的名稱或是道具的基本種類搜尋。",
-    "Players will have their Online/Offline status updated approximately every 5 minutes.": "玩家的線上／離線狀態每 5 分鐘左右更新一次。",
-    "While searching is easy, you will still have to contact the player selling the item in order to complete the trade.": "雖然搜尋相當簡單，但你還是要聯絡賣方以完成交易步驟。",
-    "The easiest way to contact a player is to use the \"Direct Whisper\" feature. It requires that both you and the seller are online and in-game to use.": "與玩家聯繫最簡單的方式是使用“直接密語”功能。這需要你和賣家都在線上且遊戲中才能使用。",
-    "Please note: The whisper message will be translated into the seller's local language.": "請注意：密語將會翻譯為賣方當地的語言。",
-    "If for any reason you no longer wish to view a certain player's listings, you can use the \"Ignore Player\" button to remove their listings from your search results.": "如果你不想看到某些玩家的物品，可以使用\"黑名單\"功能，從你的搜尋結果中移除他們。",
-    "Please note: This feature requires you to be logged in with your Path of Exile account. Additionally, this ignore list is not tied to your in-game ignore list in any way, and may be managed in the settings panel right here on the trade site.": "請注意：此功能需要登入流亡黯道帳號。此外，黑名單功能不與遊戲內黑名單連結，可以在此交易網站設定面板進行管理。",
-    "We also allow you to perform a \"Live Search\" where you will be notified when a new item matching your search criteria is listed or updated.": "網站提供\"線上搜尋\"功能，當你設定的搜尋的道具上架或是更新時會通知你。",
-    "Please note: The search only runs while you keep your browser tab or window open (in the background is okay).": "請注意：此搜尋僅會在瀏覽器頁面開啟或視窗開啟的情況下運作 (也可放置於背景)。",
-    "Settings": "設定",
-    "About": "關於",
-    "When logged into this site, you may also choose how your in-game status is used for trade-related searches.": "登入此網站時，你也可以設定遊戲中的狀態。",
-    "By default, your status will show for items you have listed in the league that you are currently playing in.": "一般來說，你上架的道具會顯示你目前正在遊玩的聯盟。",
-    "You may opt to show your status regardless of what league you are playing if you so choose.": "如果你願意，你也可以無視聯盟自行選擇顯示狀態。",
-    "Please note: Players using the Do Not Disturb feature in-game will be treated as Offline for the purposes of this site.": "請注意：遊戲中玩家使用勿擾模式時，此網站會判定為離線。",
-    "Bulk Item Exchange": "以物易物",
-    "Certain items may be listed for bulk sale (listed below).": "某些道具可以同捆販售 (以下為清單)",
-    "Your eligible items will be grouped together under one price, with the total amount of items presented as \"stock\".": "符合的道具將會成一組並且制定一個價格，以\"庫存\"呈現道具的總數量。",
-    "In order to list exchange entries, either in-game or on the forum, use the ratio format on the item you wish to offer for the type of item you would like in return.": "為了列出交換項目，無論在遊戲中或是論壇，在想提供的物品上使用比率公式可以讓你獲得你想獲得的道具。",
-    "For example:": "舉例:",
-    "will list your intent to buy 3 Orbs of Fusing for 1 Chaos Orb each.": "代表你想用 1 顆混沌石買 3 顆鏈結石。",
-    "Alternatively:": "此外:",
-    "will list your intent to buy 2 Orbs of Chaos for 35 Chromatic Orbs each. This is technically equivalent to selling 17.5 Chromatic Orbs per Chaos Orb, however pricing this way is more appropriate for bulk sets of items.": "代表你想用 35 顆幻色石買 2 顆混沌石。實際上你是想要將 17.5 顆幻色石賣 1 顆混沌石，但使用前者的定價會更適合這種交易方式。",
-    "Please note: Stock includes all of the items of that type that are publicly listed (priced or not).": "請注意：庫存包含所有公開販售的物品類型 (已標價或未標價)。",
-    "Item Tags": "道具標籤",
-    "is worth": "價值",
-    "what you get": "你得到",
-    "what you pay": "你付出",
-    "Stock": "庫存",
-    "Not enough stock!": "無足夠庫存!",
-    "pseudo": "偽屬性",
-    "explicit": "隨機屬性",
-    "implicit": "固性屬性",
-    "enchant": "附魔",
-    "crafted": "工藝",
-    "monster": "怪物",
-    "Mirrored": "已複製",
-    "Listed": "標示",
-    "Any Time": "任何時間",
-    "Up to an Hour Ago": "1 小時前",
-    "Up to 3 Hours Ago": "3 小時前",
-    "Up to 12 Hours Ago": "12 小時前",
-    "Up to a Day Ago": "至多 1 天前",
-    "Up to 3 Days Ago": "至多 3 天前",
-    "Up to a Week Ago": "至多 1 個禮拜前",
-    "Up to 2 Weeks Ago": "至多 2 個禮拜前",
-    "Up to 1 Month Ago": "至多 1 個月前",
-    "Up to 2 Months Ago": "至多 2 個月前",
-    "{RANGE1} to {RANGE2}": "{RANGE1} 至 {RANGE2}",
-    "Item stats have been added to your stat filters.": "道具統計已經被增加至你的篩選中。",
-    "Whisper message copied.": "密語已複製。",
-    "Item text copied.": "道具文字已複製。",
-    "Last Client Language (Default)": "最後客戶端語言 (預設)",
-    "English": "英文",
-    "Brazilian Portuguese": "巴西葡萄牙語",
-    "Russian": "俄羅斯語",
-    "Thai": "泰語",
-    "German": "德語",
-    "French": "法語",
-    "Spanish": "西班牙語",
-    "Korean": "Korean",
-    "Custom Search": "自定義搜尋",
-    "Seller Filters": "賣家篩選",
-    "Stock Count": "庫存總計",
-    "Depth": "深度",
-    "Depth (Solo)": "深度（單人）",
-    "Log in Required": "登入需求",
-    "Any Gem": "任何寶石",
-    "Skill Gem": "技能寶石",
-    "Support Gem": "輔助寶石",
-    "Any Jewel": "任何珠寶",
-    "Any Currency": "任何通貨",
-    "Unique Fragment": "傳奇碎片",
-    "Resonator": "鑄新儀",
-    "Fossil": "化石",
-    "Delve Sockets": "掘獄插槽",
-    "Whisper Language": "密語語言",
-    "Veiled Prefix": "隱匿前綴",
-    "Veiled Suffix": "隱匿後綴",
-    "Veiled": "隱匿",
-    "Betrayal": "反叛聯盟",
-    "Scarabs": "聖甲蟲",
-    "Stash History": "倉庫歷程",
-    "Download CSV": "下載為 CSV",
-    "Reset": "重置",
-    "Date": "Date",
-    "Action": "Action",
-    "Item": "物品",
-    "added": "已新增",
-    "modified": "已調整",
-    "removed": "已移除",
-    "Next Page": "下一頁",
-    "Today": "今日",
-    "fractured": "破裂",
-    "Synthesis": "尋夢追憶",
-    "Fractured Item": "破裂之物",
-    "Synthesised Item": "追憶之物",
-    "Can Fulfil Trade": "可以滿足交易",
-    "Forever": "Forever",
-    "Locale": "Locale",
-    "Key": "序號",
-    "Show All": "顯示全部",
-    "Active Settings": "Active Settings",
-    "Enabled": "Enabled",
-    "Disabled": "Disabled",
-    "Image/Source": "Image/Source",
-    "Url": "Url",
-    "Title": "標題",
-    "Start Time": "開始時間",
-    "Preview": "預覽",
-    "Banner Settings": "Banner Settings",
-    "New / Edit Banner": "New / Edit Banner",
-    "Messages have been sent successfully": "訊息發送成功",
-    "Failed to send messages": "發送訊息失敗",
-    "Add Recipients (ID)": "增加收件者 (ID)",
-    "Subject": "標題",
-    "Content": "內容",
-    "Incubating {ITEM}": "培育之 {ITEM}",
-    "Level {LEVEL}+ Monster Kills": "等級 {LEVEL} + 擊殺怪物",
-    "Failed to load the address.": "地址讀取失敗。",
-    "Would you like to proceed with the purchase?": "是否要繼續購買？",
-    "Purchase Successful": "購買成功",
-    "Login Required": "需要登入",
-    "Account Creation Required": "需要建立帳號",
-    "Insufficient Balance": "餘額不足",
-    "Top Up": "儲值",
-    "Country code": "Country code",
-    "Country code 3": "Country code 3",
-    "Country name": "Country name",
-    "Region": "Region",
-    "Postal code": "郵遞區號",
-    "Latitude": "Latitude",
-    "Longitude": "Longitude",
-    "Dma code": "Dma code",
-    "Area code": "Area code",
-    "ISP": "ISP",
-    "Organization": "Organization",
-    "(Pending)": "(處理中)",
-    "Paid (Completion Pending)": "已付款 (完成處理中)",
-    "Unclean Merge": "Unclean Merge",
-    "Out Of Stock": "沒有庫存",
-    "Resend": "重新寄送",
-    "Backend Message: ": "後台訊息：",
-    "Invalid character name.": "無效角色名稱。",
-    "Submit an account name to search.": "提交一個帳號名稱以搜尋。",
-    "An error occurred.": "發生錯誤。",
-    "No results found.": "沒有發現結果。",
-    "Showing ": "顯示",
-    " of ": "的",
-    " results": "結果",
-    "Draft ": "草稿",
-    "Thread Bump removed": "文章置頂移除",
-    "Thread Bumped": "置頂文章",
-    "Failed to Bump Thread": "置頂文章失敗",
-    "No new posts": "沒有新貼文",
-    "days": "天",
-    "day": "天",
-    "Cannot be traded or modified": "無法交易或修改",
-    "You must be logged in to use the Live Search feature.": "你必須登入帳號才可使用線上搜尋功能。",
-    "New live search results!": "新線上搜尋結果!",
-    "1 new item has matched your search.": "1 件新物品符合你的需求。",
-    "{i} new items have matched your search.": "{i} 件新物品符合你的需求。",
-    "Failed to fetch account settings.": "獲取帳號設定失敗。",
-    "Account settings updated!": "帳號設定已更新！",
-    "Failed to update account settings.": "更新帳號設定失敗。",
-    "Please select a valid league to search in.": "請選擇一個有效的聯盟搜尋。",
-    "limit reached!": "到達上限！",
-    "max: {MAX}": "最大: {MAX}",
-    "point": "黯幣",
-    "Accept transaction?": "接受交易?",
-    "Reject transaction?": "駁回交易?",
-    "Cancel transaction?": "取消交易?",
-    "Pending": "處理中",
-    "Redo": "重試",
-    "Dashboard": "Dashboard",
-    "Admin2": "Admin2",
-    "Account Search": "搜尋帳號",
-    "View Characters": "查看角色",
-    "Character Search": "搜尋角色",
-    "Saved!": "已保存！",
-    "Failed to save.": "保存失敗。",
-    "Purchase": "購買",
-    "Hide": "隱藏",
-    "Show": "顯示",
-    "Exilecon Ticket List": "Exilecon Ticket List",
-    "Reset Selected Tickets": "Reset Selected Tickets",
-    "Account ID": "Account ID",
-    "Account Email": "Account Email",
-    "Ticket Name": "票券名稱",
-    "Ticket Email": "Ticket Email",
-    "Ticket ID": "Ticket ID",
-    "Ticket Type": "Ticket Type",
-    "Rune Dagger": "符紋匕首",
-    "Warstaff": "征戰長杖",
-    "Incubator": "培育器",
-    "Oils": "油瓶",
-    "Guidebook": "引導指南",
-    "Are you sure you want to delete your {{NAME}} item filter?": "你確定要刪除你的 {{NAME}} 物品篩選？",
-    "Awakened Support Gem": "覺醒輔助寶石",
-    "Shaper Influence": "塑界者勢力",
-    "Elder Influence": "異界尊師勢力",
-    "Crusader Influence": "聖戰軍王勢力",
-    "Redeemer Influence": "救贖者勢力",
-    "Hunter Influence": "狩獵者勢力",
-    "Warlord Influence": "總督軍勢力",
-    "Map Fragment": "地圖碎片",
-    "Maven's Invitation": "釋界之邀",
-    "Scarab": "聖甲蟲",
-    "Watchstone": "守望石",
-    "Live Search error": "線上搜尋失敗",
-    "An error occurred while connecting": "連線時出現異常",
-    "Too many requests.": "太多請求。",
-    "Rate-limiting is active for your account": "你的帳號啟動限速",
-    "Live Search retry limit exceeded": "線上搜尋重試超過上限",
-    "Please refresh the page and try again": "請重新整理頁面並稍後再試",
-    "Server is restarting": "伺服器正在重啟",
-    "Disconnected from server": "從伺服器斷線",
-    "Retrying connection in {{TIMEOUT}} seconds...": "{{TIMEOUT}} 秒後重試...",
-    "Reconnecting...": "重新連線中...",
-    "Disconnected": "斷線",
-    "Authenticating...": "驗證中...",
-    "Cluster Jewel": "星團珠寶",
-    "This private league starts at {START_TIME}.": "此私人聯盟開始於 {START_TIME}。",
-    "The League will start when it is created.": "聯盟將在創造時開始。",
-    "after league start, are you sure?": "請確認此為在聯盟開始後?",
-    "from now, are you sure?": "請確認此為現在開始?",
-    "Now": "現在",
-    "Pay Now": "立刻付款",
-    "Create": "建立帳號",
-    "Set to ASAP": "設為盡速",
-    "Cart": "清單",
-    "Hide Expired Links": "隱藏失效連結",
-    "Show Expired Links": "顯示失效連結",
-    "No members.": "沒有成員。",
-    "Generate Invitation Link": "產生邀請連結。",
-    "Copy": "複製",
-    "Generated By:": "產生者：",
-    "Expiration Time:": "到期時間：",
-    "Members:": "成員：",
-    "Invite Account": "邀請帳號",
-    "Bulk Invite By Name (Comma separated eg/ AccountName1, AccountName2, AccountName3)": "透過名字批量邀請（用逗號區別，例如/ AccountName1, AccountName2, AccountName3）",
-    "Bulk Invite By QQ Number (Comma separated eg/ 111, 222, 333)": "Bulk Invite By QQ Number (Comma separated eg/ 111, 222, 333)",
-    "Stash": "倉庫",
-    "Inventory": "背包",
-    "Start Time can not be in the past.": "開啟時間不能為過去。",
-    "Promote": "晉升",
-    "Make Owner": "成為擁有者",
-    "Owner": "主辦人",
-    "Role": "角色",
-    "Update Members": "更新成員",
-    "Guild Stash": "公會倉庫",
-    "Are you sure you want to change Owner?": "你確認要改變持有者?",
-    "Go to Line": "前往行數",
-    "Remaining Daum Cash Balance:": "Remaining Daum Cash Balance:",
-    "Pulse": "脈搏",
-    "Piano": "鋼琴",
-    "Chime": "音效",
-    "Base Jewel": "基礎珠寶",
-    "Map Region": "地圖地區",
-    "Haewark Hamlet": "海沃克．哈姆雷特",
-    "Tirn's End": "特恩之盡",
-    "Lex Proxima": "雷克斯．普拉克斯瑪",
-    "Lex Ejoris": "雷克斯．伊喬里斯",
-    "New Vastir": "新瓦斯提里",
-    "Glennach Cairns": "格倫納許．凱恩斯",
-    "Valdo's Rest": "瓦爾多憩地",
-    "Lira Arthain": "里拉．奧斯汀",
-    "Current": "當前",
-    "Page {PAGE} of {PAGEMAX}": "頁數 {PAGE} 的 {PAGEMAX}",
-    "Showing {0}-{1} of {2} (Max 1000)": "顯示 {0}-{1} / {2} (最多 1000)",
-    "Base Dagger": "基礎匕首",
-    "Base Staff": "基礎長杖",
-    "Trinket": "飾品",
-    "Any Heist Equipment": "任何劫盜裝備",
-    "Heist Gear": "劫盜裝備",
-    "Heist Tool": "劫盜工具",
-    "Heist Cloak": "劫盜披風",
-    "Heist Brooch": "劫盜胸針",
-    "Any Heist Mission": "任何劫盜任務",
-    "Heist Contract": "劫盜契約書",
-    "Heist Blueprint": "劫盜藍圖",
-    "Heist Filters": "劫盜篩選",
-    "Wings Revealed": "已揭露側廂",
-    "Total Wings": "總側廂",
-    "Escape Routes Revealed": "已揭露逃脫路線",
-    "Total Escape Routes": "總逃脫路線",
-    "Reward Rooms Revealed": "已揭露暗房",
-    "Total Reward Rooms": "總暗房",
-    "Area Level": "區域等級",
-    "Lockpicking Level": "開鎖等級",
-    "Brute Force Level": "蠻力等級",
-    "Perception Level": "洞察力等級",
-    "Demolition Level": "拆除等級",
-    "Counter-Thaum. Level": "解咒師等級",
-    "Trap Disarmament Level": "陷阱拆除等級",
-    "Agility Level": "靈巧等級",
-    "Deception Level": "詐欺等級",
-    "Engineering Level": "工程等級",
-    "Gem Quality Type": "寶石品質類型",
-    "Superior (Default)": "精良的（預設）",
-    "Any Alternate": "任何替代",
-    "Anomalous": "異常的",
-    "Divergent": "相異的",
-    "Phantasmal": "幻影的",
-    "Rainbow (Default)": "彩虹 (預設)",
-    "Any Voidborn Variant": "任何虛塃怪誕種類",
-    "Amethyst": "紫晶",
-    "Verdant": "翡翠",
-    "Ruby": "紅玉",
-    "Cobalt": "鈷藍",
-    "Sunset": "日落",
-    "Aureate": "金光",
-    "Contract Objective Value": "契約書標的價值",
-    "Moderate Value": "中等價值",
-    "High Value": "高等價值",
-    "Precious": "珍寶",
-    "Priceless": "無價",
-    "Price with Note": "標價：",
-    "Price with Note:": "標價：",
-    "Search Bar Layout": "搜尋欄介面",
-    "Controls at Bottom (Default)": "底部控制 (預設)",
-    "Controls on Top and Bottom": "頂和底部控制",
-    "Split": "分化",
-    "Collapse Listings by Account": "透過帳號摺疊名單",
-    "Group by Seller": "以賣家分組",
-    "General": "一般",
-    "Breach": "裂痕聯盟",
-    "Eldritch/Maven": "異能 / 釋界",
-    "Heist Target": "劫盜目標",
-    "Online In League": "聯盟在線",
-    "Ultimatum Filters": "最後通牒篩選",
-    "Challenge Type": "挑戰類型",
-    "Defeat Waves of Enemies": "擊敗數波敵人",
-    "Survive": "倖存",
-    "Protect the Altar": "保護祭壇",
-    "Stand in the Stone Circles": "站在石陣內",
-    "Boss": "頭目",
-    "Reward Type": "獎勵類型",
-    "Mirrored Rare Item": "複製稀有物品",
-    "Unique Item": "傳奇物品",
-    "Required Item": "需求物品",
-    "Reward Unique": "傳奇獎勵",
-    "Character Class": "角色",
-    "Sentinel Filters": "守望篩選器",
-    "Enemies Empowered": "敵人賦予",
-    "Empowerment": "賦予",
-    "Max Durability": "最大耐久度",
-    "Any Expedition Logbook": "任何探險日誌",
-    "Any Sentinel": "任何守望",
-    "Stalker Sentinel": "潛行守望",
-    "Pandemonium Sentinel": "萬劫守望",
-    "Apex Sentinel": "巔峰守望",
-    "Searing Exarch Item": "灼烙總督物品",
-    "Eater of Worlds Item": "吞噬天地物品",
-    "Alternatives Artwork": "特殊美術圖",
-    "Scourge Level": "災魘等級",
-    "Talisman Level": "魔符等級",
-    "Generate Link": "產生連結",
-    "You have reached the maximum number of invitation links.": "邀請連結數量已達上限。",
-    "Afghanistan": "Afghanistan",
-    "Albania": "Albania",
-    "Algeria": "Algeria",
-    "American Samoa": "American Samoa",
-    "Andorra": "Andorra",
-    "Angola": "Angola",
-    "Anguilla": "Anguilla",
-    "Antarctica": "Antarctica",
-    "Antigua & Barduba": "Antigua & Barduba",
-    "Argentina": "Argentina",
-    "Armenia": "Armenia",
-    "Aruba": "Aruba",
-    "Australia": "澳洲",
-    "Austria": "Austria",
-    "Azerbaijan": "Azerbaijan",
-    "Bahamas": "Bahamas",
-    "Bahrain": "Bahrain",
-    "Bangladesh": "Bangladesh",
-    "Barbados": "Barbados",
-    "Belarus": "Belarus",
-    "Belgium": "Belgium",
-    "Belize": "Belize",
-    "Benin": "Benin",
-    "Bermuda": "Bermuda",
-    "Bhutan": "Bhutan",
-    "Bolivia": "Bolivia",
-    "Bosnia-Herzegovina": "Bosnia-Herzegovina",
-    "Botswana": "Botswana",
-    "Bouvet Island": "Bouvet Island",
-    "Brazil": "Brazil",
-    "British Virgin Islands": "British Virgin Islands",
-    "British West Indies": "British West Indies",
-    "Brunei Darussalam": "Brunei Darussalam",
-    "Bulgaria": "Bulgaria",
-    "Burkina": "Burkina",
-    "Burma (Myanmar)": "Burma (Myanmar)",
-    "Burundi": "Burundi",
-    "Cambodia": "Cambodia",
-    "Cameroon": "Cameroon",
-    "Canada": "Canada",
-    "Canary Islands": "Canary Islands",
-    "Cape Verde": "Cape Verde",
-    "Cayman Islands": "Cape Verde",
-    "Chad": "Chad",
-    "Chile": "Chile",
-    "China": "China",
-    "Christmas Islands": "Christmas Islands",
-    "Cocos Island": "Cocos Island",
-    "Colombia": "Colombia",
-    "Comoros": "Comoros",
-    "Congo (Brazzaville)": "Congo (Brazzaville)",
-    "Cook Islands": "Cook Islands",
-    "Costa Rica": "Costa Rica",
-    "Croatia": "Croatia",
-    "Cuba": "Cuba",
-    "Curacoa": "Curacoa",
-    "Cyprus": "Cyprus",
-    "Czech Republic": "Czech Republic",
-    "Denmark": "Denmark",
-    "Djibouti": "Djibouti",
-    "Dominica": "Dominica",
-    "Dominican Republic": "Dominican Republic",
-    "East Timor": "East Timor",
-    "Ecuador": "Ecuador",
-    "Egypt": "Egypt",
-    "El Salvador": "El Salvador",
-    "England": "England",
-    "Equatorial Guinea": "Equatorial Guinea",
-    "Eritrea": "Eritrea",
-    "Estonia": "Estonia",
-    "Ethiopia": "Ethiopia",
-    "Falkland Islands": "Falkland Islands",
-    "Faroe Islands": "Faroe Islands",
-    "Fiji": "Fiji",
-    "Finland": "Finland",
-    "France": "France",
-    "French Guiana": "French Guiana",
-    "French Polynesia": "French Polynesia",
-    "Gabon": "Gabon",
-    "Gambia": "Gambia",
-    "Gaza Strip": "Gaza Strip",
-    "Georgia, Republic of": "Georgia, Republic of",
-    "Germany": "Germany",
-    "Ghana": "Ghana",
-    "Gibraltar": "Gibraltar",
-    "Great Britain": "Great Britain",
-    "Greece": "Greece",
-    "Greenland": "Greenland",
-    "Grenada": "Grenada",
-    "Guadeloupe": "Guadeloupe",
-    "Guam": "Guam",
-    "Guatemala": "Guatemala",
-    "Guernsey": "Guernsey",
-    "Guinea": "Guinea",
-    "Guinea-Bissua": "Guinea-Bissua",
-    "Guyana": "Guyana",
-    "Haiti": "Haiti",
-    "Honduras": "Honduras",
-    "Hong Kong": "香港",
-    "Hungary": "Hungary",
-    "Iceland": "Iceland",
-    "India": "India",
-    "Indonesia": "Indonesia",
-    "Iran": "Iran",
-    "Iraq": "Iraq",
-    "Ireland": "Ireland",
-    "Isle of Man": "Isle of Man",
-    "Israel": "Israel",
-    "Italy": "Italy",
-    "Ivory Coast": "Ivory Coast",
-    "Jamaica": "Jamaica",
-    "Japan": "Japan",
-    "Jersey": "Jersey",
-    "Jordan": "Jordan",
-    "Kampuchea": "Kampuchea",
-    "Kazakhstan": "Kazakhstan",
-    "Kenya": "Kenya",
-    "Kiribati": "Kiribati",
-    "Kuwait": "Kuwait",
-    "Kyrgyzstan": "Kyrgyzstan",
-    "laos": "laos",
-    "Latvia": "Latvia",
-    "Lebanon": "Lebanon",
-    "Lesotho": "Lesotho",
-    "Liberia": "Liberia",
-    "Libya": "Libya",
-    "Liechtenstein": "Liechtenstein",
-    "Lithuania": "Lithuania",
-    "Luxembourg": "Luxembourg",
-    "Macau": "澳門",
-    "Macedonia": "Macedonia",
-    "Madagascar": "Madagascar",
-    "Malawi": "Malawi",
-    "Malaysia": "Malaysia",
-    "Maldives": "Maldives",
-    "Mali": "Mali",
-    "Malta": "Malta",
-    "Marshall Islands": "Marshall Islands",
-    "Martinique": "Martinique",
-    "Mauritania": "Mauritania",
-    "Mauritius": "Mauritius",
-    "Mayotte": "Mayotte",
-    "Mexico": "Mexico",
-    "Micronesia": "Micronesia",
-    "Moldova": "Moldova",
-    "Monaco": "Monaco",
-    "Mongolia": "Mongolia",
-    "Montenegro, Republic of": "Montenegro, Republic of",
-    "Montserrat": "Montserrat",
-    "Morocco": "Morocco",
-    "Mozambique": "Mozambique",
-    "Myanmar": "Myanmar",
-    "Namibia": "Namibia",
-    "Nauru": "Nauru",
-    "Nepal": "Nepal",
-    "Netherlands": "Netherlands",
-    "Netherlands Antilles": "Netherlands Antilles",
-    "New Caledonia": "New Caledonia",
-    "New Zealand": "紐西蘭",
-    "Newfoundland": "Newfoundland",
-    "Nicaragua": "Nicaragua",
-    "Niger": "Niger",
-    "Nigeria": "Nigeria",
-    "Niue": "Niue",
-    "Norfolk Island": "Norfolk Island",
-    "North Korea": "North Korea",
-    "Northern Mariana Islands": "Northern Mariana Islands",
-    "Norway": "Norway",
-    "Oman": "Oman",
-    "Pakistan": "Pakistan",
-    "Palau": "Palau",
-    "Panama": "Panama",
-    "Papua New Guinea": "Papua New Guinea",
-    "Paraguay": "Paraguay",
-    "Peru": "Peru",
-    "Philippines": "Philippines",
-    "Pitcairn Island": "Pitcairn Island",
-    "Poland": "Paraguay",
-    "Portugal": "Portugal",
-    "Puerto Rico": "Puerto Rico",
-    "Qatar": "Qatar",
-    "Reunion": "Reunion",
-    "Romania": "Romania",
-    "Russia": "Russia",
-    "Rwanda": "Rwanda",
-    "Saint Lucia": "Saint Lucia",
-    "Saint Vincent and the Grenadines": "Saint Vincent and the Grenadines",
-    "Samoa": "Samoa",
-    "San Marino": "San Marino",
-    "Sao Tome & Principe": "Sao Tome & Principe",
-    "Saudi Arabia": "Saudi Arabia",
-    "Scotland": "Scotland",
-    "Senegal": "Senegal",
-    "Serbia, Republic of": "Serbia, Republic of",
-    "Seychelles": "Seychelles",
-    "Sierra Leone": "Sierra Leone",
-    "Singapore": "Singapore",
-    "Slovakia": "Slovakia",
-    "Slovenia": "Slovenia",
-    "Solomon Islands": "Solomon Islands",
-    "Somalia": "Somalia",
-    "South Africa": "South Africa",
-    "South Korea": "South Korea",
-    "Spain": "Spain",
-    "Sri Lanka": "Sri Lanka",
-    "St. Christopher": "St. Christopher",
-    "St. Helena": "St. Helena",
-    "St. Pierre and Miquelon": "St. Pierre and Miquelon",
-    "Sudan": "Sudan",
-    "Suriname": "Suriname",
-    "Swaziland": "Swaziland",
-    "Sweden": "Sweden",
-    "Switzerland": "Switzerland",
-    "Syrian Arab Republic": "Syrian Arab Republic",
-    "Taiwan": "台灣",
-    "Tajikistan": "Tajikistan",
-    "Tanzania": "Tanzania",
-    "Thailand": "Thailand",
-    "Togo": "Togo",
-    "Tokelau": "Tokelau",
-    "Tonga": "Tonga",
-    "Trinidad And Tobago": "Trinidad And Tobago",
-    "Tunisia": "Tunisia",
-    "Turkey": "Turkey",
-    "Turkmenistan": "Turkmenistan",
-    "Turks and Caicos Islands": "Turks and Caicos Islands",
-    "Tuvalu": "Tuvalu",
-    "Uganda": "Uganda",
-    "Ukraine": "Ukraine",
-    "United Arab Emirates": "United Arab Emirates",
-    "United Kingdom": "United Kingdom",
-    "United States": "美國",
-    "Uruguay": "Uruguay",
-    "Uzbekistan": "Uzbekistan",
-    "Vanuatu": "Vanuatu",
-    "Vatican City": "Vatican City",
-    "Venezuela": "Venezuela",
-    "Vietnam": "Vietnam",
-    "Virgin Islands": "Virgin Islands",
-    "Wales, U.K.": "Wales, U.K.",
-    "Wallis and Futuna Islands": "Wallis and Futuna Islands",
-    "West Bank": "West Bank",
-    "Western Sahara": "Western Sahara",
-    "Yemen": "Yemen",
-    "Yugoslavia": "Yugoslavia",
-    "Zaire": "Zaire",
-    "Zambia": "Zambia",
-    "Zimbabwe": "Wallis and Futuna Islands",
-    "Ward": "保護",
-    "Failed to load search state. The search is no longer valid.": "載入搜尋狀態失敗。此搜尋不再有效。",
-    "Scourged (Tier {TIER})": "災魘 (階級 {TIER})",
-    "Level {LEVEL}+ Corruption Absorbed": "等級 {LEVEL} + 汙染吸收",
-    "Default": "預設",
-    "Small Notches": "小插槽",
-    "Large Pattern": "大圖示",
-    "Includes base value, local modifiers, and maximum quality": "包含基礎值、區域詞綴和最大品質",
-    "Includes base value and local modifiers": "包含基礎值和區域詞綴",
-    "Base Percentile": "基礎百分比",
-    "The percentile of all base defence rolls, averaged (0-100%)": "所有基礎防禦骰出的百分比，平均 (0-100%)",
-    "Blight-ravaged Map": "凋落蔓延地圖",
-    "Scourge Tier": "災魘階級",
-    "Level {0}": "等級 {0}",
-    "Level {0}-{1}": "等級 {0}-{1}",
-    "Item Level {0}": "物品等級 {0}",
-    "Item Level {0}-{1}": "物品等級 {0}-{1}",
-    "Buy": "購買",
-    "Buy Points": "儲值轉點",
-    "Saves": "省下",
-    "x{COUNT} Variations": "x{COUNT} 型態",
-    "You save": "你省了",
-    "Select a variant": "選擇一個型態",
-    "Select {NAME}": "選擇 {NAME}",
-    "Already Owned": "已擁有",
-    "Was": "原本為",
-    "Your Guild does not have enough points to purchase this item": "你的公會沒有足夠的黯幣購買此物品",
-    "You must be a Guild leader to purchase this": "你必須是公會會長才能購買這項物品",
-    "GIVE POINTS TO GUILD": "給予公會黯幣",
-    "Requires a guild": "限定公會",
-    "Purchasing...": "購買中...",
-    "Purchase complete.": "購買完成",
-    "Do you want to keep this item watchlisted?": "你想要保留此物品於關注清單中嗎？",
-    "Failed to purchase.": "購買失敗",
-    "Keep": "保留",
-    "Choose a Friend": "選擇一位朋友",
-    "Buy for a friend": "買給一位朋友",
-    "Stash tab admin": "倉庫頁管理員",
-    "Please check the events tab for prior map tab demotions to ensure the account is not abusing this feature. Try to ensure that this is only done for genuine mistakes, and make sure the player understands not to do this again": "Please check the events tab for prior map tab demotions to ensure the account is not abusing this feature. Try to ensure that this is only done for genuine mistakes, and make sure the player understands not to do this again",
-    "Demote map stash tabs": "Demote map stash tabs",
-    "Stash tab allocations": "倉庫頁配置",
-    "Stash type": "倉庫類型",
-    "Allocated": "分配",
-    "Confirm": "確認",
-    "Custom": "Custom",
-    "characters left": "剩餘角色",
-    "character left": "剩餘角色",
-    "Translate": "Translate",
-    "Add to notes": "Add to notes",
-    "You have been muted for {TIME} for breaching our Code of Conduct. If you have any questions about our in game chat rules, or anything else, please contact support@grindinggear.com": "你因為違反我們的行為守則被禁言 {TIME}。若你對遊戲內的聊天規則或其它事情有任何疑問，請聯絡 support@grindinggear.com",
-    "You have been muted permanently for breaching our Code of Conduct. If you have any questions about our in game chat rules, or anything else, please contact support@grindinggear.com": "你因為違反我們的行為守則被永久禁言。若你對遊戲內的聊天規則或其它事情有任何疑問，請聯絡 support@grindinggear.com",
-    "You have been muted for {TIME} due to the following statement \"{MESSAGE}\" as this breaches our Code of Conduct. If you have any questions about our in game chat rules, or anything else, please contact support@grindinggear.com": "你因為下列發言\"{MESSAGE}\"違反我們的行為守則被禁言 {TIME} 。若你對遊戲內的聊天規則或其它事情有任何疑問，請聯絡 support@grindinggear.com",
-    "You have been muted permanently due to the following statement \"{MESSAGE}\" as this breaches our Code of Conduct. If you have any questions about our in game chat rules, or anything else, please contact support@grindinggear.com": "你因為下列發言\"{MESSAGE}\"違反我們的行為守則被永久禁言。若你對遊戲內的聊天規則或其它事情有任何疑問，請聯絡 support@grindinggear.com",
-    "You have been muted for {TIME} for trading in the global chat. For future trading, please use the dedicated trade channels. If you have any questions about our in game chat rules, or anything else, please contact support@grindinggear.com": "你因為在世界頻道交易被禁言 {TIME}。未來有交易需求，請至對應的交易頻道。若你對遊戲內的聊天規則或其它事情有任何疑問，請聯絡 support@grindinggear.com",
-    "You have been muted permanently for trading in the global chat. For future trading, please use the dedicated trade channels. If you have any questions about our in game chat rules, or anything else, please contact support@grindinggear.com": "你因為在世界頻道交易被永久禁言。未來有交易需求，請至對應的交易頻道。若你對遊戲內的聊天規則或其它事情有任何疑問，請聯絡 support@grindinggear.com",
-    "Your character will be renamed shortly for breaching our Code of Conduct. This will log you out of the game client. When you log back in you will need to select a new character name. If you have any questions about our in game chat rules, or anything else, please contact support@grindinggear.com": "因違反我們的行為守則，你的角色將被重新命名。此會將你登出遊戲。當你重新登入時，你需要為你的角色重新命名。若你對遊戲內的聊天規則或其它事情有任何疑問，請聯絡 support@grindinggear.com",
-    "Original Cost": "原價",
-    "Sale Cost": "特價",
-    "Discount": "折扣",
-    "Image": "圖片",
-    "Priority": "Priority",
-    "Platform": "平台",
-    "Start / End": "開始/結束",
-    "Could not find new / update special data": "無法找到新的/更新特殊資料",
-    "Start and end time are required.": "需要開始和結束時間。",
-    "Priority must be greater than or equal to 0.": "優先度必須大於0",
-    "Sale Cost must be greater than 0.": "特價必須大於0",
-    "Could not update legacy special type.": "無法更新不朽特殊類型。",
-    "Export all data": "Export all data",
-    "You have attempted to export your data too many times. If your download did not begin, please contact {SUPPORT_LINK} for assistance": "You have attempted to export your data too many times. If your download did not begin, please contact {SUPPORT_LINK} for assistance",
-    "Your export is being prepared and the download will begin shortly. If it does not begin within the next 30 seconds, {LINK}click here{/LINK} to try again.": "Your export is being prepared and the download will begin shortly. If it does not begin within the next 30 seconds, {LINK}click here{/LINK} to try again.",
-    "You may download a copy of all data that is tracked against your account by pressing the button below. If you would like to remove this information, you may delete your account. 30 days after your account is deleted, the information will be removed.": "You may download a copy of all data that is tracked against your account by pressing the button below. If you would like to remove this information, you may delete your account. 30 days after your account is deleted, the information will be removed.",
-    "You may only periodically download your data. Please contact us at {SUPPORT_LINK} if you would like to download your account data.": "You may only periodically download your data. Please contact us at {SUPPORT_LINK} if you would like to download your account data.",
-    "Delete your account": "刪除帳號",
-    "{BOLD}CAUTION{/BOLD}: After deleting your account, there is a 30 day window in which it can be recovered. After this time lapses, it will be impossible for us to recover your account.": "{BOLD}CAUTION{/BOLD}: After deleting your account, there is a 30 day window in which it can be recovered. After this time lapses, it will be impossible for us to recover your account.",
-    "When you complete the deletion process below, you will be logged out and your account will immediately be deleted. After 30 days, all your data will be permanently removed. If you change your mind within 30 days and wish to recover your account, please contact us at {SUPPORT_LINK} for assistance with this.": "When you complete the deletion process below, you will be logged out and your account will immediately be deleted. After 30 days, all your data will be permanently removed. If you change your mind within 30 days and wish to recover your account, please contact us at {SUPPORT_LINK} for assistance with this.",
-    "To delete your account, type your account name into the field and click \"{BUTTON}\".": "To delete your account, type your account name into the field and click \"{BUTTON}\".",
-    "Season Reward Points": "賽季獎勵點數",
-    "Hover or click to highlight other clusters of the same type": "滑鼠移至或點擊提示的其他同類型的天賦群",
-    "Path of Exile": "《流亡黯道》",
-    "Top": "回到頂部",
-    "Latest": "最新",
-    "Back to {link}": "返回 {link}",
-    "Password": "密碼",
-    "Remember me": "記住我",
-    "Forgot your password": "忘記密碼",
-    "Sign in": "登入",
-    "all sign in options": "全部登入選項",
-    "Please complete the reCAPTCHA": "請完成 reCAPTCHA 驗證",
-    "Sign in instead": "改為登入",
-    "Choose how you would like to sign up:": "請選擇登入方式：",
-    "Log in": "登入",
-    "Loading posts...": "載入貼文...",
-    "New post in {category}": "新貼文於 {category}",
-    "Text": "Text",
-    "Submit": "提交",
-    "Post": "貼文",
-    "Video": "影片",
-    "Link": "Link",
-    "Poll": "Poll",
-    "Loading post...": "載入貼文...",
-    "Create an account": "創立帳號",
-    "Create your Path of Exile account": "創立你的流亡黯道帳號",
-    "here": "這裡",
-    "Steam": "Steam",
-    "Epic Games": "Epic Games",
-    "Xbox Live": "Xbox Live",
-    "Playstation Network": "Playstation Network",
-    "PC": "PC",
-    "Console": "Console",
-    "GGG Icon": "GGG Icon",
-    "Loading categories...": "載入分類...",
-    "Loading feed...": "載入資源...",
-    "More": "更多",
-    "New post": "開新文章",
-    "Home": "主頁",
-    "Sort by:": "排序方式：",
-    "Loading comments...": "載入留言...",
-    "Posted by {author} {date}": "由 {author} 發布 {date} ",
-    "Leave a comment...": "留言...",
-    "Spoiler": "折疊",
-    "Just now": "只有現在",
-    "Sign in to your Path of Exile account": "登入你的流亡黯道帳號",
-    "Posted by {author}": "發文者 {author}",
-    "Announcement": "公告",
-    "Discussion": "討論",
-    "Replying to:": "回覆:",
-    "URL": "URL",
-    "Sign in with {provider}": "使用{provider}登入",
-    "Create account with {provider}": "此用{provider}創立帳號",
-    "Claimed": "已取得",
-    "Kirac's Vault": "基拉克的秘寶",
-    "Free Track": "免費",
-    "Complete Map Bonus Objectives to Unlock": "完成地圖特殊條件來解鎖",
-    "Premium Track": "進階",
-    "Purchase the Premium Track to be eligible for this reward": "購買進階指南可以獲得此獎勵",
-    "Crucible stats are ignored in Weighted Sum groups.": "熔火的狀態在權重總合中被無視。",
-    "Select Items to Exchange": "選擇道具來交換",
-    "Whisper sent!": "發送密語！",
-    "Crucible Passive Tree Path": "熔火天賦樹路徑",
-    "Filter by the mods that you want to be able to allocate at once.\nUse a lower `min` value for partial matches.": "透過你想配置的詞綴篩選。\n使用較\"低\"的值來配對。",
-    "Any One-Handed Mace": "任何單手錘",
-    "Base One-Handed Mace": "基礎單手錘",
-    "Breachstone": "裂痕石",
-    "Memory Line": "記憶線",
-    "Foil Variation": "貼模種類",
-    "Gold Coin": "金幣",
-    "crucible": "熔火冥獄",
-    "Crucible Update": "熔火更新",
-    "Crucible Passive Trees": "熔火天賦樹",
-    "For the purposes of search filters, all items with Crucible Passive Trees are considered unallocated. The allocated effects will still be represented visually on the item.": "對於搜尋篩選器，熔火天賦樹在全部物品上都被視為未配置。這些已配置的效果仍然會在物品上以視覺方式表示。",
-    "You can hover over the tree preview to view each node, and expand or collapse each preview's size individually by dragging the handle in the bottom-right corner.": "你可以懸停在天賦樹預覽上，查看每個節點，並通過拖曳右下角的把手來個別展開或折疊每個預覽的大小。",
-    "To find items with your preferred Crucible Passive Tree skills, use the \"Crucible Passive Tree Path\" stat group. This group will match trees with a valid path that includes all of the selected skills. The \"min\" field in this stat group can be used to partially match a subset of the selected skills instead. Multiple \"Crucible Passive Tree Path\" groups will be applied together for each path.": "若要找到具有所選熔火天賦樹天賦的物品，請使用「熔火天賦樹路徑」屬性群組。此群組將匹配包含所有所選技能的有效路徑的樹。此屬性群組中的「min」欄位可以用於部分匹配所選技能的子集。對於每個路徑，將應用多個「熔火天賦樹路徑」群組。你可以懸停在樹預覽上查看每個節點，並透過拖曳右下角的手把來展開或折疊每個預覽的大小。",
-    "Crucible skills can also be used in And, Not, If, and Count stat groups for basic matching. They are not supported in the Weighted Sum stat group.": "熔火天賦也可以在 And、Not、If 和 Count 屬性群組中用於基本匹配。它們不支援權重總和屬性群組。",
-    "Other changes": "其它改動",
-    "Added Anomalous, Divergent, and Phantasmal gems to the \"Search Items\" drop-down.": "新增異常的、相異的和幻影的寶石至「搜尋物品」的下拉選項。",
-    "Updated the Bulk Exchange to include Crucible items.": "更新以物易物，現在有熔火物品",
-    "Fixed a bug where Blood-filled Vessels weren't searchable by area level.": "修正浸血碑器無法透過區域等級搜索。",
-    "Thank you for your energy and continued support.": "感謝你的支持。",
-    "Crucible Item": "熔火物品",
-    "Sanctum Relic": "聖域聖物",
-    "Sanctum Filters": "聖域篩選器",
-    "Resolve": "決心",
-    "Maximum Resolve": "最大決心",
-    "Inspiration": "啟發",
-    "Aureus": "奧瑞厄斯幣",
-    "Chaos or Divine Orbs": "混沌或神聖石",
-    "Omen": "預兆",
-    "Tattoo": "紋身",
-    "Hinekora's Lock allows you to forsee the result of the next Currency Item used on this item. The Lock is removed when this item is modified.": "悉妮蔻拉的髮絲讓你可以預見下一個使用於物品上的通貨結果。當物品被調整時，髮絲會被移除。",
-    "Foreseeing": "預見",
-    "Direct Whisper": "私訊",
-    "Any Tincture": "任何萃取物",
-    "Any Charm": "任何咒語",
-    "Any Corpse": "任何屍體",
-    "Show Wildwood Rucksack": "顯示荒林背包",
-    "Hide Wildwood Rucksack": "隱藏荒林背包",
-    "Any Celestial Variant": "任何眾星類型",
-    "Celestial Quartz": "眾星．石英",
-    "Celestial Ruby": "眾星．紅玉",
-    "Celestial Emerald": "眾星．翠綠",
-    "Celestial Aureate": "眾星．金光",
-    "Celestial Pearl": "眾星．珍珠",
-    "Celestial Amethyst": "眾星．紫晶",
-    "Corpse Type": "屍體類型",
-    "Eldritch": "異能",
-    "Demon": "惡魔",
-    "Construct": "生物",
-    "Undead": "不死",
-    "Beast": "野獸",
-    "Humanoid": "人形",
-    "Transfigured Gem": "變異寶石",
-    "Vaal Gem": "瓦寶寶石",
-    "Any Necropolis Pack": "任意魔影墓場包",
-    "Match items that meet each stat's `min` and `max` requirements if the stat is present.": "如果該統計資料存在，則對符合每項統計資料的「min」和「max」要求的項目進行配對。",
-    "Count each stat that meets the `min` and `max` (if provided, otherwise existence) requirements.\nUse the group's `min` and `max` to filter items based on the count of matching stats.": "計算每個符合「min」和「max」（除非另外提供數值，否則適用）要求的統計資料。\n使用組的「min」和「max」來根據配對的統計資料篩選項目。",
-    "Check each stat meets the `min` and `max` (if provided, otherwise existence) requirements before multiplying the stat value by the `weight` and finally summing them together.\nUse the group's `min` and `max` to filter items based on the total summed value.": "在將統計值乘以「weight」並加總前，檢查每個統計資料是否符合「min」和「max」（除非另外提供數值，否則適用）的要求。\n使用組的「min」和「max」來根據加總總值篩選項目。",
-    "Each stat value that meets the `min` and `max` (if provided, otherwise existence) requirements will be multiplied by the `weight` before being summed together.\nUse the group's `min` and `max` to filter items based on the total summed value.": "符合「min」和「max」（除非另外提供數值，否則適用）要求的每個統計值都將在進行總和之前乘以「weight」。\n使用組的「min」和「max」來根據加總總值篩選項目。",
-    "Modifiable only with Chaos Orbs, Vaal Orbs, Delirium Orbs and Chisels": "僅能使用混沌石、瓦爾寶珠、譫妄玉和圖釘調整"
-}
+﻿
+var __ = {};
+
+__['Ladder'] = '天梯';
+__['Rank'] = '天梯與排名';
+__['Account'] = '帳號';
+__['Points'] = '黯幣';
+__['Character'] = '角色';
+__['Class'] = '角色';
+__['Level'] = '等級';
+__['Experience'] = '經驗值';
+__['Next'] = '下一頁';
+__['Prev'] = '上一頁';
+__['per page'] = '每頁';
+__['Post Reply'] = '回覆貼文';
+__['Hide Delve Depth'] = '隱藏掘獄深度';
+__['Auto refresh'] = '自動重整';
+__['Refresh'] = '重整';
+__['Export CSV'] = '匯出成 CSV 檔';
+__['Witch'] = '女巫';
+__['Templar'] = '聖騎士';
+__['Scion'] = '貴族';
+__['Shadow'] = '暗影刺客';
+__['Marauder'] = '野蠻人';
+__['Ranger'] = '遊俠';
+__['Duelist'] = '決鬥者';
+__['Ascendant'] = '昇華使徒';
+__['Juggernaut'] = '勇士';
+__['Berserker'] = '暴徒';
+__['Chieftain'] = '酋長';
+__['Warden'] = '守護者';
+__['Deadeye'] = '銳眼';
+__['Pathfinder'] = '追獵者';
+__['Occultist'] = '秘術家';
+__['Elementalist'] = '元素使';
+__['Necromancer'] = '死靈師';
+__['Slayer'] = '處刑者';
+__['Gladiator'] = '衛士';
+__['Champion'] = '冠軍';
+__['Inquisitor'] = '判官';
+__['Hierophant'] = '聖宗';
+__['Guardian'] = '守護者';
+__['Assassin'] = '疾密刺客';
+__['Trickster'] = '詐欺師';
+__['Saboteur'] = '破壞者';
+__['Starts'] = '開始';
+__['Started'] = '已開始';
+__['Finishes'] = '結束時間';
+__['Finished'] = '已結束';
+__['Ends'] = '結束';
+__['Ended'] = '已結束';
+__['at'] = '在';
+__['Registration open'] = '開啟註冊';
+__['Rules'] = '規則';
+__['Hardcore'] = '專家模式';
+__['A character killed in Hardcore is moved to its parent league.'] = '在專家模式中，角色死亡將會被移動到對應的下層聯盟';
+__['Starts in'] = '開始於';
+__['Ends in'] = '結束於';
+__['Goal'] = '目標';
+__['Dead'] = '死亡';
+__['Retired'] = '退役';
+__['Ineligible'] = '不合格';
+__['Online'] = '線上';
+__['Offline'] = '不在線上';
+__['Loading'] = '載入中';
+__['League'] = '聯盟';
+__['1 Point Left'] = '剩餘 1 天賦點';
+__['{0} Points Left'] = '剩餘 {0} 天賦點';
+__['1 Ascendancy Point Left'] = '剩餘 1 昇華天賦點';
+__['{0} Ascendancy Points Left'] = '剩餘 {0} 昇華天賦點';
+__['1 Wildwood Point Left'] = '剩餘 1 荒林天賦點';
+__['{0} Wildwood Points Left'] = '剩餘 {0} 荒林天賦點';
+__['Ascendancy'] = '昇華';
+__['SWITCH CHARACTER'] = '切換角色';
+__['Guild Balance'] = '公會黯幣';
+__['Give Microtransaction Points to Guild'] = '貢獻黯幣給公會';
+__['Use this form to send points to your Guild to allow your Guild Leader to purchase Microtransactions. If the Guild Leader accepts your points you can not be kicked out for three months.'] = '你可以貢獻你的黯幣給公會並讓會長購買公會商品。如果公會會長接受你的貢獻，在三個月內你將無法被踢出公會。';
+__['Points Amount'] = '貢獻黯幣數';
+__['Give Points'] = '貢獻';
+__['Transaction History'] = '貢獻紀錄';
+__['Guild Transactions'] = '公會交易';
+__['This is a list of points transfers from members of your Guild. Accept transactions to credit the points to your Guild. You will not be able to kick a player for three months if you accept their points.'] = '下面是你所在公會的公會成員貢獻紀錄。你可以接受貢獻以增加公會黯幣。若是你接受了一位成員的貢獻，三個月內將無法把該成員移出公會。';
+__['Accept'] = '接受';
+__['Reject'] = '拒絕';
+__['Cancelled'] = '已取消';
+__['Rejected'] = '已拒絕';
+__['Complete'] = '完成';
+__['Manual transfer'] = '手動轉移';
+__['from'] = '從';
+__['Transaction created'] = '貢獻已建立';
+__['Amount is not a number'] = '請輸入數字';
+__['Amount must be greater than 0'] = '數字必須大於 0';
+__['Accept transaction'] = '接受貢獻';
+__['Reject transaction'] = '拒絕貢獻';
+__['Cancel transaction'] = '取消貢獻';
+__['points transferred to'] = '黯幣轉移至';
+__['Failed to load history'] = '讀取紀錄失敗';
+__['Added pin'] = '已增加展示';
+__['Deleted pin'] = '已刪除展示';
+__['Moved pin'] = '已被移動展示';
+__['There was an error adding this pin'] = '在增加展示時發生一個錯誤';
+__['There was an error deleting this pin'] = '在刪除展示時發生一個錯誤';
+__['There was an error moving this pin'] = '在移動展示時發生一個錯誤';
+__['Private'] = '私人';
+__['League requires a password to join.'] = '需要輸入密碼來加入此聯盟。';
+__['A character killed in Hardcore is moved to its parent league.'] = '在專家模式中，角色死亡將會被移動到對應的下層聯盟';
+__['Drop equipped items on death.'] = '死亡時會掉落裝備的物品。';
+__['Instance invasion'] = '入侵地圖';
+__['Allows you to select other people\'s instances in the instance manager.'] = '你可以選擇進入其他流亡者所正在進行的地圖。';
+__['Harsh death experience penalty'] = '超級死亡懲罰';
+__['Increases the death experience penalty by 30% on all difficulty levels.'] = '所有難度下，死亡時的經驗懲罰提升到 30 %。';
+__['Hostile by default'] = '預設敵對';
+__['Non-partymembers are hostile by default when you are not partied.'] = '非在隊伍內的成員將會被預設為敵人。';
+__['Death penalty awarded to slayer'] = '殺人獎勵';
+__['When killing a player, their death penalty is awarded to the player doing the killing.'] = '當殺死一個其他的流亡者時，你會獲得其因死亡所損失的經驗值。';
+__['Increased player caps'] = '增加流亡者上限';
+__['Doubles player capacity in non-town instances. Does not increase the party size.'] = '非城鎮地圖內的流亡者上限提高一倍。隊伍人數上限並不會因此而增加。';
+__['Turbo'] = '加速';
+__['Monsters move, attack and cast 60% faster.'] = '怪物的移動、攻擊及施放速度加快 60 %。';
+__['Solo'] = '單人';
+__['You may not party in this league.'] = '你不能與他人組隊。';
+__['No Ascendancy respecs'] = '無昇華天賦重置';
+__['You cannot change your Ascendancy class once it has been chosen.'] = '你一但選擇昇華職業後就無法改動。';
+__['Ruthless'] = '無情';
+__['A significantly different game experience with extreme item scarcity, among other changes.'] = '極端物品稀缺和其它改動會有著非常不一樣的遊戲體驗。';
+__['Requires'] = '需求';
+__['No results found'] = '查無結果';
+__['Time'] = '時間';
+__['hour'] = '小時';
+__['hours'] = '小時';
+__['minute'] = '分';
+__['minutes'] = '分';
+__['second'] = '秒';
+__['seconds'] = '秒';
+__['League has ended'] = '聯盟已經結束';
+__['Monday'] = '星期一';
+__['Tuesday'] = '星期二';
+__['Wednesday'] = '星期三';
+__['Thursday'] = '星期四';
+__['Friday'] = '星期五';
+__['Saturday'] = '星期六';
+__['Sunday'] = '星期日';
+__['Find an account by ID, name or email.'] = 'Find an account by ID, steam ID,  name or email.';
+__['Include related accounts'] = 'Include related accounts';
+__['Connecting...'] = '連線中...';
+__['Searching...'] = 'Searching...';
+__['Bulk Ban'] = 'Bulk Ban';
+__['Put the account ids to ban in the textarea below (one line per account id)'] = 'Put the account ids to ban in the textarea below (one line per account id)';
+__['Ban reason (Visible to Player)'] = '封鎖原因 (玩家可見)';
+__['Ban notes (Moderator Notes)'] = '封鎖備註 (後台)';
+__['Failed to ban'] = 'Failed to ban';
+__['Banned'] = '已停權';
+__['Ban'] = 'Ban';
+__['Incoming'] = 'Incoming';
+__['All Types'] = 'All Types';
+__['Whisper'] = '密語';
+__['Party'] = 'Party';
+__['Local'] = 'Local';
+__['Global'] = '全球';
+__['Exclude incoming'] = 'Exclude incoming';
+__['Character Name'] = 'Character Name';
+__['Filter'] = '篩選條件';
+__['From Character'] = 'From Character';
+__['Message'] = '訊息';
+__['Loading...'] = 'Loading...';
+__['Forum'] = '論壇';
+__['Thread'] = '主題';
+__['View Post'] = '閱讀文章';
+__['Set guild name'] = 'Set guild name';
+__['Save'] = '保存';
+__['Set guild tag'] = 'Set guild tag';
+__['Set guild status message'] = 'Set guild status message';
+__['ID'] = 'ID';
+__['Points'] = '黯幣';
+__['Created'] = 'Created';
+__['Change Member Type'] = 'Change Member Type';
+__['Leader'] = '完成殘酷難度';
+__['Officer'] = '管理員';
+__['Member'] = 'Member';
+__['Waitlist'] = '等待清單';
+__['Applied'] = '已申請';
+__['Removed'] = '已移除';
+__['Initiate'] = '新人';
+__['Change'] = '改變';
+__['Members'] = '成員';
+__['Show All Players'] = '顯示全部玩家';
+__['Elapsed time'] = '經過時間';
+__['Expire in 24 hours'] = '在 24 小時內到期';
+__['No Expiration Time'] = '沒有過期時間';
+__['Name'] = '名稱';
+__['Position'] = 'Position';
+__['Details'] = '詳情';
+__['Garena UID'] = 'Garena UID';
+__['Steam ID'] = 'Steam ID';
+__['Destroyed Steam Account'] = 'Destroyed Steam Account';
+__['Account name'] = 'Account name';
+__['Change Name'] = 'Change Name';
+__['FLAGS'] = 'FLAGS';
+__['Flag set'] = 'Flag set';
+__['Flag not set'] = 'Flag not set';
+__['Unset'] = 'Unset';
+__['Set'] = 'Set';
+__['Email'] = '電子郵件';
+__['Change Email'] = '變更電子郵件';
+__['Set Random Password'] = 'Set Random Password';
+__['Flag Compromised'] = 'Flag Compromised';
+__['Unflag Compromised'] = 'Unflag Compromised';
+__['Timezone'] = '時區';
+__['Create IP'] = '創建 IP';
+__['Last IP'] = 'Last IP';
+__['Last client IP'] = '最後一個用戶端 IP';
+__['IP Login History'] = 'IP 登錄歷史記錄';
+__['Yes Login IP Check'] = 'Yes Login IP Check';
+__['No Login IP Check'] = 'No Login IP Check';
+__['Verified'] = '已認證';
+__['Set Verified'] = 'Set Verified';
+__['No'] = '否';
+__['Yes'] = '是';
+__['Staff Member'] = '員工';
+__['Moderator'] = 'Moderator';
+__['Unban'] = 'Unban';
+__['Deleted'] = '刪除';
+__['Delete Time'] = '刪除時間';
+__['Undelete'] = 'Undelete';
+__['Locked'] = '鎖定';
+__['Unlock'] = 'Unlock';
+__['Lock'] = 'Lock';
+__['Lock Reason'] = 'Lock Reason';
+__['Confirm Lock'] = 'Confirm Lock';
+__['Probation'] = 'Probation';
+__['Orphaned'] = 'Orphaned';
+__['Unorphan'] = 'Unorphan';
+__['Orphan'] = 'Orphan';
+__['Last Login'] = 'Last Login';
+__['Create Agent'] = 'Create Agent';
+__['Last Agent'] = 'Last Agent';
+__['Visitor ID'] = 'Visitor ID';
+__['Hardware hash'] = 'Hardware hash';
+__['Hell Mute Hash'] = 'Hell Mute Hash';
+__['Unban Hash'] = 'Unban Hash';
+__['Hash Login History'] = 'Hash Login History';
+__['Muted until time'] = 'Muted until time';
+__['Muted'] = 'Muted';
+__['Mark as spam bot'] = 'Mark as spam bot';
+__['Unlock code'] = 'Unlock code';
+__['Cursed'] = 'Cursed';
+__['Uncurse'] = 'Uncurse';
+__['Credited Name'] = '感謝者';
+__['Change Credited Name'] = 'Change Credited Name';
+__['Signature'] = 'Signature';
+__['Disable honeypot'] = 'Disable honeypot';
+__['Enable honeypot'] = 'Enable honeypot';
+__['Show email change requests'] = 'Show email change requests';
+__['Custom avatars'] = 'Custom avatars';
+__['Season History'] = 'Season History';
+__['Unlink Steam'] = 'Unlink Steam';
+__['Restore Deleted Steam Account'] = 'Restore Deleted Steam Account';
+__['Show Pending Accounts'] = 'Show Pending Accounts';
+__['Email Change Requests'] = 'Email Change Requests';
+__['Pending Accounts'] = 'Pending Accounts';
+__['Name change history'] = 'Name change history';
+__['by'] = 'by';
+__['Email change history'] = 'Email change history';
+__['Characters'] = '角色';
+__['Microtransactions'] = '商城';
+__['NOTE: The error "Your character is not the owner of this item" may mean the MTX is no longer in the MTX stash'] = 'NOTE: The error "Your character is not the owner of this item" may mean the MTX is no longer in the MTX stash';
+__['Edit Settings'] = 'Edit Settings';
+__['Shipping Address'] = 'Shipping Address';
+__['Address Line 1'] = '地址 1';
+__['Address Line 2'] = '地址 2';
+__['Address Zip / Postal Code'] = '郵遞區號';
+__['City'] = '城市';
+__['State'] = '州份';
+__['Country'] = '國家';
+__['Shirt Size'] = '衣服尺寸';
+__['International Shipping'] = 'International Shipping';
+__['Edit Shipping Address'] = 'Edit Shipping Address';
+__['Open Beta points pack summary'] = 'Open Beta points pack summary';
+__['Points purchased'] = 'Points purchased';
+__['Less unspent points since 24 May'] = 'Less unspent points since 24 May';
+__['Unspent points since 23 Oct 2013'] = 'Unspent points since 23 Oct 2013';
+__['Calculator'] = 'Calculator';
+__['Survivor Pack'] = 'Survivor Pack';
+__['Warrior Pack'] = 'Warrior Pack';
+__['Champion Pack'] = 'Champion Pack';
+__['Payment Transactions'] = 'Payment Transactions';
+__['Honey Potted'] = 'Honey Potted';
+__['Add Points'] = 'Add Points';
+__['Sub Points'] = 'Sub Points';
+__['Undo All'] = 'Undo All';
+__['Default Stripe Customer'] = 'Default Stripe Customer';
+__['Add points amount'] = 'Add points amount';
+__['Notes'] = 'Notes';
+__['Go'] = '前往';
+__['Sub points amount'] = 'Sub points amount';
+__['Give pack'] = 'Give pack';
+__['Amount'] = 'Amount';
+__['Note by'] = 'Note by';
+__['Hash'] = 'Hash';
+__['IP'] = 'IP';
+__['Role Manager'] = 'Role Manager';
+__['Manual'] = 'Manual';
+__['Guild'] = 'Guild';
+__['Find a guild by ID or Tag.'] = 'Find a guild by ID or Tag.';
+__['Add'] = '新增';
+__['Remove'] = '移除';
+__['Delete'] = '刪除';
+__['Start'] = '開始';
+__['End'] = 'End';
+__['Filter message'] = 'Filter message';
+__['on'] = '在';
+__['Livestream'] = 'Livestream';
+__['Blacklist'] = 'Blacklist';
+__['Current blacklist'] = 'Current blacklist';
+__['Add to blacklist'] = 'Add to blacklist';
+__['Channel name'] = 'Channel name';
+__['Un-Flag Hash'] = 'Un-Flag Hash';
+__['Flag Hash'] = 'Flag Hash';
+__['Unique client IPs used to login'] = 'Unique client IPs used to login';
+__['Unique hardware hashes used to login'] = 'Unique hardware hashes used to login';
+__['Last Logout'] = 'Last Logout';
+__['Transactions'] = 'Transactions';
+__['Ban Account'] = 'Ban Account';
+__['Moderator Notes'] = 'Moderator Notes';
+__['Future Ban'] = 'Future Ban';
+__['Remove Ban'] = 'Remove Ban';
+__['Delete Account'] = '刪除帳號';
+__['Muted until'] = 'Muted until';
+__['hour(s)'] = 'hour(s)';
+__['minute(s)'] = 'minute(s)';
+__['second(s)'] = 'second(s)';
+__['On probation until'] = 'On probation until';
+__['Duration'] = '期間';
+__['Show post content'] = 'Show post content';
+__['View thread'] = 'View thread';
+__['Moved from forum'] = 'Moved from forum';
+__['Events'] = '活動競賽';
+__['Moderation Type'] = 'Moderation Type';
+__['Include System Events'] = 'Include System Events';
+__['Hide System Events'] = 'Hide System Events';
+__['Show Only System Events'] = 'Show Only System Events';
+__['Key Redemptions'] = 'Key Redemptions';
+__['Moderator Stats'] = 'Moderator Stats';
+__['Average Report Response Time'] = 'Average Report Response Time';
+__['Only reports from the last month are included'] = 'Only reports from the last month are included';
+__['Count'] = '總計';
+__['Average'] = '平均';
+__['Add Note'] = '新增註解';
+__['Note'] = '註解';
+__['Nuke Account'] = 'Nuke Account';
+__['Place on probation'] = 'Place on probation';
+__['Probation Reason'] = 'Probation Reason';
+__['Probation Length'] = 'Probation Length';
+__['Probation Length Units'] = 'Probation Length Units';
+__['Seconds'] = '秒';
+__['Minutes'] = '分';
+__['Hours'] = '小時';
+__['Days'] = '天';
+__['Weeks'] = '週';
+__['Months'] = '月';
+__['You have been muted for {TIME} for {REASON}. Please contact support@grindinggear.com if you would like to speak with a GGG staff member directly.'] = '由於{REASON}，你已被禁言，懲處時間為：{TIME}。如欲直接與 GGG 的工作人員溝通，請來信 support@pathofexile.tw。';
+__['Mute'] = 'Mute';
+__['Forum'] = '論壇';
+__['Reports for'] = 'Reports for';
+__['Hell Mute'] = 'Hell Mute';
+__['Send Whisper'] = 'Send Whisper';
+__['Reason'] = 'Reason';
+__['Please select a reason'] = 'Please select a reason';
+__['abuse'] = 'abuse';
+__['harassment'] = 'harassment';
+__['an offensive character name'] = 'an offensive character name';
+__['spam'] = 'spam';
+__['trading in General Chat'] = 'trading in General Chat';
+__['Whisper to be sent to player'] = 'Whisper to be sent to player';
+__['Dismiss All'] = 'Dismiss All';
+__['NEW'] = 'NEW';
+__['DISMISSED'] = 'DISMISSED';
+__['reported by'] = 'reported by';
+__['View'] = '檢視';
+__['Edit'] = '編輯';
+__['Reload'] = 'Reload';
+__['Back'] = '返回';
+__['Roles'] = 'Roles';
+__['Add role'] = 'Add role';
+__['Trophy Name'] = 'Trophy Name';
+__['Trophy Description'] = 'Trophy Description';
+__['Update'] = '更新';
+__['Updated'] = '已更新';
+__['Gifted Microtransactions'] = 'Gifted Microtransactions';
+__['NOTE: The error "Your character is not the owner of this item" may mean that the gift has not yet been opened or the MTX is no longer in the MTX stash'] = 'NOTE: The error "Your character is not the owner of this item" may mean that the gift has not yet been opened or the MTX is no longer in the MTX stash';
+__['Used'] = 'Used';
+__['Unused'] = 'Unused';
+__['Set as Used'] = 'Set as Used';
+__['Num keys'] = 'Num keys';
+__['Prefix (2 or 3 characters)'] = 'Prefix (2 or 3 characters)';
+__['Generate'] = 'Generate';
+__['Search for a full key, an account ID or use the * character to search for partial keys, eg "NV*"'] = 'Search for a full key, an account ID or use the * character to search for partial keys, eg "NV*"';
+__['Search...'] = 'Search...';
+__['Total'] = '總共';
+__['NOTE: The error "Your character is not the owner of this item" may mean the MTX is no longer in the MTX stash'] = 'NOTE: The error "Your character is not the owner of this item" may mean the MTX is no longer in the MTX stash';
+__['Warning! This item is not for sale, are you sure you\'ve selected the correct item?'] = 'Warning! This item is not for sale, are you sure you\'ve selected the correct item?';
+__['Quantity'] = 'Quantity';
+__['Add'] = '新增';
+__['Purchase total'] = 'Purchase total';
+__['Site-wide special'] = 'Site-wide special';
+__['Special Cost'] = 'Special Cost';
+__['Image URL'] = 'Image URL';
+__['Start at'] = 'Start at';
+__['End at'] = 'End at';
+__['Description'] = '描述';
+__['Item special'] = 'Item special';
+__['Category special'] = 'Category special';
+__['Set Amount'] = 'Set Amount';
+__['Percentage Amount'] = 'Percentage Amount';
+__['Add special'] = 'Add special';
+__['All'] = 'All';
+__['Upcoming'] = 'Upcoming';
+__['Active'] = 'Active';
+__['Start Date'] = 'Start Date';
+__['End Date'] = '結束時間';
+__['ASC'] = 'ASC';
+__['DESC'] = 'DESC';
+__['Signature Seasons'] = 'Signature Seasons';
+__['Continent code'] = 'Continent code';
+__['Banned from website'] = 'Banned from website';
+__['Ban IP From Website'] = 'Ban IP From Website';
+__['Unban IP From Website'] = 'Unban IP From Website';
+__['Banned from game'] = 'Banned from game';
+__['Banned until'] = 'Banned until';
+__['Extend IP Ban'] = 'Extend IP Ban';
+__['Ban IP From Game'] = 'Ban IP From Game';
+__['Unban IP From Game'] = 'Unban IP From Game';
+__['Result'] = 'Result';
+__['Error'] = 'Error';
+__['Transaction ID'] = 'Transaction ID';
+__['Txn ID'] = 'Txn ID';
+__['Merge'] = 'Merge';
+__['Upgrade'] = '升級';
+__['Merge Into'] = 'Merge Into';
+__['Upgrade to'] = '升級至';
+__['Transfer to account name'] = 'Transfer to account name';
+__['New'] = '新增';
+__['Undone'] = 'Undone';
+__['Payment Pending'] = '待付款項';
+__['Payment Failed'] = 'Payment Failed';
+__['Failed To Reconcile'] = 'Failed To Reconcile';
+__['Charge Back'] = 'Charge Back';
+__['Refunded'] = 'Refunded';
+__['Internal Pending'] = 'Internal Pending';
+__['Internal Unhandled'] = 'Internal Unhandled';
+__['Merged'] = 'Merged';
+__['Upgraded'] = '升級新';
+__['Transferred'] = 'Transferred';
+__['Merged from transaction'] = 'Merged from transaction';
+__['Merged into transaction'] = 'Merged into transaction';
+__['Upgraded to transaction'] = '已更新至交易';
+__['Upgraded from transaction'] = '已從交易更新';
+__['Transferred from transaction'] = 'Transferred from transaction';
+__['Transferred to transaction'] = 'Transferred to transaction';
+__['Undo'] = 'Undo';
+__['Expires'] = 'Expires';
+__['Microtransaction'] = 'Microtransaction';
+__['Gifted from {GIFTER_ACCOUNT} to {GIFTEE_ACCOUNT}'] = 'Gifted from {GIFTER_ACCOUNT} to {GIFTEE_ACCOUNT}';
+__['Your showcase is empty. Click a {PIN} to pin a notable item here.'] = '你的展示欄是空的。點擊資訊後方的 {PIN} 來展示相關資訊。';
+__['Cancel'] = '取消';
+__['Lifetime Points'] = 'Lifetime Points';
+__['Overall'] = '總覽';
+__['Standard'] = '標準模式';
+__['Hardcore'] = '專家模式';
+__['Overall Points'] = '總點數';
+__['Standard Points'] = '一般模式點數';
+__['Hardcore Points'] = '專家模式點數';
+__['Forum Title'] = '論壇稱號';
+__['Corrupted'] = '已汙染';
+__['Unidentified'] = '未鑑定';
+__['Starts in {before}'] = '開始倒數：{before}';
+__['Ends in {before}'] = '結束倒數：{before}';
+__['Starts in {after}'] = '開始倒數：{after}';
+__['Ends in {after}'] = '結束倒數：{after}';
+__['Transfer'] = '轉移';
+__['points to your guild'] = '黯幣至你的公會';
+__['point to your guild'] = '黯幣至你的公會';
+__['Draft out of sync'] = '草稿未同步';
+__['Draft up to date'] = '草稿已更新';
+__['[ Expand ]'] = '[ 展開 ]';
+__['[ Collapse ]'] = '[ 收起 ]';
+__[' Saved at  '] = ' 上次儲存時間： ';
+__['Saving draft'] = '正在儲存草稿';
+__['You are editing a saved draft. Click here to edit the original.'] = '你正在編輯先前存檔的草稿。點此編輯原文。';
+__['Stack Size'] = '堆疊數量';
+__['Talisman Tier:'] = '魔符階級：';
+__['New Note'] = 'New Note';
+__['Edit Note'] = 'Edit Note';
+__['Slayer'] = '處刑者';
+__['Gladiator'] = '衛士';
+__['Champion'] = '冠軍';
+__['Assassin'] = '疾密刺客';
+__['Saboteur'] = '破壞者';
+__['Trickster'] = '詐欺師';
+__['Juggernaut'] = '勇士';
+__['Berserker'] = '暴徒';
+__['Chieftain'] = '酋長';
+__['Necromancer'] = '死靈師';
+__['Occultist'] = '秘術家';
+__['Elementalist'] = '元素使';
+__['Deadeye'] = '銳眼';
+__['Warden'] = '守護者';
+__['Pathfinder'] = '追獵者';
+__['Inquisitor'] = '判官';
+__['Hierophant'] = '聖宗';
+__['Guardian'] = '守護者';
+__['Ascendant'] = '昇華使徒';
+__['None'] = '無';
+__['Normal'] = '一般';
+__['Cruel'] = '殘酷';
+__['Merciless'] = '無情';
+__['Format not correct'] = '格式不正確';
+__['Upload failed.'] = '檔案上傳失敗。';
+__['Upload successful.'] = '上傳成功。';
+__['Logout successful.'] = '已登出';
+__['Make this image your avatar?'] = '是否要用這張圖片做為頭像？';
+__['The Passive Skill Tree requires a browser that supports canvas.'] = '天賦樹需要瀏覽器支援 canvas。';
+__['You may need to upgrade your browser. Some other browsers that work with the passive skill tree are: '] = '你需要升級你的瀏覽器。其他能運作天賦樹的瀏覽器有：';
+__['and'] = '和';
+__['Full Screen (f)'] = '全螢幕（F）';
+__['Exit Full Screen (f)'] = '離開全螢幕 (f)';
+__['No new posts since you last read this thread'] = '自從上次瀏覽後並無新增討論串';
+__['Account-bound'] = '帳號綁定';
+__['Use Avatar'] = '使用頭像';
+__['Current Avatar'] = '當前頭像';
+__['Choose Avatar'] = '選擇頭像';
+__['Public Avatars'] = '公開頭像';
+__['Custom Avatars'] = '自訂頭像';
+__['Limit reached!'] = '已達到上限！';
+__['You may have up to {MAX} forum supporter titles.'] = '你最多可以同時擁有 {MAX} 個論壇頭銜。';
+__['You may have up to {MAX} forum badges.'] = '你最多可以同時擁有 {MAX} 個論壇徽章。';
+__['CIS Race Season Reward'] = 'CIS Race Season Reward';
+__['SG Race Season Reward'] = 'SG 賽季獎勵';
+__['TH Race Season Reward'] = 'TH Race Season Reward';
+__['Opted out of physical goods'] = '已選擇不接收實體商品';
+__['BDB Banned Until'] = 'BDB Banned Until';
+__['You don\'t have enough points!'] = '你沒有足夠的黯幣！';
+__['You can give {{POINTS}} more points today.'] = 'You can give {{POINTS}} more points today.';
+__['You get 1 point per 10 in-game achievements completed to give each day.'] = 'You get 1 point per 10 in-game achievements completed to give each day.';
+__['Good job!'] = 'Good job!';
+__['Give this post a point if you think they did a good job.'] = 'Give this post a point if you think they did a good job.';
+__['Add Property Filter'] = '新增屬性過濾';
+__['Add Stat Filter'] = '新增數值過濾';
+__['Add Stat Group Filter'] = '新增數值組合過濾';
+__['Item Stats'] = '道具數值';
+__['Stat Groups'] = '項目群組';
+__['Item Properties'] = '道具屬性';
+__['No Price Set'] = '無定價';
+__['Online'] = '線上';
+__['Offline'] = '不在線上';
+__['Search Items...'] = '搜尋道具...';
+__['Highlight Items...'] = '標記物品...';
+__['Any'] = '任何';
+__['Online Only'] = '只顯示線上';
+__['Listed by'] = '賣家';
+__['No results found'] = '查無結果';
+__['Events Schedule'] = '競賽賽程表';
+__['Please note that the times on this schedule are shown in your local timezone.'] = '請注意，表上的時間是你所在區域的當地時間。';
+__['There are no current events.'] = '沒有進行中的競賽。';
+__['Add to Watchlist'] = '加入關注清單';
+__['Remove from Watchlist'] = '移除關注清單';
+__['Add all to Watchlist'] = '全部加入關注清單';
+
+__['Starred Items'] = '星號標記物品';
+__['Stat Filters'] = '篩選器';
+__['And'] = '和';
+__['Not'] = '不';
+__['If'] = '如果';
+__['Count'] = '總計';
+__['Following {name}...'] = '下面的 {name}...';
+__['Enter name (alphanumeric)'] = '輸入名字';
+__['Search saved!'] = '搜尋已儲存!';
+__['Search failed to save'] = '儲存失敗';
+__['Failed to remove saved search'] = '刪除已保存的搜尋失敗';
+__['Searching in {0}...'] = '搜尋中 {0}...';
+__['An error occurred. Please try again later.'] = '發生錯誤，請稍候再嘗試。';
+__['{i} results'] = '{i} 結果';
+__['No results found'] = '查無結果';
+__['Show my Status'] = '顯示我的狀態';
+__['Show my Status on All Leagues'] = '顯示所有聯盟';
+__['Appear Offline'] = '顯示離線';
+__['Fetching...'] = '取回中...';
+__['Orb of Alteration'] = '改造石';
+__['Orb of Fusing'] = '鏈結石';
+__['Orb of Alchemy'] = '點金石';
+__['Chaos Orb Equivalent'] = '與混沌石等值';
+__['Chaos Orb'] = '混沌石';
+__['Gemcutter\'s Prism'] = '珠寶匠的稜鏡';
+__['Exalted Orb'] = '崇高石';
+__['Chromatic Orb'] = '幻色石';
+__['Jeweller\'s Orb'] = '工匠石';
+__['Orb of Chance'] = '機會石';
+__['Cartographer\'s Chisel'] = '製圖釘';
+__['Orb of Scouring'] = '重鑄石';
+__['Blessed Orb'] = '祝福石';
+__['Orb of Regret'] = '後悔石';
+__['Regal Orb'] = '富豪石';
+__['Divine Orb'] = '神聖石';
+__['Vaal Orb'] = '瓦爾寶珠';
+__['Scroll of Wisdom'] = '智慧卷軸';
+__['Portal Scroll'] = '傳送卷軸';
+__['Armourer\'s Scrap'] = '護甲石';
+__['Blacksmith\'s Whetstone'] = '磨刀石';
+__['Glassblower\'s Bauble'] = '玻璃彈珠';
+__['Orb of Transmutation'] = '蛻變石';
+__['Orb of Augmentation'] = '增幅石';
+__['Mirror of Kalandra'] = '卡蘭德魔鏡';
+__['Eternal Orb'] = '永恆珠寶';
+__['Perandus Coin'] = '普蘭德斯金幣';
+__['Silver Coin'] = '銀幣';
+__['Blessing of Xoph'] = '索伏的祝福';
+__['Blessing of Tul'] = '托沃的祝福';
+__['Blessing of Esh'] = '艾許的祝福';
+__['Blessing of Uul-Netol'] = '烏爾尼多的祝福';
+__['Blessing of Chayula'] = '夏烏拉的祝福';
+__['Sacrifice at Dusk'] = '黃昏的奉獻';
+__['Sacrifice at Midnight'] = '午夜的奉獻';
+__['Sacrifice at Dawn'] = '黎明的奉獻';
+__['Sacrifice at Noon'] = '正午的奉獻';
+__['Sacrifice Set'] = '奉獻套組';
+__['Mortal Grief'] = '凡人的哀傷';
+__['Mortal Rage'] = '凡人的憤怒';
+__['Mortal Hope'] = '凡人的希望';
+__['Mortal Ignorance'] = '凡人的無知';
+__['Mortal Set'] = '凡人套組';
+__['Eber\'s Key'] = '希伯之鑰';
+__['Yriel\'s Key'] = '伊瑞之鑰';
+__['Inya\'s Key'] = '茵雅之鑰';
+__['Volkuur\'s Key'] = '福庫爾之鑰';
+__['Pale Court Set'] = '蒼白議會套組';
+__['Fragment of the Hydra'] = '九頭蛇的斷片';
+__['Fragment of the Phoenix'] = '鳳凰的斷片';
+__['Fragment of the Minotaur'] = '牛頭人的斷片';
+__['Fragment of the Chimera'] = '奇美拉的斷片';
+__['Shaper Set'] = '塑界者套組';
+__['Splinter of Xoph'] = '索伏裂片';
+__['Splinter of Tul'] = '托沃裂片';
+__['Splinter of Esh'] = '艾許裂片';
+__['Splinter of Uul-Netol'] = '烏爾尼多裂片';
+__['Splinter of Chayula'] = '夏烏拉裂片';
+__['Xoph\'s Breachstone'] = '索伏裂痕石';
+__['Tul\'s Breachstone'] = '托沃裂痕石';
+__['Esh\'s Breachstone'] = '艾許裂痕石';
+__['Uul-Netol\'s Breachstone'] = '烏爾尼多裂痕石';
+__['Chayula\'s Breachstone'] = '夏烏拉裂痕石';
+__['Offering to the Goddess'] = '女神祭品';
+__['Type Filters'] = '類別過濾';
+__['Item Subcategory'] = '物品類別';
+__['One-Handed Weapon'] = '單手武器';
+__['One-Handed Melee Weapon'] = '單手近戰武器';
+__['Two-Handed Melee Weapon'] = '雙手近戰武器';
+__['Bow'] = '弓';
+__['Claw'] = '爪';
+__['Dagger'] = '匕首';
+__['One-Handed Axe'] = '單手斧';
+__['One-Handed Mace'] = '單手錘';
+__['One-Handed Sword'] = '單手劍';
+__['Sceptre'] = '權杖';
+__['Staff'] = '長杖';
+__['Two-Handed Axe'] = '雙手斧';
+__['Two-Handed Mace'] = '雙手錘';
+__['Two-Handed Sword'] = '雙手劍';
+__['Wand'] = '法杖';
+__['Fishing Rod'] = '釣竿';
+__['Body Armour'] = '胸甲';
+__['Boots'] = '鞋子';
+__['Gloves'] = '手套';
+__['Helmet'] = '頭部';
+__['Shield'] = '盾';
+__['Quiver'] = '箭袋';
+__['Amulet'] = '項鍊';
+__['Belt'] = '腰帶';
+__['Ring'] = '戒指';
+__['Gem'] = '寶石';
+__['Abyss Jewel'] = '深淵珠寶';
+__['Jewel'] = '珠寶';
+__['Flask'] = '藥劑';
+__['Map'] = '地圖';
+__['Leaguestone'] = '聯盟石';
+__['Captured Beast'] = '已捕獲野獸';
+__['Divination Card'] = '命運卡';
+__['Item Rarity'] = '物品稀有度';
+__['Normal'] = '一般';
+__['Magic'] = '魔法';
+__['Rare'] = '稀有';
+__['Unique'] = '傳奇';
+__['Relic'] = '古典';
+__['Unique (Foil)'] = '傳奇 (貼模)';
+__['Weapon Filters'] = '武器篩選';
+__['Damage'] = '傷害';
+__['APS'] = '每秒攻擊次數';
+__['Attacks per Second'] = '每秒攻擊速度';
+__['Crit.'] = '暴擊';
+__['Critical Chance'] = '暴擊機率';
+__['Damage per Second'] = '每秒傷害';
+__['DPS'] = '每秒造成傷害';
+__['pDPS'] = '每秒物裡傷害';
+__['Physical DPS'] = '物理傷害';
+__['eDPS'] = '每秒元素傷害';
+__['Elemental DPS'] = '元素傷害';
+__['Armour Filters'] = '護甲篩選';
+__['Armour'] = '護甲';
+__['Evasion'] = '閃避值';
+__['E. Shield'] = '能量護盾';
+__['Energy Shield'] = '能量護盾';
+__['Block'] = '格檔';
+__['Socket Filters'] = '插槽篩選';
+__['Sockets'] = '插槽';
+__['Links'] = '連結';
+__['Requirements'] = '物品需求';
+__['Level'] = '等級';
+__['Str'] = '力量';
+__['Strength'] = '力量';
+__['Dex'] = '敏捷';
+__['Dexterity'] = '敏捷';
+__['Int'] = '智慧';
+__['Intelligence'] = '智慧';
+__['Miscellaneous'] = '其他';
+__['Quality'] = '品質';
+__['Item Level'] = '物品等級';
+__['Monster Level'] = '怪物等級';
+__['Mod Filters'] = '詞綴篩選';
+__['Empty Prefixes'] = '空前綴';
+__['Empty Suffixes'] = '空後綴';
+__['Minimum Empty Affixes'] = '最少空白詞綴';
+__['Map Filters'] = '地圖篩選';
+__['Map Tier'] = '地圖階級';
+__['Map Packsize'] = '地圖大小';
+__['Map IIQ'] = '地圖物品掉落數量';
+__['Map IIR'] = '地圖物品稀有度';
+__['Map Series'] = '地圖系列';
+__['Blight'] = '凋落禁地';
+__['Legion'] = '戰亂之殤';
+__['War for the Atlas'] = '烽火輿圖';
+__['Atlas of Worlds'] = '異界輿圖';
+__['The Awakening'] = '大覺醒';
+__['Legacy'] = '不朽聯盟';
+__['Shaped Map'] = '塑者之圖';
+__['Elder Map'] = '尊師之圖';
+__['Blighted Map'] = '凋落的地圖';
+__['Captured Beast'] = '已捕獲野獸';
+__['Captured Beast Filters'] = '已捕獲野獸篩選';
+__['Beast Level'] = '野獸等級';
+__['Beast Genus'] = '野獸種類';
+__['Beast Group'] = '野獸屬類';
+__['Beast Family'] = '野獸科類';
+__['Gargantuans'] = '巨人';
+__['Goatmen'] = '羊人';
+__['Goat Shamans'] = '羊人術師';
+__['Hellions'] = '地獄犬';
+__['Wolves'] = '惡狼';
+__['Apes'] = '狂猿';
+__['Rhoas'] = '恐喙鳥';
+__['Sand Spitters'] = '噴沙爪蟹';
+__['Sea Witches'] = '海妖';
+__['Shield Crabs'] = '重盾巨蟹';
+__['Snakes'] = '毒蛇';
+__['Spawn'] = '幼蟲';
+__['Spiders'] = '毒蛛';
+__['Maws'] = '裂齒獸';
+__['Chimerals'] = '龍蜥';
+__['Carrion Queens'] = '食腐蟲后';
+__['Carrion Insects'] = '食腐蟲';
+__['Retches'] = '反芻鳥';
+__['Goliaths'] = '巨獸';
+__['Devourers'] = '吞噬獸';
+__['Watchers'] = '看守者';
+__['Plummeting Ursae'] = '墜落熊';
+__['Vultures'] = '禿鷹';
+__['Leapers'] = '突躍獸';
+__['Karui Hounds'] = '卡魯獵犬';
+__['Pitbulls'] = '鬥牛犬';
+__['Cockerels'] = '野雞';
+__['Bulls'] = '野牛';
+__['Ape Chieftains'] = '大酋長';
+__['Parasites'] = '寄生獸';
+__['Lions'] = '怒獅';
+__['Crabs'] = '巨蟹';
+__['Hounds'] = '獵犬';
+__['Lurchers'] = '奸細';
+__['Arachnoscorpions'] = '蛛網毒蠍';
+__['Rhexes'] = '雛鳥';
+__['Scorpions'] = '毒蠍';
+__['Lynxes'] = '山貓';
+__['Tigers'] = '猛虎';
+__['Spider Crabs'] = '蛛蛛蟹';
+__['Octopuses'] = '章魚';
+__['Gem Frogs'] = '寶石蛙';
+__['Felines'] = '青蛙';
+__['Primates'] = '靈長動物';
+__['Canines'] = '犬科動物';
+__['Ursae'] = '熊類動物';
+__['Unnaturals'] = '非自然';
+__['Avians'] = '飛禽動物';
+__['Reptiles'] = '爬行動物';
+__['Insects'] = '昆蟲';
+__['Arachnids'] = '蜘蛛';
+__['Cephalopods'] = '頭足動物';
+__['Crustaceans'] = '甲殼動物';
+__['Amphibians'] = '兩棲動物';
+__['The Wilds'] = '野性';
+__['The Sands'] = '飛沙';
+__['The Caverns'] = '洞窟';
+__['The Deep'] = '深潭';
+__['Gem Level'] = '寶石等級';
+__['Gem Experience %'] = '寶石經驗 %';
+__['Shaper Item'] = '塑者之物';
+__['Elder Item'] = '尊師之物';
+__['Talisman Tier'] = '魔符階級';
+__['Stored Experience'] = '儲存經驗';
+__['Durability'] = '耐久度';
+__['Alternate Art'] = '特殊造型';
+__['Yes'] = '是';
+__['No'] = '否';
+__['Identified'] = '已鑑定';
+__['Corrupted'] = '已汙染';
+__['Unmodifiable'] = '不可調整';
+__['Crafted'] = '已工藝';
+__['Enchanted'] = '已附魔';
+__['Trade Filters'] = '交易過濾';
+__['Seller Account'] = '賣家帳號';
+__['Enter account name...'] = '輸入帳號名稱...';
+__['Sale Type'] = '販售型式';
+__['Buyout or Fixed Price'] = '直購價或定價';
+__['No Listed Price'] = '無定價';
+__['Buyout Price'] = '直購價';
+__['Unknown'] = '未知';
+__['Copied!'] = '已複製!';
+__['Added {PLAYER} to your ignore list'] = '將{PLAYER}加入黑名單';
+__['Removed {PLAYER} from your ignore list'] = '從黑名單移除 {PLAYER}';
+__['Exact Price:'] = '不二價:';
+__['Asking Price:'] = '報價:';
+__['Current Offer:'] = '當前價格:';
+__['No Price Set'] = '無定價';
+__['Verified'] = '已認證';
+__['(at max Quality)'] = '(最高品質)';
+__['Listed by'] = '賣家';
+__['Item no longer available'] = '物品不存在';
+__['Ignore Player'] = '黑名單流亡者';
+__['Unignore Player'] = '取消黑名單玩家';
+__['Whisper'] = '密語';
+__['PM'] = '私訊';
+__['Save'] = '保存';
+__['Contact...'] = '聯繫...';
+__['Online'] = '線上';
+__['Offline'] = '不在線上';
+__['Selling:'] = '售價:';
+__['For:'] = '給:';
+__['Search Now'] = '馬上搜尋';
+__['View Stream'] = '觀賞實況';
+__['({0} new items)'] = '({0} 新物品)';
+__['(no new items)'] = '(沒有新物品)';
+__['R'] = 'R';
+__['G'] = 'G';
+__['B'] = 'B';
+__['W'] = 'W';
+__['(Inapplicable)'] = '(不適用)';
+__['Toggle'] = '切換';
+__['Remove'] = '移除';
+__['{{LEAGUE}} League'] = '{{LEAGUE}} 聯盟';
+__['Could not initiate Xsolla payment, please try again later or contact support@grindinggear.com'] = 'Could not initiate Xsolla payment, please try again later or contact support@pathofexile.tw';
+__['Failed to create Xsolla transaction, please try again later or contact support@grindinggear.com'] = 'Failed to create Xsolla transaction, please try again later or contact support@pathofexile.tw';
+__['Follow {NAME}'] = 'Follow {NAME}';
+__['Unfollow {NAME}'] = 'Unfollow {NAME}';
+__['Sort Items By:'] = '分類物品:';
+__['Categories'] = '種類';
+__['Theme'] = '主題';
+__['This tree is in read only mode'] = '此天賦樹圍觀察模式';
+__['Class Filter'] = '職業篩選器';
+__['This stat is already being used in this filter'] = '此項目已經在篩選中';
+__['min'] = '最小';
+__['max'] = '最大';
+__['weight'] = '權重';
+__['Items I Want'] = '想要的道具';
+__['Items I Have'] = '持有的道具';
+__['Add Want Entry'] = '增加想要名單';
+__['Add Have Entry'] = '增加持有名單';
+__['Swap Want/Have'] = '轉換想要/持有';
+__['My {{LEAGUE}} Offers'] = '我的 {{LEAGUE}} 提價';
+__['Add Stat Group'] = '新增屬性組合';
+__['Item not found'] = '無發現道具';
+__['Load More'] = '讀取更多';
+__['Activate Live Search'] = '啟動線上搜尋';
+__['Deactivate Live Search'] = '停用線上搜尋';
+__['Show Filters'] = '顯示篩選';
+__['Hide Filters'] = '隱藏篩選';
+__['Clear'] = '清除';
+__['Account Settings'] = '帳號設定';
+__['Online Status'] = '在線狀況';
+__['Search Settings'] = '搜尋設定';
+__['Treat DND Players as Offline'] = '將勿擾玩家判定離線';
+__['Treat AFK Players as Offline'] = '將暫離玩家判定離線';
+__['Track Online Status for Live Search'] = '追蹤搜尋時的在線狀態';
+__['Socket Notches'] = '插槽欄位';
+__['Notification Sound'] = '提示聲';
+__['Notification Volume'] = '提示聲音量';
+__['Cache Settings'] = '暫存設定';
+__['Cached Data'] = '暫存資料';
+__['Clear Cached Data'] = '清除暫存資料';
+__['Ignore List'] = '黑名單';
+__['Remove All'] = '移儲全部';
+__['Clear Filter Group'] = '清除篩選群組';
+__['at max Quality'] = '最高品質';
+__['listed'] = '清單';
+__['Item is outdated'] = '道具已過時';
+__['AFK'] = '暫離';
+__['DND'] = '勿擾';
+__['Unavailable Stat'] = '無法取得的狀態';
+__['Failed to fetch the next set of trade items.'] = '取得下個交易道具失敗。';
+__['Could not refresh trade item.'] = '無法重整交易道具。';
+__['Search form cleared!'] = '已清空搜尋表格.';
+__['Currency'] = '通貨';
+__['Splinters'] = '裂片';
+__['Shards'] = '碎片';
+__['Shards & Splinters'] = '碎片和裂片';
+__['Fragments'] = '碎片';
+__['Fragment Sets'] = '碎片組';
+__['Fragments & Sets'] = '地圖碎片和地圖組';
+__['Misc'] = '其他';
+__['Incubators'] = '培育器';
+__['Nets'] = '捕獸網';
+__['Vials'] = '神殿之罈';
+__['Delve Resonators'] = '掘獄鑄新儀';
+__['Delve Fossils'] = '掘獄化石';
+__['Atlas Memories'] = '輿圖記憶';
+__['Leaguestones'] = '聯盟石';
+__['Essences'] = '精髓';
+__['Cards'] = '命運卡';
+__['Maps'] = '地圖';
+__['Shaped Maps'] = '塑者之圖';
+__['Elder Maps'] = '尊師之圖';
+__['Blighted Maps'] = '凋落的地圖';
+__['Divination Cards'] = '命運卡';
+__['Invalid Currency'] = '無效通貨';
+__['Showing 1 result'] = '顯示 1 筆結果';
+__['Showing {i} results'] = '顯示 {i} 筆結果';
+__['{i} matched'] = '{i} 筆符合';
+__['Your live search has been disabled after 2 hours of inactivity.'] = '啟動 2 小時後，線上搜尋已經停止。';
+__['Your live search is being rate-limited.'] = '你的線上搜尋被限制中。';
+__['Live Search: '] = '線上搜尋:';
+__['Search'] = '搜尋';
+__['Custom: {sound}'] = '客制化: {sound}';
+__['Custom...'] = '客制化...';
+__['The selected file was not recognized as an audio file'] = '選取檔案非音效檔';
+__['An error occurred while loading the selected sound'] = '讀取音效時發生錯誤';
+__['Account status updated!'] = '帳號狀態已更新!';
+__['Failed to update account status.'] = '更新帳號狀態失敗。';
+__['Reloading Page...'] = '重新載入頁面...';
+__['Failed to clear ignore list.'] = '清除黑名單失敗。';
+__['Failed to retrieve ignore list.'] = '取回黑名單失敗。';
+__['just now'] = '僅此一次';
+__['Search Listed Items'] = '搜尋道具';
+__['Item Exchange'] = '道具交易';
+__['Gong'] = 'Gong';
+__['Weighted Sum'] = '權重總計';
+__['Weighted Sum v2'] = '加權總和版本2';
+__['Item Category'] = '道具分類';
+__['Any Weapon'] = '武器';
+__['Any Dagger'] = '任一匕首';
+__['Any Staff'] = '任一長杖';
+__['Any Armour'] = '護甲';
+__['Any Accessory'] = '配件';
+__['Any Non-Unique'] = '非傳奇道具';
+__['No elements found. Consider changing the search query.'] = '沒有發現道具。請更換搜尋條件。';
+__['No matches.'] = '無符合道具.';
+__['{i} selected'] = '{i} 選取';
+__['Check out with Credit/Debit Card.'] = '使用信用卡／簽帳金融卡結帳。';
+__['Listed Item Searching'] = '搜尋清單道具';
+__['This website allows you to search through items listed for sale in Shop Forums as well as those listed using Public Premium Stash Tabs in-game.'] = '這個網站可以讓你搜尋列在交易論壇中或是遊戲中公開高級倉庫頁中的道具。';
+__['You can search by an item\'s name or an item\'s base type using the "Search Items" field.'] = '你可以在"搜尋道具"區塊，使用道具的名稱或是道具的基本種類搜尋。';
+__['Players will have their Online/Offline status updated approximately every 5 minutes.'] = '玩家的線上／離線狀態每 5 分鐘左右更新一次。';
+__['While searching is easy, you will still have to contact the player selling the item in order to complete the trade.'] = '雖然搜尋相當簡單，但你還是要聯絡賣方以完成交易步驟。';
+__['The easiest way to contact a player is to use the "Direct Whisper" feature. It requires that both you and the seller are online and in-game to use.'] = '與玩家聯繫最簡單的方式是使用“直接密語”功能。這需要你和賣家都在線上且遊戲中才能使用。';
+__['Please note: The whisper message will be translated into the seller\'s local language.'] = '請注意：密語將會翻譯為賣方當地的語言。';
+__['If for any reason you no longer wish to view a certain player\'s listings, you can use the "Ignore Player" button to remove their listings from your search results.'] = '如果你不想看到某些玩家的物品，可以使用"黑名單"功能，從你的搜尋結果中移除他們。';
+__['Please note: This feature requires you to be logged in with your Path of Exile account. Additionally, this ignore list is not tied to your in-game ignore list in any way, and may be managed in the settings panel right here on the trade site.'] = '請注意：此功能需要登入流亡黯道帳號。此外，黑名單功能不與遊戲內黑名單連結，可以在此交易網站設定面板進行管理。';
+__['We also allow you to perform a "Live Search" where you will be notified when a new item matching your search criteria is listed or updated.'] = '網站提供"線上搜尋"功能，當你設定的搜尋的道具上架或是更新時會通知你。';
+__['Please note: The search only runs while you keep your browser tab or window open (in the background is okay).'] = '請注意：此搜尋僅會在瀏覽器頁面開啟或視窗開啟的情況下運作 (也可放置於背景)。';
+__['Settings'] = '設定';
+__['About'] = '關於';
+__['When logged into this site, you may also choose how your in-game status is used for trade-related searches.'] = '登入此網站時，你也可以設定遊戲中的狀態。';
+__['By default, your status will show for items you have listed in the league that you are currently playing in.'] = '一般來說，你上架的道具會顯示你目前正在遊玩的聯盟。';
+__['You may opt to show your status regardless of what league you are playing if you so choose.'] = '如果你願意，你也可以無視聯盟自行選擇顯示狀態。';
+__['Please note: Players using the Do Not Disturb feature in-game will be treated as Offline for the purposes of this site.'] = '請注意：遊戲中玩家使用勿擾模式時，此網站會判定為離線。';
+__['Bulk Item Exchange'] = '以物易物';
+__['Certain items may be listed for bulk sale (listed below).'] = '某些道具可以同捆販售 (以下為清單)';
+__['Your eligible items will be grouped together under one price, with the total amount of items presented as "stock".'] = '符合的道具將會成一組並且制定一個價格，以"庫存"呈現道具的總數量。';
+__['In order to list exchange entries, either in-game or on the forum, use the ratio format on the item you wish to offer for the type of item you would like in return.'] = '為了列出交換項目，無論在遊戲中或是論壇，在想提供的物品上使用比率公式可以讓你獲得你想獲得的道具。';
+__['For example:'] = '舉例:';
+__['will list your intent to buy 3 Orbs of Fusing for 1 Chaos Orb each.'] = '代表你想用 1 顆混沌石買 3 顆鏈結石。';
+__['Alternatively:'] = '此外:';
+__['will list your intent to buy 2 Orbs of Chaos for 35 Chromatic Orbs each. This is technically equivalent to selling 17.5 Chromatic Orbs per Chaos Orb, however pricing this way is more appropriate for bulk sets of items.'] = '代表你想用 35 顆幻色石買 2 顆混沌石。實際上你是想要將 17.5 顆幻色石賣 1 顆混沌石，但使用前者的定價會更適合這種交易方式。';
+__['Please note: Stock includes all of the items of that type that are publicly listed (priced or not).'] = '請注意：庫存包含所有公開販售的物品類型 (已標價或未標價)。';
+__['Item Tags'] = '道具標籤';
+__['is worth'] = '價值';
+__['what you get'] = '你得到';
+__['what you pay'] = '你付出';
+__['Stock'] = '庫存';
+__['Contact...'] = '聯繫...';
+__['Not enough stock!'] = '無足夠庫存!';
+__['pseudo'] = '偽屬性';
+__['explicit'] = '隨機屬性';
+__['implicit'] = '固性屬性';
+__['enchant'] = '附魔';
+__['crafted'] = '工藝';
+__['monster'] = '怪物';
+__['Mirrored'] = '已複製';
+__['Listed'] = '標示';
+__['Any Time'] = '任何時間';
+__['Up to an Hour Ago'] = '1 小時前';
+__['Up to 3 Hours Ago'] = '3 小時前';
+__['Up to 12 Hours Ago'] = '12 小時前';
+__['Up to a Day Ago'] = '至多 1 天前';
+__['Up to 3 Days Ago'] = '至多 3 天前';
+__['Up to a Week Ago'] = '至多 1 個禮拜前';
+__['Up to 2 Weeks Ago'] = '至多 2 個禮拜前';
+__['Up to 1 Month Ago'] = '至多 1 個月前';
+__['Up to 2 Months Ago'] = '至多 2 個月前';
+__['{RANGE1} to {RANGE2}'] = '{RANGE1} 至 {RANGE2}';
+__['Item stats have been added to your stat filters.'] = '道具統計已經被增加至你的篩選中。';
+__['Whisper message copied.'] = '密語已複製。';
+__['Item text copied.'] = '道具文字已複製。';
+__['Last Client Language (Default)'] = '最後客戶端語言 (預設)';
+__['English'] = '英文';
+__['Brazilian Portuguese'] = '巴西葡萄牙語';
+__['Russian'] = '俄羅斯語';
+__['Thai'] = '泰語';
+__['German'] = '德語';
+__['French'] = '法語';
+__['Spanish'] = '西班牙語';
+__['Korean'] = 'Korean';
+__['Custom Search'] = '自定義搜尋';
+__['Seller Filters'] = '賣家篩選';
+__['Seller Account'] = '賣家帳號';
+__['Stock Count'] = '庫存總計';
+__['Depth'] = '深度';
+__['Depth (Solo)'] = '深度（單人）';
+__['Log in Required'] = '登入需求';
+__['Any Gem'] = '任何寶石';
+__['Skill Gem'] = '技能寶石';
+__['Support Gem'] = '輔助寶石';
+__['Any Jewel'] = '任何珠寶';
+__['Any Currency'] = '任何通貨';
+__['Unique Fragment'] = '傳奇碎片';
+__['Resonator'] = '鑄新儀';
+__['Fossil'] = '化石';
+__['Delve Sockets'] = '掘獄插槽';
+__['Whisper Language'] = '密語語言';
+__['Veiled Prefix'] = '隱匿前綴';
+__['Veiled Suffix'] = '隱匿後綴';
+__['Veiled'] = '隱匿';
+__['Betrayal'] = '反叛聯盟';
+__['Scarabs'] = '聖甲蟲';
+__['Stash History'] = '倉庫歷程';
+__['Download CSV'] = '下載為 CSV';
+__['Reset'] = '重置';
+__['Date'] = 'Date';
+__['Action'] = 'Action';
+__['Item'] = '物品';
+__['added'] = '已新增';
+__['modified'] = '已調整';
+__['removed'] = '已移除';
+__['Next Page'] = '下一頁';
+__['Today'] = '今日';
+__['fractured'] = '破裂';
+__['Synthesis'] = '尋夢追憶';
+__['Fractured Item'] = '破裂之物';
+__['Synthesised Item'] = '追憶之物';
+__['Can Fulfil Trade'] = '可以滿足交易';
+__['Forever'] = 'Forever';
+__['Locale'] = 'Locale';
+__['Key'] = '序號';
+__['Show All'] = '顯示全部';
+__['Active Settings'] = 'Active Settings';
+__['Enabled'] = 'Enabled';
+__['Disabled'] = 'Disabled';
+__['Image/Source'] = 'Image/Source';
+__['Url'] = 'Url';
+__['Title'] = '標題';
+__['Start Time'] = '開始時間';
+__['Preview'] = '預覽';
+__['Banner Settings'] = 'Banner Settings';
+__['New / Edit Banner'] = 'New / Edit Banner';
+__['Messages have been sent successfully'] = '訊息發送成功';
+__['Failed to send messages'] = '發送訊息失敗';
+__['Add Recipients (ID)'] = '增加收件者 (ID)';
+__['Subject'] = '標題';
+__['Content'] = '內容';
+__['Incubating {ITEM}'] = '培育之 {ITEM}';
+__['Level {LEVEL}+ Monster Kills'] = '等級 {LEVEL} + 擊殺怪物';
+__['Failed to load the address.'] = '地址讀取失敗。';
+__['Would you like to proceed with the purchase?'] = '是否要繼續購買？';
+__['Purchase Successful'] = '購買成功';
+__['Login Required'] = '需要登入';
+__['Account Creation Required'] = '需要建立帳號';
+__['Insufficient Balance'] = '餘額不足';
+__['Top Up'] = '儲值';
+__['Country code'] = 'Country code';
+__['Country code 3'] = 'Country code 3';
+__['Country name'] = 'Country name';
+__['Region'] = 'Region';
+__['Postal code'] = '郵遞區號';
+__['Latitude'] = 'Latitude';
+__['Longitude'] = 'Longitude';
+__['Dma code'] = 'Dma code';
+__['Area code'] = 'Area code';
+__['ISP'] = 'ISP';
+__['Organization'] = 'Organization';
+__['(Pending)'] = '(處理中)';
+__['Paid (Completion Pending)'] = '已付款 (完成處理中)';
+__['Unclean Merge'] = 'Unclean Merge';
+__['Out Of Stock'] = '沒有庫存';
+__['Resend'] = '重新寄送';
+__['Backend Message: '] = '後台訊息：';
+__['Invalid character name.'] = '無效角色名稱。';
+__['Submit an account name to search.'] = '提交一個帳號名稱以搜尋。';
+__['An error occurred.'] = '發生錯誤。';
+__['No results found.'] = '沒有發現結果。';
+__['Showing '] = '顯示';
+__[' of '] = '的';
+__[' results'] = '結果';
+__['Draft '] = '草稿';
+__['Thread Bump removed'] = '文章置頂移除';
+__['Thread Bumped'] = '置頂文章';
+__['Failed to Bump Thread'] = '置頂文章失敗';
+__['No new posts'] = '沒有新貼文';
+__['days'] = '天';
+__['day'] = '天';
+__['Cannot be traded or modified'] = '無法交易或修改';
+__['You must be logged in to use the Live Search feature.'] = '你必須登入帳號才可使用線上搜尋功能。';
+__['New live search results!'] = '新線上搜尋結果!';
+__['1 new item has matched your search.'] = '1 件新物品符合你的需求。';
+__['{i} new items have matched your search.'] = '{i} 件新物品符合你的需求。';
+__['Failed to fetch account settings.'] = '獲取帳號設定失敗。';
+__['Account settings updated!'] = '帳號設定已更新！';
+__['Failed to update account settings.'] = '更新帳號設定失敗。';
+__['Please select a valid league to search in.'] = '請選擇一個有效的聯盟搜尋。';
+__['limit reached!'] = '到達上限！';
+__['max: {MAX}'] = '最大: {MAX}';
+__['point'] = '黯幣';
+__['Accept transaction?'] = '接受交易?';
+__['Reject transaction?'] = '駁回交易?';
+__['Cancel transaction?'] = '取消交易?';
+__['Pending'] = '處理中';
+__['Redo'] = '重試';
+__['Dashboard'] = 'Dashboard';
+__['Admin2'] = 'Admin2';
+__['Account Search'] = '搜尋帳號';
+__['View Characters'] = '查看角色';
+__['Character Search'] = '搜尋角色';
+__['Saved!'] = '已保存！';
+__['Failed to save.'] = '保存失敗。';
+__['Purchase'] = '購買';
+__['Hide'] = '隱藏';
+__['Show'] = '顯示';
+__['Exilecon Ticket List'] = 'Exilecon Ticket List';
+__['Reset Selected Tickets'] = 'Reset Selected Tickets';
+__['Account ID'] = 'Account ID';
+__['Account Email'] = 'Account Email';
+__['Ticket Name'] = '票券名稱';
+__['Ticket Email'] = 'Ticket Email';
+__['Ticket ID'] = 'Ticket ID';
+__['Ticket Type'] = 'Ticket Type';
+__['Rune Dagger'] = '符紋匕首';
+__['Warstaff'] = '征戰長杖';
+__['Incubator'] = '培育器';
+__['Oils'] = '油瓶';
+__['Guidebook'] = '引導指南';
+__['Are you sure you want to delete your {{NAME}} item filter?'] = '你確定要刪除你的 {{NAME}} 物品篩選？';
+__['Awakened Support Gem'] = '覺醒輔助寶石';
+__['Shaper Influence'] = '塑界者勢力';
+__['Elder Influence'] = '異界尊師勢力';
+__['Crusader Influence'] = '聖戰軍王勢力';
+__['Redeemer Influence'] = '救贖者勢力';
+__['Hunter Influence'] = '狩獵者勢力';
+__['Warlord Influence'] = '總督軍勢力';
+__['Map Fragment'] = '地圖碎片';
+__['Maven\'s Invitation'] = '釋界之邀';
+__['Scarab'] = '聖甲蟲';
+__['Watchstone'] = '守望石';
+__['Live Search error'] = '線上搜尋失敗';
+__['An error occurred while connecting'] = '連線時出現異常';
+__['Too many requests.'] = '太多請求。';
+__['Rate-limiting is active for your account'] = '你的帳號啟動限速';
+__['Live Search retry limit exceeded'] = '線上搜尋重試超過上限';
+__['Please refresh the page and try again'] = '請重新整理頁面並稍後再試';
+__['Server is restarting'] = '伺服器正在重啟';
+__['Disconnected from server'] = '從伺服器斷線';
+__['Retrying connection in {{TIMEOUT}} seconds...'] = '{{TIMEOUT}} 秒後重試...';
+__['Reconnecting...'] = '重新連線中...';
+__['Disconnected'] = '斷線';
+__['Authenticating...'] = '驗證中...';
+__['Cluster Jewel'] = '星團珠寶';
+__['This private league starts at {START_TIME}.'] = '此私人聯盟開始於 {START_TIME}。';
+__['The League will start when it is created.'] = '聯盟將在創造時開始。';
+__['after league start, are you sure?'] = '請確認此為在聯盟開始後?';
+__['from now, are you sure?'] = '請確認此為現在開始?';
+__['Now'] = '現在';
+__['Pay Now'] = '立刻付款';
+__['Details'] = '詳情';
+__['Create'] = '建立帳號';
+__['Change'] = '改變';
+__['Set to ASAP'] = '設為盡速';
+__['Cart'] = '清單';
+__['Hide Expired Links'] = '隱藏失效連結';
+__['Show Expired Links'] = '顯示失效連結';
+__['No members.'] = '沒有成員。';
+__['Generate Invitation Link'] = '產生邀請連結。';
+__['Copy'] = '複製';
+__['Generated By:'] = '產生者：';
+__['Expiration Time:'] = '到期時間：';
+__['Members:'] = '成員：';
+__['Invite Account'] = '邀請帳號';
+__['Bulk Invite By Name (Comma separated eg/ AccountName1, AccountName2, AccountName3)'] = '透過名字批量邀請（用逗號區別，例如/ AccountName1, AccountName2, AccountName3）';
+__['Bulk Invite By QQ Number (Comma separated eg/ 111, 222, 333)'] = 'Bulk Invite By QQ Number (Comma separated eg/ 111, 222, 333)';
+__['Stash'] = '倉庫';
+__['Inventory'] = '背包';
+__['Start Time can not be in the past.'] = '開啟時間不能為過去。';
+__['Promote'] = '晉升';
+__['Make Owner'] = '成為擁有者';
+__['Owner'] = '主辦人';
+__['Role'] = '角色';
+__['Update Members'] = '更新成員';
+__['Guild Stash'] = '公會倉庫';
+__['Are you sure you want to change Owner?'] = '你確認要改變持有者?';
+__['Go to Line'] = '前往行數';
+__['Remaining Daum Cash Balance:'] = 'Remaining Daum Cash Balance:';
+__['Pulse'] = '脈搏';
+__['Piano'] = '鋼琴';
+__['Chime'] = '音效';
+__['Base Jewel'] = '基礎珠寶';
+__['Map Region'] = '地圖地區';
+__['Haewark Hamlet'] = '海沃克．哈姆雷特';
+__['Tirn\'s End'] = '特恩之盡';
+__['Lex Proxima'] = '雷克斯．普拉克斯瑪';
+__['Lex Ejoris'] = '雷克斯．伊喬里斯';
+__['New Vastir'] = '新瓦斯提里';
+__['Glennach Cairns'] = '格倫納許．凱恩斯';
+__['Valdo\'s Rest'] = '瓦爾多憩地';
+__['Lira Arthain'] = '里拉．奧斯汀';
+__['Current'] = '當前';
+__['Page {PAGE} of {PAGEMAX}'] = '頁數 {PAGE} 的 {PAGEMAX}';
+__['Showing {0}-{1} of {2} (Max 1000)'] = '顯示 {0}-{1} / {2} (最多 1000)';
+__['Base Dagger'] = '基礎匕首';
+__['Base Staff'] = '基礎長杖';
+__['Trinket'] = '飾品';
+__['Any Heist Equipment'] = '任何劫盜裝備';
+__['Heist Gear'] = '劫盜裝備';
+__['Heist Tool'] = '劫盜工具';
+__['Heist Cloak'] = '劫盜披風';
+__['Heist Brooch'] = '劫盜胸針';
+__['Any Heist Mission'] = '任何劫盜任務';
+__['Heist Contract'] = '劫盜契約書';
+__['Heist Blueprint'] = '劫盜藍圖';
+__['Heist Filters'] = '劫盜篩選';
+__['Wings Revealed'] = '已揭露側廂';
+__['Total Wings'] = '總側廂';
+__['Escape Routes Revealed'] = '已揭露逃脫路線';
+__['Total Escape Routes'] = '總逃脫路線';
+__['Reward Rooms Revealed'] = '已揭露暗房';
+__['Total Reward Rooms'] = '總暗房';
+__['Area Level'] = '區域等級';
+__['Lockpicking Level'] = '開鎖等級';
+__['Brute Force Level'] = '蠻力等級';
+__['Perception Level'] = '洞察力等級';
+__['Demolition Level'] = '拆除等級';
+__['Counter-Thaum. Level'] = '解咒師等級';
+__['Trap Disarmament Level'] = '陷阱拆除等級';
+__['Agility Level'] = '靈巧等級';
+__['Deception Level'] = '詐欺等級';
+__['Engineering Level'] = '工程等級';
+__['Gem Quality Type'] = '寶石品質類型';
+__['Superior (Default)'] = '精良的（預設）';
+__['Any Alternate'] = '任何替代';
+__['Anomalous'] = '異常的';
+__['Divergent'] = '相異的';
+__['Phantasmal'] = '幻影的';
+__['Rainbow (Default)'] = '彩虹 (預設)';
+__['Any Voidborn Variant'] = '任何虛塃怪誕種類';
+__['Amethyst'] = '紫晶';
+__['Verdant'] = '翡翠';
+__['Ruby'] = '紅玉';
+__['Cobalt'] = '鈷藍';
+__['Sunset'] = '日落';
+__['Aureate'] = '金光';
+__['Contract Objective Value'] = '契約書標的價值';
+__['Moderate Value'] = '中等價值';
+__['High Value'] = '高等價值';
+__['Precious'] = '珍寶';
+__['Priceless'] = '無價';
+__['Price with Note'] = '標價：';
+__['Price with Note:'] = '標價：';
+__['Search Bar Layout'] = '搜尋欄介面';
+__['Controls at Bottom (Default)'] = '底部控制 (預設)';
+__['Controls on Top and Bottom'] = '頂和底部控制';
+__['Split'] = '分化';
+__['Collapse Listings by Account'] = '透過帳號摺疊名單';
+__['Group by Seller'] = '以賣家分組';
+__['General'] = '一般';
+__['Breach'] = '裂痕聯盟';
+__['Eldritch/Maven'] = '異能 / 釋界';
+__['Heist Target'] = '劫盜目標';
+__['Online In League'] = '聯盟在線';
+__['Ultimatum Filters'] = '最後通牒篩選';
+__['Challenge Type'] = '挑戰類型';
+__['Defeat Waves of Enemies'] = '擊敗數波敵人';
+__['Survive'] = '倖存';
+__['Protect the Altar'] = '保護祭壇';
+__['Stand in the Stone Circles'] = '站在石陣內';
+__['Boss'] = '頭目';
+__['Reward Type'] = '獎勵類型';
+__['Mirrored Rare Item'] = '複製稀有物品';
+__['Unique Item'] = '傳奇物品';
+__['Required Item'] = '需求物品';
+__['Reward Unique'] = '傳奇獎勵';
+__['Character Class'] = '角色';
+__['Sentinel Filters'] = '守望篩選器';
+__['Enemies Empowered'] = '敵人賦予';
+__['Empowerment'] = '賦予';
+__['Max Durability'] = '最大耐久度';
+__['Any Expedition Logbook'] = '任何探險日誌';
+__['Any Sentinel'] = '任何守望';
+__['Stalker Sentinel'] = '潛行守望';
+__['Pandemonium Sentinel'] = '萬劫守望';
+__['Apex Sentinel'] = '巔峰守望';
+__['Heist Target'] = '劫盜目標';
+__['Online In League'] = '聯盟在線';
+__['Searing Exarch Item'] = '灼烙總督物品';
+__['Eater of Worlds Item'] = '吞噬天地物品';
+__['Alternatives Artwork'] = '特殊美術圖';
+__['Scourge Level'] = '災魘等級';
+__['Talisman Level'] = '魔符等級';
+__['Generate Link'] = '產生連結';
+__['You have reached the maximum number of invitation links.'] = '邀請連結數量已達上限。';
+__['Afghanistan'] = 'Afghanistan';
+__['Albania'] = 'Albania';
+__['Algeria'] = 'Algeria';
+__['American Samoa'] = 'American Samoa';
+__['Andorra'] = 'Andorra';
+__['Angola'] = 'Angola';
+__['Anguilla'] = 'Anguilla';
+__['Antarctica'] = 'Antarctica';
+__['Antigua & Barduba'] = 'Antigua & Barduba';
+__['Argentina'] = 'Argentina';
+__['Armenia'] = 'Armenia';
+__['Aruba'] = 'Aruba';
+__['Australia'] = '澳洲';
+__['Austria'] = 'Austria';
+__['Azerbaijan'] = 'Azerbaijan';
+__['Bahamas'] = 'Bahamas';
+__['Bahrain'] = 'Bahrain';
+__['Bangladesh'] = 'Bangladesh';
+__['Barbados'] = 'Barbados';
+__['Belarus'] = 'Belarus';
+__['Belgium'] = 'Belgium';
+__['Belize'] = 'Belize';
+__['Benin'] = 'Benin';
+__['Bermuda'] = 'Bermuda';
+__['Bhutan'] = 'Bhutan';
+__['Bolivia'] = 'Bolivia';
+__['Bosnia-Herzegovina'] = 'Bosnia-Herzegovina';
+__['Botswana'] = 'Botswana';
+__['Bouvet Island'] = 'Bouvet Island';
+__['Brazil'] = 'Brazil';
+__['British Virgin Islands'] = 'British Virgin Islands';
+__['British West Indies'] = 'British West Indies';
+__['Brunei Darussalam'] = 'Brunei Darussalam';
+__['Bulgaria'] = 'Bulgaria';
+__['Burkina'] = 'Burkina';
+__['Burma (Myanmar)'] = 'Burma (Myanmar)';
+__['Burundi'] = 'Burundi';
+__['Cambodia'] = 'Cambodia';
+__['Cameroon'] = 'Cameroon';
+__['Canada'] = 'Canada';
+__['Canary Islands'] = 'Canary Islands';
+__['Cape Verde'] = 'Cape Verde';
+__['Cayman Islands'] = 'Cape Verde';
+__['Chad'] = 'Chad';
+__['Chile'] = 'Chile';
+__['China'] = 'China';
+__['Christmas Islands'] = 'Christmas Islands';
+__['Cocos Island'] = 'Cocos Island';
+__['Colombia'] = 'Colombia';
+__['Comoros'] = 'Comoros';
+__['Congo (Brazzaville)'] = 'Congo (Brazzaville)';
+__['Cook Islands'] = 'Cook Islands';
+__['Costa Rica'] = 'Costa Rica';
+__['Croatia'] = 'Croatia';
+__['Cuba'] = 'Cuba';
+__['Curacoa'] = 'Curacoa';
+__['Cyprus'] = 'Cyprus';
+__['Czech Republic'] = 'Czech Republic';
+__['Denmark'] = 'Denmark';
+__['Djibouti'] = 'Djibouti';
+__['Dominica'] = 'Dominica';
+__['Dominican Republic'] = 'Dominican Republic';
+__['East Timor'] = 'East Timor';
+__['Ecuador'] = 'Ecuador';
+__['Egypt'] = 'Egypt';
+__['El Salvador'] = 'El Salvador';
+__['England'] = 'England';
+__['Equatorial Guinea'] = 'Equatorial Guinea';
+__['Eritrea'] = 'Eritrea';
+__['Estonia'] = 'Estonia';
+__['Ethiopia'] = 'Ethiopia';
+__['Falkland Islands'] = 'Falkland Islands';
+__['Faroe Islands'] = 'Faroe Islands';
+__['Fiji'] = 'Fiji';
+__['Finland'] = 'Finland';
+__['France'] = 'France';
+__['French Guiana'] = 'French Guiana';
+__['French Polynesia'] = 'French Polynesia';
+__['Gabon'] = 'Gabon';
+__['Gambia'] = 'Gambia';
+__['Gaza Strip'] = 'Gaza Strip';
+__['Georgia, Republic of'] = 'Georgia, Republic of';
+__['Germany'] = 'Germany';
+__['Ghana'] = 'Ghana';
+__['Gibraltar'] = 'Gibraltar';
+__['Great Britain'] = 'Great Britain';
+__['Greece'] = 'Greece';
+__['Greenland'] = 'Greenland';
+__['Grenada'] = 'Grenada';
+__['Guadeloupe'] = 'Guadeloupe';
+__['Guam'] = 'Guam';
+__['Guatemala'] = 'Guatemala';
+__['Guernsey'] = 'Guernsey';
+__['Guinea'] = 'Guinea';
+__['Guinea-Bissua'] = 'Guinea-Bissua';
+__['Guyana'] = 'Guyana';
+__['Haiti'] = 'Haiti';
+__['Honduras'] = 'Honduras';
+__['Hong Kong'] = '香港';
+__['Hungary'] = 'Hungary';
+__['Iceland'] = 'Iceland';
+__['India'] = 'India';
+__['Indonesia'] = 'Indonesia';
+__['Iran'] = 'Iran';
+__['Iraq'] = 'Iraq';
+__['Ireland'] = 'Ireland';
+__['Isle of Man'] = 'Isle of Man';
+__['Israel'] = 'Israel';
+__['Italy'] = 'Italy';
+__['Ivory Coast'] = 'Ivory Coast';
+__['Jamaica'] = 'Jamaica';
+__['Japan'] = 'Japan';
+__['Jersey'] = 'Jersey';
+__['Jordan'] = 'Jordan';
+__['Kampuchea'] = 'Kampuchea';
+__['Kazakhstan'] = 'Kazakhstan';
+__['Kenya'] = 'Kenya';
+__['Kiribati'] = 'Kiribati';
+__['Kuwait'] = 'Kuwait';
+__['Kyrgyzstan'] = 'Kyrgyzstan';
+__['laos'] = 'laos';
+__['Latvia'] = 'Latvia';
+__['Lebanon'] = 'Lebanon';
+__['Lesotho'] = 'Lesotho';
+__['Liberia'] = 'Liberia';
+__['Libya'] = 'Libya';
+__['Liechtenstein'] = 'Liechtenstein';
+__['Lithuania'] = 'Lithuania';
+__['Luxembourg'] = 'Luxembourg';
+__['Macau'] = '澳門';
+__['Macedonia'] = 'Macedonia';
+__['Madagascar'] = 'Madagascar';
+__['Malawi'] = 'Malawi';
+__['Malaysia'] = 'Malaysia';
+__['Maldives'] = 'Maldives';
+__['Mali'] = 'Mali';
+__['Malta'] = 'Malta';
+__['Marshall Islands'] = 'Marshall Islands';
+__['Martinique'] = 'Martinique';
+__['Mauritania'] = 'Mauritania';
+__['Mauritius'] = 'Mauritius';
+__['Mayotte'] = 'Mayotte';
+__['Mexico'] = 'Mexico';
+__['Micronesia'] = 'Micronesia';
+__['Moldova'] = 'Moldova';
+__['Monaco'] = 'Monaco';
+__['Mongolia'] = 'Mongolia';
+__['Montenegro, Republic of'] = 'Montenegro, Republic of';
+__['Montserrat'] = 'Montserrat';
+__['Morocco'] = 'Morocco';
+__['Mozambique'] = 'Mozambique';
+__['Myanmar'] = 'Myanmar';
+__['Namibia'] = 'Namibia';
+__['Nauru'] = 'Nauru';
+__['Nepal'] = 'Nepal';
+__['Netherlands'] = 'Netherlands';
+__['Netherlands Antilles'] = 'Netherlands Antilles';
+__['New Caledonia'] = 'New Caledonia';
+__['New Zealand'] = '紐西蘭';
+__['Newfoundland'] = 'Newfoundland';
+__['Nicaragua'] = 'Nicaragua';
+__['Niger'] = 'Niger';
+__['Nigeria'] = 'Nigeria';
+__['Niue'] = 'Niue';
+__['Norfolk Island'] = 'Norfolk Island';
+__['North Korea'] = 'North Korea';
+__['Northern Mariana Islands'] = 'Northern Mariana Islands';
+__['Norway'] = 'Norway';
+__['Oman'] = 'Oman';
+__['Pakistan'] = 'Pakistan';
+__['Palau'] = 'Palau';
+__['Panama'] = 'Panama';
+__['Papua New Guinea'] = 'Papua New Guinea';
+__['Paraguay'] = 'Paraguay';
+__['Peru'] = 'Peru';
+__['Philippines'] = 'Philippines';
+__['Pitcairn Island'] = 'Pitcairn Island';
+__['Poland'] = 'Paraguay';
+__['Portugal'] = 'Portugal';
+__['Puerto Rico'] = 'Puerto Rico';
+__['Qatar'] = 'Qatar';
+__['Reunion'] = 'Reunion';
+__['Romania'] = 'Romania';
+__['Russia'] = 'Russia';
+__['Rwanda'] = 'Rwanda';
+__['Saint Lucia'] = 'Saint Lucia';
+__['Saint Vincent and the Grenadines'] = 'Saint Vincent and the Grenadines';
+__['Samoa'] = 'Samoa';
+__['San Marino'] = 'San Marino';
+__['Sao Tome & Principe'] = 'Sao Tome & Principe';
+__['Saudi Arabia'] = 'Saudi Arabia';
+__['Scotland'] = 'Scotland';
+__['Senegal'] = 'Senegal';
+__['Serbia, Republic of'] = 'Serbia, Republic of';
+__['Seychelles'] = 'Seychelles';
+__['Sierra Leone'] = 'Sierra Leone';
+__['Singapore'] = 'Singapore';
+__['Slovakia'] = 'Slovakia';
+__['Slovenia'] = 'Slovenia';
+__['Solomon Islands'] = 'Solomon Islands';
+__['Somalia'] = 'Somalia';
+__['South Africa'] = 'South Africa';
+__['South Korea'] = 'South Korea';
+__['Spain'] = 'Spain';
+__['Sri Lanka'] = 'Sri Lanka';
+__['St. Christopher'] = 'St. Christopher';
+__['St. Helena'] = 'St. Helena';
+__['St. Pierre and Miquelon'] = 'St. Pierre and Miquelon';
+__['Sudan'] = 'Sudan';
+__['Suriname'] = 'Suriname';
+__['Swaziland'] = 'Swaziland';
+__['Sweden'] = 'Sweden';
+__['Switzerland'] = 'Switzerland';
+__['Syrian Arab Republic'] = 'Syrian Arab Republic';
+__['Taiwan'] = '台灣';
+__['Tajikistan'] = 'Tajikistan';
+__['Tanzania'] = 'Tanzania';
+__['Thailand'] = 'Thailand';
+__['Togo'] = 'Togo';
+__['Tokelau'] = 'Tokelau';
+__['Tonga'] = 'Tonga';
+__['Trinidad And Tobago'] = 'Trinidad And Tobago';
+__['Tunisia'] = 'Tunisia';
+__['Turkey'] = 'Turkey';
+__['Turkmenistan'] = 'Turkmenistan';
+__['Turks and Caicos Islands'] = 'Turks and Caicos Islands';
+__['Tuvalu'] = 'Tuvalu';
+__['Uganda'] = 'Uganda';
+__['Ukraine'] = 'Ukraine';
+__['United Arab Emirates'] = 'United Arab Emirates';
+__['United Kingdom'] = 'United Kingdom';
+__['United States'] = '美國';
+__['Uruguay'] = 'Uruguay';
+__['Uzbekistan'] = 'Uzbekistan';
+__['Vanuatu'] = 'Vanuatu';
+__['Vatican City'] = 'Vatican City';
+__['Venezuela'] = 'Venezuela';
+__['Vietnam'] = 'Vietnam';
+__['Virgin Islands'] = 'Virgin Islands';
+__['Wales, U.K.'] = 'Wales, U.K.';
+__['Wallis and Futuna Islands'] = 'Wallis and Futuna Islands';
+__['West Bank'] = 'West Bank';
+__['Western Sahara'] = 'Western Sahara';
+__['Yemen'] = 'Yemen';
+__['Yugoslavia'] = 'Yugoslavia';
+__['Zaire'] = 'Zaire';
+__['Zambia'] = 'Zambia';
+__['Zimbabwe'] = 'Wallis and Futuna Islands';
+__['Ward'] = '保護';
+__['Failed to load search state. The search is no longer valid.'] = '載入搜尋狀態失敗。此搜尋不再有效。';
+__['Scourged (Tier {TIER})'] = '災魘 (階級 {TIER})';
+__['Level {LEVEL}+ Corruption Absorbed'] = '等級 {LEVEL} + 汙染吸收';
+__['Default'] = '預設';
+__['Small Notches'] = '小插槽';
+__['Large Pattern'] = '大圖示';
+__['Includes base value, local modifiers, and maximum quality'] = '包含基礎值、區域詞綴和最大品質';
+__['Includes base value and local modifiers'] = '包含基礎值和區域詞綴';
+__['Base Percentile'] = '基礎百分比';
+__['The percentile of all base defence rolls, averaged (0-100%)'] = '所有基礎防禦骰出的百分比，平均 (0-100%)';
+__['Blight-ravaged Map'] = '凋落蔓延地圖';
+__['Scourge Tier'] = '災魘階級';
+__['Level {0}'] = '等級 {0}';
+__['Level {0}-{1}'] = '等級 {0}-{1}';
+__['Item Level {0}'] = '物品等級 {0}';
+__['Item Level {0}-{1}'] = '物品等級 {0}-{1}';
+__['Buy'] = '購買';
+__['Buy Points'] = '儲值轉點';
+__['Saves'] = '省下';
+__['x{COUNT} Variations'] = 'x{COUNT} 型態';
+__['You save'] = '你省了';
+__['Select a variant'] = '選擇一個型態';
+__['Select {NAME}'] = '選擇 {NAME}';
+__['Already Owned'] = '已擁有';
+__['Was'] = '原本為';
+__['Your Guild does not have enough points to purchase this item'] = '你的公會沒有足夠的黯幣購買此物品';
+__['You must be a Guild leader to purchase this'] = '你必須是公會會長才能購買這項物品';
+__['GIVE POINTS TO GUILD'] = '給予公會黯幣';
+__['Requires a guild'] = '限定公會';
+__['Purchasing...'] = '購買中...';
+__['Purchase complete.'] = '購買完成';
+__['Do you want to keep this item watchlisted?'] = '你想要保留此物品於關注清單中嗎？';
+__['Failed to purchase.'] = '購買失敗';
+__['Keep'] = '保留';
+__['Remove'] = '移除';
+__['Choose a Friend'] = '選擇一位朋友';
+__['Buy for a friend'] = '買給一位朋友';
+__['Stash tab admin'] = '倉庫頁管理員';
+__['Please check the events tab for prior map tab demotions to ensure the account is not abusing this feature. Try to ensure that this is only done for genuine mistakes, and make sure the player understands not to do this again'] = 'Please check the events tab for prior map tab demotions to ensure the account is not abusing this feature. Try to ensure that this is only done for genuine mistakes, and make sure the player understands not to do this again';
+__['Demote map stash tabs'] = 'Demote map stash tabs';
+__['Stash tab allocations'] = '倉庫頁配置';
+__['Stash type'] = '倉庫類型';
+__['Allocated'] = '分配';
+__['Allocated (Sony)'] = '已分配（Sony）';
+__['Confirm'] = '確認';
+__['Custom'] = 'Custom';
+__['characters left'] = '剩餘角色';
+__['character left'] = '剩餘角色';
+__['Translate'] = 'Translate';
+__['Add to notes'] = 'Add to notes';
+__['You have been muted for {TIME} for breaching our Code of Conduct. If you have any questions about our in game chat rules, or anything else, please contact support@grindinggear.com'] = '你因為違反我們的行為守則被禁言 {TIME}。若你對遊戲內的聊天規則或其它事情有任何疑問，請聯絡 support@grindinggear.com';
+__['You have been muted permanently for breaching our Code of Conduct. If you have any questions about our in game chat rules, or anything else, please contact support@grindinggear.com'] = '你因為違反我們的行為守則被永久禁言。若你對遊戲內的聊天規則或其它事情有任何疑問，請聯絡 support@grindinggear.com';
+__['You have been muted for {TIME} due to the following statement "{MESSAGE}" as this breaches our Code of Conduct. If you have any questions about our in game chat rules, or anything else, please contact support@grindinggear.com'] = '你因為下列發言"{MESSAGE}"違反我們的行為守則被禁言 {TIME} 。若你對遊戲內的聊天規則或其它事情有任何疑問，請聯絡 support@grindinggear.com';
+__['You have been muted permanently due to the following statement "{MESSAGE}" as this breaches our Code of Conduct. If you have any questions about our in game chat rules, or anything else, please contact support@grindinggear.com'] = '你因為下列發言"{MESSAGE}"違反我們的行為守則被永久禁言。若你對遊戲內的聊天規則或其它事情有任何疑問，請聯絡 support@grindinggear.com';
+__['You have been muted for {TIME} for trading in the global chat. For future trading, please use the dedicated trade channels. If you have any questions about our in game chat rules, or anything else, please contact support@grindinggear.com'] = '你因為在世界頻道交易被禁言 {TIME}。未來有交易需求，請至對應的交易頻道。若你對遊戲內的聊天規則或其它事情有任何疑問，請聯絡 support@grindinggear.com';
+__['You have been muted permanently for trading in the global chat. For future trading, please use the dedicated trade channels. If you have any questions about our in game chat rules, or anything else, please contact support@grindinggear.com'] = '你因為在世界頻道交易被永久禁言。未來有交易需求，請至對應的交易頻道。若你對遊戲內的聊天規則或其它事情有任何疑問，請聯絡 support@grindinggear.com';
+__['Your character will be renamed shortly for breaching our Code of Conduct. This will log you out of the game client. When you log back in you will need to select a new character name. If you have any questions about our in game chat rules, or anything else, please contact support@grindinggear.com'] = '因違反我們的行為守則，你的角色將被重新命名。此會將你登出遊戲。當你重新登入時，你需要為你的角色重新命名。若你對遊戲內的聊天規則或其它事情有任何疑問，請聯絡 support@grindinggear.com';
+__['Original Cost'] = '原價';
+__['Sale Cost'] = '特價';
+__['Discount'] = '折扣';
+__['Image'] = '圖片';
+__['Priority'] = 'Priority';
+__['Platform'] = '平台';
+__['Start / End'] = '開始/結束';
+__['Could not find new / update special data'] = '無法找到新的/更新特殊資料';
+__['Start and end time are required.'] = '需要開始和結束時間。';
+__['Priority must be greater than or equal to 0.'] = '優先度必須大於0';
+__['Sale Cost must be greater than 0.'] = '特價必須大於0';
+__['Could not update legacy special type.'] = '無法更新不朽特殊類型。';
+__['Export all data'] = 'Export all data';
+__['You have attempted to export your data too many times. If your download did not begin, please contact {SUPPORT_LINK} for assistance'] = 'You have attempted to export your data too many times. If your download did not begin, please contact {SUPPORT_LINK} for assistance';
+__['Your export is being prepared and the download will begin shortly. If it does not begin within the next 30 seconds, {LINK}click here{/LINK} to try again.'] = 'Your export is being prepared and the download will begin shortly. If it does not begin within the next 30 seconds, {LINK}click here{/LINK} to try again.';
+__['You may download a copy of all data that is tracked against your account by pressing the button below. If you would like to remove this information, you may delete your account. 30 days after your account is deleted, the information will be removed.'] = 'You may download a copy of all data that is tracked against your account by pressing the button below. If you would like to remove this information, you may delete your account. 30 days after your account is deleted, the information will be removed.';
+__['You may only periodically download your data. Please contact us at {SUPPORT_LINK} if you would like to download your account data.'] = 'You may only periodically download your data. Please contact us at {SUPPORT_LINK} if you would like to download your account data.';
+__['Delete your account'] = '刪除帳號';
+__['{BOLD}CAUTION{/BOLD}: After deleting your account, there is a 30 day window in which it can be recovered. After this time lapses, it will be impossible for us to recover your account.'] = '{BOLD}CAUTION{/BOLD}: After deleting your account, there is a 30 day window in which it can be recovered. After this time lapses, it will be impossible for us to recover your account.';
+__['When you complete the deletion process below, you will be logged out and your account will immediately be deleted. After 30 days, all your data will be permanently removed. If you change your mind within 30 days and wish to recover your account, please contact us at {SUPPORT_LINK} for assistance with this.'] = 'When you complete the deletion process below, you will be logged out and your account will immediately be deleted. After 30 days, all your data will be permanently removed. If you change your mind within 30 days and wish to recover your account, please contact us at {SUPPORT_LINK} for assistance with this.';
+__['To delete your account, type your account name into the field and click "{BUTTON}".'] = 'To delete your account, type your account name into the field and click "{BUTTON}".';
+__['Season Reward Points'] = '賽季獎勵點數';
+__['Hover or click to highlight other clusters of the same type'] = '滑鼠移至或點擊提示的其他同類型的天賦群';
+
+
+__['Path of Exile'] = '《流亡黯道》';
+__['Top'] = '回到頂部';
+__['Latest'] = '最新';
+__['Back to {link}'] = '返回 {link}';
+__['Password'] = '密碼';
+__['Remember me'] = '記住我';
+__['Forgot your password'] = '忘記密碼';
+__['Sign in'] = '登入';
+__['all sign in options'] = '全部登入選項';
+__['Please complete the reCAPTCHA'] = '請完成 reCAPTCHA 驗證';
+__['Sign in instead'] = '改為登入';
+__['Choose how you would like to sign up:'] = '請選擇登入方式：';
+__['Log in'] = '登入';
+__['Loading posts...'] = '載入貼文...';
+__['New post in {category}'] = '新貼文於 {category}';
+__['Text'] = 'Text';
+__['Submit'] = '提交';
+__['Post'] = '貼文';
+__['Video'] = '影片';
+__['Link'] = 'Link';
+__['Poll'] = 'Poll';
+__['Loading post...'] = '載入貼文...';
+__['Create an account'] = '創立帳號';
+__['Create your Path of Exile account'] = '創立你的流亡黯道帳號';
+__['here'] = '這裡';
+__['Steam'] = 'Steam';
+__['Epic Games'] = 'Epic Games';
+__['Xbox Live'] = 'Xbox Live';
+__['Playstation Network'] = 'Playstation Network';
+__['PC'] = 'PC';
+__['Console'] = 'Console';
+__['GGG Icon'] = 'GGG Icon';
+__['Loading categories...'] = '載入分類...';
+__['Loading feed...'] = '載入資源...';
+__['More'] = '更多';
+__['New post'] = '開新文章';
+__['Home'] = '主頁';
+__['Sort by:'] = '排序方式：';
+__['Loading comments...'] = '載入留言...';
+__['Top'] = '回到頂部';
+__['Posted by {author} {date}'] = '由 {author} 發布 {date} ';
+__['Leave a comment...'] = '留言...';
+__['Submit'] = '提交';
+__['Spoiler'] = '折疊';
+__['Just now'] = '只有現在';
+__['Sign in to your Path of Exile account'] = '登入你的流亡黯道帳號';
+__['Posted by {author}'] = '發文者 {author}';
+__['Announcement'] = '公告';
+__['Discussion'] = '討論';
+__['Replying to:'] = '回覆:';
+__['URL'] = 'URL';
+__['Sign in with {provider}'] = '使用{provider}登入';
+__['Create account with {provider}'] = '此用{provider}創立帳號';
+__['Claimed'] = '已取得';
+__['Kirac\'s Vault'] = '基拉克的秘寶';
+__['Free Track'] = '免費';
+__['Complete Map Bonus Objectives to Unlock'] = '完成地圖特殊條件來解鎖';
+__['Premium Track'] = '進階';
+__['Purchase the Premium Track to be eligible for this reward'] = '購買進階指南可以獲得此獎勵';
+__['Crucible stats are ignored in Weighted Sum groups.'] = '熔火的狀態在權重總合中被無視。';
+__['Select Items to Exchange'] = '選擇道具來交換';
+__['Whisper sent!'] = '發送密語！';
+__['Crucible Passive Tree Path'] = '熔火天賦樹路徑';
+__['Filter by the mods that you want to be able to allocate at once.\nUse a lower `min` value for partial matches.'] = '透過你想配置的詞綴篩選。\n使用較"低"的值來配對。';
+__['Any One-Handed Mace'] = '任何單手錘';
+__['Base One-Handed Mace'] = '基礎單手錘';
+__['Breachstone'] = '裂痕石';
+__['Memory Line'] = '記憶線';
+__['Foil Variation'] = '貼模種類';
+__['Gold Coin'] = '金幣';
+__['crucible'] = '熔火冥獄';
+__['Crucible Update'] = '熔火更新';
+__['Crucible Passive Trees'] = '熔火天賦樹';
+__['For the purposes of search filters, all items with Crucible Passive Trees are considered unallocated. The allocated effects will still be represented visually on the item.'] = '對於搜尋篩選器，熔火天賦樹在全部物品上都被視為未配置。這些已配置的效果仍然會在物品上以視覺方式表示。';
+__['You can hover over the tree preview to view each node, and expand or collapse each preview\'s size individually by dragging the handle in the bottom-right corner.'] = '你可以懸停在天賦樹預覽上，查看每個節點，並通過拖曳右下角的把手來個別展開或折疊每個預覽的大小。';
+__['To find items with your preferred Crucible Passive Tree skills, use the "Crucible Passive Tree Path" stat group. This group will match trees with a valid path that includes all of the selected skills. The "min" field in this stat group can be used to partially match a subset of the selected skills instead. Multiple "Crucible Passive Tree Path" groups will be applied together for each path.'] = '若要找到具有所選熔火天賦樹天賦的物品，請使用「熔火天賦樹路徑」屬性群組。此群組將匹配包含所有所選技能的有效路徑的樹。此屬性群組中的「min」欄位可以用於部分匹配所選技能的子集。對於每個路徑，將應用多個「熔火天賦樹路徑」群組。你可以懸停在樹預覽上查看每個節點，並透過拖曳右下角的手把來展開或折疊每個預覽的大小。';
+__['Crucible skills can also be used in And, Not, If, and Count stat groups for basic matching. They are not supported in the Weighted Sum stat group.'] = '熔火天賦也可以在 And、Not、If 和 Count 屬性群組中用於基本匹配。它們不支援權重總和屬性群組。';
+__['Other changes'] = '其它改動';
+__['Added Anomalous, Divergent, and Phantasmal gems to the "Search Items" drop-down.'] = '新增異常的、相異的和幻影的寶石至「搜尋物品」的下拉選項。';
+__['Updated the Bulk Exchange to include Crucible items.'] = '更新以物易物，現在有熔火物品';
+__['Fixed a bug where Blood-filled Vessels weren\'t searchable by area level.'] = '修正浸血碑器無法透過區域等級搜索。';
+__['Thank you for your energy and continued support.'] = '感謝你的支持。';
+__['Crucible Item'] = '熔火物品';
+__['Sanctum Relic'] = '聖域聖物';
+__['Sanctum Filters'] = '聖域篩選器';
+__['Resolve'] = '決心';
+__['Maximum Resolve'] = '最大決心';
+__['Inspiration'] = '啟發';
+__['Aureus'] = '奧瑞厄斯幣';
+__['Chaos or Divine Orbs'] = '混沌或神聖石';
+__['Omen'] = '預兆';
+__['Tattoo'] = '紋身';
+__['Hinekora\'s Lock allows you to forsee the result of the next Currency Item used on this item. The Lock is removed when this item is modified.'] = '悉妮蔻拉的髮絲讓你可以預見下一個使用於物品上的通貨結果。當物品被調整時，髮絲會被移除。';
+__['Foreseeing'] = '預見';
+__['Direct Whisper'] = '私訊';
+__['Any Tincture'] = '任何萃取物';
+__['Any Charm'] = '任何咒語';
+__['Any Corpse'] = '任何屍體';
+__['Show Wildwood Rucksack'] = '顯示荒林背包';
+__['Hide Wildwood Rucksack'] = '隱藏荒林背包';
+__['Any Celestial Variant'] = '任何眾星類型';
+__['Celestial Quartz'] = '眾星．石英';
+__['Celestial Ruby'] = '眾星．紅玉';
+__['Celestial Emerald'] = '眾星．翠綠';
+__['Celestial Aureate'] = '眾星．金光';
+__['Celestial Pearl'] = '眾星．珍珠';
+__['Celestial Amethyst'] = '眾星．紫晶';
+__['Corpse Type'] = '屍體類型';
+__['Eldritch'] = '異能';
+__['Demon'] = '惡魔';
+__['Construct'] = '生物';
+__['Undead'] = '不死';
+__['Beast'] = '野獸';
+__['Humanoid'] = '人形';
+__['Transfigured Gem'] = '變異寶石';
+__['Vaal Gem'] = '瓦寶寶石';
+__['Any Necropolis Pack'] = '任意魔影墓場包';
+__['Match items that meet each stat\'s `min` and `max` requirements if the stat is present.'] = '如果該統計資料存在，則對符合每項統計資料的「min」和「max」要求的項目進行配對。';
+__['Count each stat that meets the `min` and `max` (if provided, otherwise existence) requirements.\nUse the group\'s `min` and `max` to filter items based on the count of matching stats.'] = '計算每個符合「min」和「max」（除非另外提供數值，否則適用）要求的統計資料。\n使用組的「min」和「max」來根據配對的統計資料篩選項目。';
+__['Check each stat meets the `min` and `max` (if provided, otherwise existence) requirements before multiplying the stat value by the `weight` and finally summing them together.\nUse the group\'s `min` and `max` to filter items based on the total summed value.'] = '在將統計值乘以「weight」並加總前，檢查每個統計資料是否符合「min」和「max」（除非另外提供數值，否則適用）的要求。\n使用組的「min」和「max」來根據加總總值篩選項目。';
+__['Each stat value that meets the `min` and `max` (if provided, otherwise existence) requirements will be multiplied by the `weight` before being summed together.\nUse the group\'s `min` and `max` to filter items based on the total summed value.'] = '符合「min」和「max」（除非另外提供數值，否則適用）要求的每個統計值都將在進行總和之前乘以「weight」。\n使用組的「min」和「max」來根據加總總值篩選項目。';
+__['Modifiable only with Chaos Orbs, Vaal Orbs, Delirium Orbs and Chisels'] = '僅能使用混沌石、瓦爾寶珠、譫妄玉和圖釘調整';
+
+
