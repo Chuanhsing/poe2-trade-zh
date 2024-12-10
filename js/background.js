@@ -318,7 +318,7 @@ let getCacheData = (language) => {
 
 let fetchData = {
   async us() {
-    let us_url = 'https://www.pathofexile.com/api/trade/data/'
+    let us_url = 'https://www.pathofexile.com/api/trade2/data/'
     let items = await fetch(`${us_url}items`).then((res) => res.json())
     let stats = await fetch(`${us_url}stats`).then((res) => res.json())
     let static = await fetch(`${us_url}static`).then((res) => res.json())
@@ -326,7 +326,7 @@ let fetchData = {
     return { items, stats, static }
   },
   async zh_tw() {
-    let us_url = 'https://pathofexile.tw/api/trade/data/'
+    let us_url = 'https://pathofexile.tw/api/trade2/data/'
     try {
       let stats = await fetch(`${us_url}stats`).then((res) => res.json())
       let static = await fetch(`${us_url}static`).then((res) => res.json())
@@ -337,7 +337,7 @@ let fetchData = {
     }
   },
   async zh_cn() {
-    let us_url = 'https://poe.game.qq.com/api/trade/data/'
+    let us_url = 'https://poe.game.qq.com/api/trade2/data/'
     let stats = await fetch(`${us_url}stats`).then((res) => res.json())
     let static = await fetch(`${us_url}static`).then((res) => res.json())
     chrome.storage.local.set({ cache_zh_cn: { stats, static } })
