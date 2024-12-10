@@ -1,0 +1,35 @@
+{
+   "action": {
+      "default_icon": "images/icon.png",
+      "default_popup": "options.html",
+      "default_title": "POE Trade zh"
+   },
+   "background": {
+      "service_worker": "js/background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "js/app.js" ],
+      "matches": [ "https://www.pathofexile.com/trade/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "js/result.js" ],
+      "matches": [ "https://www.pathofexile.com/trade/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "讓國際版 POE Trade 網頁支援中文裝備、詞綴搜尋",
+   "host_permissions": [ "https://www.pathofexile.com/trade/*", "https://pathofexile.tw/trade/*", "https://poe.game.qq.com/api/trade/*" ],
+   "icons": {
+      "128": "images/128x128.png",
+      "48": "images/icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAltWhgcc1mPvC/q9ucmi6awqjle9NFwmi8Fdzjx0riYKGZTHaRryzgA0AOmDV1JImfKIGVtVmaOwyMK9uEOxgmw0m8KpJ6lNdApc+b5iX+RV5SRy2mj5CDgt3c/xT7Kk6qOHU3AcbxMEx2CslG+Pwa1eBLL78TeLpNU1B2TPxiui1HND3LgguMcveGjH0zfPP8fEdAJdC7PmG37aSR8RsiRGHiUeP4i0JmiwSiUwqRsWynfSx8xZP2cHapk8o+hiQn2EqyP96WtjZERsuDxSxc/5ldmTfR3EuSa8T8lRwzhrQVvM2JY1er2twiAYMXe4ojYhLYHlwwJBTFwIysaV05QIDAQAB",
+   "manifest_version": 3,
+   "name": "POE Trade zh",
+   "permissions": [ "storage", "unlimitedStorage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.25.1",
+   "web_accessible_resources": [ {
+      "matches": [ "https://www.pathofexile.com/*" ],
+      "resources": [ "js/translate.zh_TW.js" ]
+   } ]
+}

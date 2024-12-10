@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <title>POE Trade zh</title>
+    <link rel="stylesheet" href="lib/materialize/css/materialize.min.css" media="screen,projection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        @font-face {
+            font-family: 'Source Code Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: local('Source Code Pro Regular'), local('SourceCodePro-Regular'), url('font/SourceCodePro-Black.otf.woff2') format('woff2');
+        }
+
+        body {
+            min-width: 400px;
+            font-family: 'Source Code Pro', monospace;
+            font-weight: bold;
+        }
+
+        .brand-logo {
+            white-space: nowrap;
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        #status .progress {
+            display: none;
+        }
+
+        #status.loading .description {
+            display: none;
+        }
+
+        #status.loading .progress {
+            display: block;
+        }
+
+        .card {
+            margin: 0;
+        }
+
+        .card .card-content {
+            padding: 8px;
+            text-align: center;
+        }
+
+        .card .card-content > p {
+            font-size: 20px;
+            color: #ff5252;
+        }
+
+        hr {
+            margin-bottom: 20px;
+        }
+
+        #version {
+            position: absolute;
+            right: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">
+                POE Trade zh
+            </a>
+            <div id="version"></div>
+        </div>
+    </nav>
+    <div class="section no-pad-bot">
+        <div class="container">
+            <!-- <div class="row">
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-content">
+                            <p>官網</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-content">
+                            <p>目前語系:<span id="langText"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="waves-effect waves-light btn-large full-width" id="zhTwBtn">
+                        繁體中文化(zh_tw)
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col s12">
+                    <div class="waves-effect waves-light btn-large full-width disabled">
+                        简体中文化(zh_cn)
+                    </div>
+                    <div class="description center-align">
+                        CN 的資料改成登入後才能抓取，因此 CN 暫停更新
+                    </div>
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col s12">
+                    <div class="waves-effect waves-light btn-large full-width" id="resetBtn">
+                        還原回英文(US)
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row" style="display: none;">
+                <div class="col s12">
+                    <label>介面顯示</label>
+                    <a class="waves-effect waves-light btn-small" id="uiZhUsBtn">中(英)</a>
+                    <a class="waves-effect waves-light btn-small" id="uiZhBtn">僅中文</a>
+                    <a class="waves-effect waves-light btn-small" id="uiUsBtn">僅英文</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="waves-effect waves-light btn full-width red accent-2" id="clearCache">
+                        清除快取
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="status">
+                <div class="col s12">
+                    <span class="blue-text text-darken-2">
+                        <div class="progress">
+                            <div class="indeterminate"></div>
+                        </div>
+                        <div class="description center-left">
+                            1. 套用後記得重新整理讓修改生效<br>
+                            2. POE 改版後，清除快取再套用，就能用英文搜到新道具<br>
+                            3. 等台服改版後，再重新套用就能用中文搜到新詞綴<br>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/popup.js"></script>
+</body>
+
+</html>
