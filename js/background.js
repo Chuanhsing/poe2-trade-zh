@@ -37,16 +37,16 @@ chrome.storage.onChanged.addListener((changes) => {
 
 let changeLanguage = async (language) => {
   if (language === 'us') {
-    getCacheData(language).then(({ items, stats, static }) => {
+    getCacheData(language).then(({ items, stats, static, filters }) => {
       chrome.storage.local.set({
-        translation: { items, stats, static },
+        translation: { items, stats, static, filters },
         status: 'done',
         updated: +new Date(),
       })
     })
   }
   if (language === 'zh_tw') {
-    getCacheData('us').then(async ({ items, stats, static }) => {
+    getCacheData('us').then(async ({ items, stats, static, filters }) => {
       const translateFile = chrome.runtime.getURL('json/translate.json')
       let translate = await fetch(translateFile).then((res) => res.json())
       const clusterJewelFile = chrome.runtime.getURL('json/clusterJewel.json')
@@ -67,7 +67,7 @@ let changeLanguage = async (language) => {
           }
         })
       })
-      getCacheData('zh_tw').then(({ stats: zh_stats, static: zh_static }) => {
+      getCacheData('zh_tw').then(({ stats: zh_stats, static: zh_static, filters: zh_filters }) => {
         // stats
         let translate_stat = {}
         zh_stats.result.forEach((category) => {
@@ -83,6 +83,23 @@ let changeLanguage = async (language) => {
             }
           })
         })
+        // filter
+        /*
+        let translate_filters = {}
+        zh_filters.result.forEach((category) => {
+          category.filters.forEach((item) => {
+            translate_filters[item.id] = item.text
+          })
+        })
+        filters.result.forEach((category) => {
+          category.filters.forEach((item) => {
+            let haveTranslate = translate_filters[item.id]
+            if (!!haveTranslate) {
+              item.text = haveTranslate + ' (' + item.text + ')'
+            }
+          })
+        })
+        */
         // static
         let translate_static = {}
         let translate_label = {}
@@ -111,6 +128,7 @@ let changeLanguage = async (language) => {
             }
           })
         })
+        /*
         // stats Filters 星團翻譯 (Added Small Passive Skills grant)
         cluster_jewel_us = stats.result[4].entries.find(({ id }) => id == 'enchant.stat_3948993189').option.options
         cluster_jewel_zh = zh_stats.result[4].entries.find(({ id }) => id == 'enchant.stat_3948993189').option.options
@@ -131,6 +149,7 @@ let changeLanguage = async (language) => {
             options.text = zh_text.text + '\n (' + options.text + ')'
           }
         })
+        */
         // finish
         chrome.storage.local.set({
           translation: { items, stats, static, clusterJewel, passivesNotable },
@@ -203,6 +222,7 @@ let changeLanguage = async (language) => {
           })
         })
         // stats Filters 星團翻譯 (Added Small Passive Skills grant)
+        /*
         cluster_jewel_us = stats.result[4].entries.find(({ id }) => id == 'enchant.stat_3948993189').option.options
         cluster_jewel_zh = zh_stats.result[4].entries.find(({ id }) => id == 'enchant.stat_3948993189').option.options
         //
@@ -212,6 +232,7 @@ let changeLanguage = async (language) => {
             options.text = zh_text.text + '\n (' + options.text + ')'
           }
         })
+        */
         // 塗油天賦翻譯
         passives_notable_us = stats.result[4].entries.find(({ id }) => id == 'enchant.stat_2954116742').option.options
         passives_notable_zh = zh_stats.result[4].entries.find(({ id }) => id == 'enchant.stat_2954116742').option.options
@@ -322,7 +343,8 @@ let fetchData = {
     let items = await fetch(`${us_url}items`).then((res) => res.json())
     let stats = await fetch(`${us_url}stats`).then((res) => res.json())
     let static = await fetch(`${us_url}static`).then((res) => res.json())
-    chrome.storage.local.set({ cache_us: { items, stats, static } })
+    let filters = await fetch(`${us_url}filters`).then((res) => res.json())
+    chrome.storage.local.set({ cache_us: { items, stats, static, filters } })
     return { items, stats, static }
   },
   async zh_tw() {
@@ -330,8 +352,9 @@ let fetchData = {
     try {
       let stats = await fetch(`${us_url}stats`).then((res) => res.json())
       let static = await fetch(`${us_url}static`).then((res) => res.json())
-      chrome.storage.local.set({ cache_zh_tw: { stats, static } })
-      return { stats, static }
+      let filters = await fetch(`${us_url}filters`).then((res) => res.json())
+      chrome.storage.local.set({ cache_zh_tw: { stats, static, filters } })
+      return { stats, static, filters }
     } catch (error) {
       console.log(error)
     }
