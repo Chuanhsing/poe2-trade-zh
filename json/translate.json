@@ -1589,6 +1589,106 @@
         "zh_tw": "時迭鑽石 (Time-Lost Diamond)",
         "zh_cn": "Time-Lost Diamond (Time-Lost Diamond)"
     },
+    "Desert Rune": {
+        "zh_tw": "沙漠符文 (Desert Rune)",
+        "zh_cn": "Desert Rune (Desert Rune)"
+    },
+    "Glacial Rune": {
+        "zh_tw": "冰川符文 (Glacial Rune)",
+        "zh_cn": "Glacial Rune (Glacial Rune)"
+    },
+    "Storm Rune": {
+        "zh_tw": "暴風符文 (Storm Rune)",
+        "zh_cn": "Storm Rune (Storm Rune)"
+    },
+    "Iron Rune": {
+        "zh_tw": "鍛鐵符文 (Iron Rune)",
+        "zh_cn": "Iron Rune (Iron Rune)"
+    },
+    "Body Rune": {
+        "zh_tw": "肉體符文 (Body Rune)",
+        "zh_cn": "Body Rune (Body Rune)"
+    },
+    "Mind Rune": {
+        "zh_tw": "心靈符文 (Mind Rune)",
+        "zh_cn": "Mind Rune (Mind Rune)"
+    },
+    "Rebirth Rune": {
+        "zh_tw": "重生符文 (Rebirth Rune)",
+        "zh_cn": "Rebirth Rune (Rebirth Rune)"
+    },
+    "Inspiration Rune": {
+        "zh_tw": "啟發符文 (Inspiration Rune)",
+        "zh_cn": "Inspiration Rune (Inspiration Rune)"
+    },
+    "Stone Rune": {
+        "zh_tw": "岩石符文 (Stone Rune)",
+        "zh_cn": "Stone Rune (Stone Rune)"
+    },
+    "Vision Rune": {
+        "zh_tw": "遠見符文 (Vision Rune)",
+        "zh_cn": "Vision Rune (Vision Rune)"
+    },
+    "Soul Core of Tacati": {
+        "zh_tw": "特卡蒂靈魂核心 (Soul Core of Tacati)",
+        "zh_cn": "Soul Core of Tacati (Soul Core of Tacati)"
+    },
+    "Soul Core of Opiloti": {
+        "zh_tw": "歐派理堤靈魂核心 (Soul Core of Opiloti)",
+        "zh_cn": "Soul Core of Opiloti (Soul Core of Opiloti)"
+    },
+    "Soul Core of Jiquani": {
+        "zh_tw": "吉卡尼靈魂核心 (Soul Core of Jiquani)",
+        "zh_cn": "Soul Core of Jiquani (Soul Core of Jiquani)"
+    },
+    "Soul Core of Zalatl": {
+        "zh_tw": "札拉提靈魂核心 (Soul Core of Zalatl)",
+        "zh_cn": "Soul Core of Zalatl (Soul Core of Zalatl)"
+    },
+    "Soul Core of Citaqualotl": {
+        "zh_tw": "希特克拉多靈魂核心 (Soul Core of Citaqualotl)",
+        "zh_cn": "Soul Core of Citaqualotl (Soul Core of Citaqualotl)"
+    },
+    "Soul Core of Puhuarte": {
+        "zh_tw": "普希瓦爾靈魂核心 (Soul Core of Puhuarte)",
+        "zh_cn": "Soul Core of Puhuarte (Soul Core of Puhuarte)"
+    },
+    "Soul Core of Tzamoto": {
+        "zh_tw": "薩摩特靈魂核心 (Soul Core of Tzamoto)",
+        "zh_cn": "Soul Core of Tzamoto (Soul Core of Tzamoto)"
+    },
+    "Soul Core of Xopec": {
+        "zh_tw": "柔派克靈魂核心 (Soul Core of Xopec)",
+        "zh_cn": "Soul Core of Xopec (Soul Core of Xopec)"
+    },
+    "Soul Core of Azcapa": {
+        "zh_tw": "艾斯卡巴靈魂核心 (Soul Core of Azcapa)",
+        "zh_cn": "Soul Core of Azcapa (Soul Core of Azcapa)"
+    },
+    "Soul Core of Topotante": {
+        "zh_tw": "塔普塔特靈魂核心 (Soul Core of Topotante)",
+        "zh_cn": "Soul Core of Topotante (Soul Core of Topotante)"
+    },
+    "Soul Core of Quipolatl": {
+        "zh_tw": "克特帕托靈魂核心 (Soul Core of Quipolatl)",
+        "zh_cn": "Soul Core of Quipolatl (Soul Core of Quipolatl)"
+    },
+    "Soul Core of Ticaba": {
+        "zh_tw": "堤卡巴靈魂核心 (Soul Core of Ticaba)",
+        "zh_cn": "Soul Core of Ticaba (Soul Core of Ticaba)"
+    },
+    "Soul Core of Atmohua": {
+        "zh_tw": "力量靈魂核心 (Soul Core of Atmohua)",
+        "zh_cn": "Soul Core of Atmohua (Soul Core of Atmohua)"
+    },
+    "Soul Core of Cholotl": {
+        "zh_tw": "敏捷靈魂核心 (Soul Core of Cholotl)",
+        "zh_cn": "Soul Core of Cholotl (Soul Core of Cholotl)"
+    },
+    "Soul Core of Zantipi": {
+        "zh_tw": "智慧靈魂核心 (Soul Core of Zantipi)",
+        "zh_cn": "Soul Core of Zantipi (Soul Core of Zantipi)"
+    },
     "Waystone (Tier 1)": {
         "zh_tw": "地圖鑰匙（階級 1） (Waystone (Tier 1))",
         "zh_cn": "Waystone (Tier 1) (Waystone (Tier 1))"
@@ -6593,6 +6693,22 @@
         "zh_tw": "怒炎之靈 (Raging Spirits)",
         "zh_cn": "愤怒狂灵 (Raging Spirits)"
     },
+    "Ancient Crisis Fragment": {
+        "zh_tw": "遠古危機碎片 (Ancient Crisis Fragment)",
+        "zh_cn": "Ancient Crisis Fragment (Ancient Crisis Fragment)"
+    },
+    "Faded Crisis Fragment": {
+        "zh_tw": "褪色危機碎片 (Faded Crisis Fragment)",
+        "zh_cn": "Faded Crisis Fragment (Faded Crisis Fragment)"
+    },
+    "Weathered Crisis Fragment": {
+        "zh_tw": "風化危機碎片 (Weathered Crisis Fragment)",
+        "zh_cn": "Weathered Crisis Fragment (Weathered Crisis Fragment)"
+    },
+    "Inscribed Ultimatum": {
+        "zh_tw": "最後通牒雕刻 (Inscribed Ultimatum)",
+        "zh_cn": "Inscribed Ultimatum (Inscribed Ultimatum)"
+    },
     "Cowardly Fate": {
         "zh_tw": "怯懦之運 (Cowardly Fate)",
         "zh_cn": "Cowardly Fate (Cowardly Fate)"
@@ -6889,6 +7005,26 @@
         "zh_tw": "巫術護盾 (Sorcery Ward)",
         "zh_cn": "Sorcery Ward (Sorcery Ward)"
     },
+    "Breach Precursor Tablet": {
+        "zh_tw": "裂痕碑牌 (Breach Precursor Tablet)",
+        "zh_cn": "Breach Precursor Tablet (Breach Precursor Tablet)"
+    },
+    "Expedition Precursor Tablet": {
+        "zh_tw": "探險碑牌 (Expedition Precursor Tablet)",
+        "zh_cn": "Expedition Precursor Tablet (Expedition Precursor Tablet)"
+    },
+    "Delirium Precursor Tablet": {
+        "zh_tw": "譫妄碑牌 (Delirium Precursor Tablet)",
+        "zh_cn": "Delirium Precursor Tablet (Delirium Precursor Tablet)"
+    },
+    "Ritual Precursor Tablet": {
+        "zh_tw": "祭祀碑牌 (Ritual Precursor Tablet)",
+        "zh_cn": "Ritual Precursor Tablet (Ritual Precursor Tablet)"
+    },
+    "Precursor Tablet": {
+        "zh_tw": "先行者碑牌 (Precursor Tablet)",
+        "zh_cn": "Precursor Tablet (Precursor Tablet)"
+    },
     "Elemental Expression": {
         "zh_tw": "元素表現 (Elemental Expression)",
         "zh_cn": "Elemental Expression (Elemental Expression)"
@@ -6988,6 +7124,74 @@
     "Tornado Shot": {
         "zh_tw": "龍捲射擊 (Tornado Shot)",
         "zh_cn": "Tornado Shot (Tornado Shot)"
+    },
+    "Omen of Refreshment": {
+        "zh_tw": "刷新之兆 (Omen of Refreshment)",
+        "zh_cn": "Omen of Refreshment (Omen of Refreshment)"
+    },
+    "Omen of Resurgence": {
+        "zh_tw": "復興之兆 (Omen of Resurgence)",
+        "zh_cn": "Omen of Resurgence (Omen of Resurgence)"
+    },
+    "Omen of Amelioration": {
+        "zh_tw": "改善之兆 (Omen of Amelioration)",
+        "zh_cn": "Omen of Amelioration (Omen of Amelioration)"
+    },
+    "Omen of Whittling": {
+        "zh_tw": "削切之兆 (Omen of Whittling)",
+        "zh_cn": "Omen of Whittling (Omen of Whittling)"
+    },
+    "Omen of Sinistral Erasure": {
+        "zh_tw": "左旋抺除之兆 (Omen of Sinistral Erasure)",
+        "zh_cn": "Omen of Sinistral Erasure (Omen of Sinistral Erasure)"
+    },
+    "Omen of Dextral Erasure": {
+        "zh_tw": "右旋抺除之兆 (Omen of Dextral Erasure)",
+        "zh_cn": "Omen of Dextral Erasure (Omen of Dextral Erasure)"
+    },
+    "Omen of Sinistral Alchemy": {
+        "zh_tw": "左旋煉金之兆 (Omen of Sinistral Alchemy)",
+        "zh_cn": "Omen of Sinistral Alchemy (Omen of Sinistral Alchemy)"
+    },
+    "Omen of Dextral Alchemy": {
+        "zh_tw": "右旋煉金之兆 (Omen of Dextral Alchemy)",
+        "zh_cn": "Omen of Dextral Alchemy (Omen of Dextral Alchemy)"
+    },
+    "Omen of Sinistral Coronation": {
+        "zh_tw": "左旋加冕之兆 (Omen of Sinistral Coronation)",
+        "zh_cn": "Omen of Sinistral Coronation (Omen of Sinistral Coronation)"
+    },
+    "Omen of Dextral Coronation": {
+        "zh_tw": "右旋加冕之兆 (Omen of Dextral Coronation)",
+        "zh_cn": "Omen of Dextral Coronation (Omen of Dextral Coronation)"
+    },
+    "Omen of Corruption": {
+        "zh_tw": "腐化之兆 (Omen of Corruption)",
+        "zh_cn": "Omen of Corruption (Omen of Corruption)"
+    },
+    "Omen of Greater Exaltation": {
+        "zh_tw": "大幅提升之兆 (Omen of Greater Exaltation)",
+        "zh_cn": "Omen of Greater Exaltation (Omen of Greater Exaltation)"
+    },
+    "Omen of Sinistral Exaltation": {
+        "zh_tw": "左旋提升之兆 (Omen of Sinistral Exaltation)",
+        "zh_cn": "Omen of Sinistral Exaltation (Omen of Sinistral Exaltation)"
+    },
+    "Omen of Dextral Exaltation": {
+        "zh_tw": "右旋提升之兆 (Omen of Dextral Exaltation)",
+        "zh_cn": "Omen of Dextral Exaltation (Omen of Dextral Exaltation)"
+    },
+    "Omen of Greater Annulment": {
+        "zh_tw": "大幅廢止之兆 (Omen of Greater Annulment)",
+        "zh_cn": "Omen of Greater Annulment (Omen of Greater Annulment)"
+    },
+    "Omen of Sinistral Annulment": {
+        "zh_tw": "左旋廢止之兆 (Omen of Sinistral Annulment)",
+        "zh_cn": "Omen of Sinistral Annulment (Omen of Sinistral Annulment)"
+    },
+    "Omen of Dextral Annulment": {
+        "zh_tw": "右旋廢止之兆 (Omen of Dextral Annulment)",
+        "zh_cn": "Omen of Dextral Annulment (Omen of Dextral Annulment)"
     },
     "Charge Infusion": {
         "zh_tw": "充能灌注 (Charge Infusion)",
