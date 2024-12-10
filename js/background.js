@@ -84,6 +84,7 @@ let changeLanguage = async (language) => {
           })
         })
         // filter
+        filters = zh_filters;
         /*
         let translate_filters = {}
         zh_filters.result.forEach((category) => {
@@ -152,7 +153,7 @@ let changeLanguage = async (language) => {
         */
         // finish
         chrome.storage.local.set({
-          translation: { items, stats, static, clusterJewel, passivesNotable },
+          translation: { items, stats, static, clusterJewel, passivesNotable, filters },
           status: 'done',
           updated: +new Date(),
           statusUI: 'progress',
