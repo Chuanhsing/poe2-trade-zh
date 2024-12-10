@@ -33,12 +33,14 @@ chrome.storage.local.get('language', ({ language }) => {
         affix_us[entry.id] = entry.text
       })
     })
+    /*
     cluster_jewel_zh = stats_zh.result[4].entries.find(({ id }) => id == 'enchant.stat_3948993189').option.options
     cluster_jewel_us = stats_us.result[4].entries.find(({ id }) => id == 'enchant.stat_3948993189').option.options
     // console.log('cluster_jewel_zh', cluster_jewel_zh)
     // console.log('cluster_jewel_us', cluster_jewel_us)
     passives_notable_zh = stats_zh.result[4].entries.find(({ id }) => id == 'enchant.stat_2954116742').option.options
     passives_notable_us = stats_us.result[4].entries.find(({ id }) => id == 'enchant.stat_2954116742').option.options
+    */
     // console.log('cluster_jewel_us', cluster_jewel_us)
     chrome.storage.local.get(['translation'], ({ translation }) => {
       clusterJewel = translation.clusterJewel
@@ -219,6 +221,7 @@ const translate = () => {
       })
 
     // cluster jewel Passive Skills description
+    /*
     let clusterJewelDescription = document.querySelectorAll('.notableProperty')
     Array.prototype.filter
       .call(clusterJewelDescription, (elm) => !~elm.className.indexOf('translated'))
@@ -242,6 +245,7 @@ const translate = () => {
           .join('<br>')
         elm.classList.add('translated')
       })
+    */
 
     // passives Notable description
     let passiveNotableDescription = document.querySelectorAll('.notableProperty')
