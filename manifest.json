@@ -22,7 +22,6 @@
       "128": "images/128x128.png",
       "48": "images/icon.png"
    },
-   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAltWhgcc1mPvC/q9ucmi6awqjle9NFwmi8Fdzjx0riYKGZTHaRryzgA0AOmDV1JImfKIGVtVmaOwyMK9uEOxgmw0m8KpJ6lNdApc+b5iX+RV5SRy2mj5CDgt3c/xT7Kk6qOHU3AcbxMEx2CslG+Pwa1eBLL78TeLpNU1B2TPxiui1HND3LgguMcveGjH0zfPP8fEdAJdC7PmG37aSR8RsiRGHiUeP4i0JmiwSiUwqRsWynfSx8xZP2cHapk8o+hiQn2EqyP96WtjZERsuDxSxc/5ldmTfR3EuSa8T8lRwzhrQVvM2JY1er2twiAYMXe4ojYhLYHlwwJBTFwIysaV05QIDAQAB",
    "manifest_version": 3,
    "name": "POE2 Trade zh",
    "permissions": [ "storage", "unlimitedStorage" ],
