@@ -109,8 +109,8 @@ const translate = () => {
         }
         //console.log('usString', usString)
         //console.log('zhString', zhString)
-        usString = usString.replace(/\[.+?\|(.+?)\]/g, '$1')
-        zhString = zhString.replace(/\[.+?\|(.+?)\]/g, '$1')
+        usString = usString.replace(/\[.+?\|(.+?)\]/g, '$1').replace(/\[(.+?)\]/g, '$1')
+        zhString = zhString.replace(/\[.+?\|(.+?)\]/g, '$1').replace(/\[(.+?)\]/g, '$1')
         //console.log('usString', usString)
         //console.log('zhString', zhString)
         // wtf
