@@ -100,19 +100,18 @@ const translate = () => {
         let zhString = affix_zh[field]
         // console.log('================')
         // console.log('field', field)
-
         // console.log('================')
         if (!!usString === false || !!zhString === false) {
           //   console.log('Mismatch', field, usString, zhString)
           elm.classList.add('translated')
           return
         }
-        //console.log('usString', usString)
-        //console.log('zhString', zhString)
-        usString = usString.replace(/\[.+?\|(.+?)\]/g, '$1').replace(/\[(.+?)\]/g, '$1')
-        zhString = zhString.replace(/\[.+?\|(.+?)\]/g, '$1').replace(/\[(.+?)\]/g, '$1')
-        //console.log('usString', usString)
-        //console.log('zhString', zhString)
+        // console.log('usString', usString)
+        // console.log('zhString', zhString)
+        usString = usString.replace(/\[[a-zA-Z '\-]+?\|(.+?)\]/g, '$1').replace(/\[([a-zA-Z '\-]+?)\]/g, '$1')
+        zhString = zhString.replace(/\[[a-zA-Z '\-]+?\|(.+?)\]/g, '$1').replace(/\[([a-zA-Z '\-]+?)\]/g, '$1')
+        // console.log('usString', usString)
+        // console.log('zhString', zhString)
         // wtf
         // # Added Passive Skills are Jewel Sockets
         // 1 Added Passive Skill is a Jewel Socket
@@ -196,11 +195,12 @@ const translate = () => {
           } else {
             // 是否為固定數值
             let numRange = elm.parentNode.querySelector('.lc .d').innerText.replace('&nbsp;', '').trim().slice(1, -1)
-            //console.log('numRange', numRange)
+            // console.log('numRange', numRange)
             if (Number.isNaN(numRange)) {
               zhString = zhString.replace(/#/gim, numRange)
             } else {
               const myArray = numRange.split('—', 2);
+              // console.log(myArray)
               if (myArray[0] == myArray[1]) {
                 zhString = zhString.replace(/#/gim, myArray[0])
               } else {
